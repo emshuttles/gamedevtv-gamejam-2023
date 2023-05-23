@@ -8,10 +8,20 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "Draggable",
+"language": "GDScript",
+"path": "res://src/components/draggable.gd"
+} ]
+_global_script_class_icons={
+"Draggable": ""
+}
+
 [application]
 
 config/name="GameDev.tv Game Jam 2023"
-run/main_scene="res://src/objects/Persometer.tscn"
+run/main_scene="res://src/objects/persometer/test_for_opening.tscn"
 config/icon="res://icon.png"
 
 [autoload]

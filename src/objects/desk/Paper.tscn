@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/images/paper.png" type="Texture" id=1]
-[ext_resource path="res://src/objects/desk/little_paper.gd" type="Script" id=2]
+[ext_resource path="res://src/objects/desk/paper.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 40, 56 )
@@ -16,6 +16,5 @@ texture = ExtResource( 1 )
 visible = false
 shape = SubResource( 1 )
 
-[connection signal="input_event" from="." to="." method="_on_LittlePaper_input_event"]
 [connection signal="mouse_entered" from="." to="." method="_on_LittlePaper_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_LittlePaper_mouse_exited"]

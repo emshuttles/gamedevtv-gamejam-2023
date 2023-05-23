@@ -1,11 +1,15 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/objects/persometer.gd" type="Script" id=1]
 [ext_resource path="res://assets/persometer/use.png" type="Texture" id=2]
 [ext_resource path="res://assets/persometer/warmth.png" type="Texture" id=3]
 [ext_resource path="res://src/objects/persometer/axis.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/components/draggable.gd" type="Script" id=5]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 159, 163.5 )
+
+[node name="Persometer" type="Node2D"]
 position = Vector2( 413, 360 )
 script = ExtResource( 1 )
 
@@ -53,5 +57,12 @@ texture = ExtResource( 2 )
 [node name="Use4" type="Sprite" parent="Uses"]
 position = Vector2( -18, 15 )
 texture = ExtResource( 2 )
+
+[node name="Draggable" type="Area2D" parent="."]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Draggable"]
+position = Vector2( 114, -91.5 )
+shape = SubResource( 1 )
 
 [connection signal="pressed" from="ButtonActivate" to="." method="_on_ButtonActivate_pressed"]

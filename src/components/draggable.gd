@@ -14,6 +14,12 @@ func _ready() -> void:
 	_parent.connect("mouse_exited", self, "_on_mouse_exited")
 
 
+func _process(_delta: float) -> void:
+	# This is here instead of _unhandled_input so you can drag while panning
+	if _is_held:
+		owner.global_position = owner.get_global_mouse_position() - _click_position
+
+
 # TODO: How to put most recently moved paper on top?
 func _unhandled_input(event: InputEvent) -> void:
 	if _is_mouse_inside and event.is_action("select"):
@@ -28,11 +34,6 @@ func _unhandled_input(event: InputEvent) -> void:
 
 		_click_position = owner.get_local_mouse_position()
 		get_tree().set_input_as_handled()
-	elif event is InputEventMouseMotion:
-		event = event as InputEventMouseMotion
-		if _is_held:
-			owner.global_position = owner.get_global_mouse_position() - _click_position
-			get_tree().set_input_as_handled()
 
 
 func _on_mouse_entered() -> void:

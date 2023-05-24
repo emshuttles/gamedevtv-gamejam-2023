@@ -5,4 +5,5 @@
 [node name="Desk" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 4, 4 )
 texture = ExtResource( 1 )

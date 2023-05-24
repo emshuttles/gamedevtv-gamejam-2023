@@ -4,7 +4,7 @@
 [ext_resource path="res://src/components/draggable.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 40, 56 )
+extents = Vector2( 450, 690 )
 
 [node name="Paper" type="Area2D"]
 

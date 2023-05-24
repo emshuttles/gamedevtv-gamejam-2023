@@ -7,24 +7,24 @@ const DESK_HEIGHT := 4320.0
 const WINDOW_WIDTH := 1920.0
 const WINDOW_HEIGHT := 1080.0
 
-#var zoom_levels := [1.0, 2.0, 3.0, 4.0]
-var zoom_levels := [1.0, 4.0]
-var zoom_duration := 0.2
-var pan_speed := 30.0
-
-var _zoom_level_index := zoom_levels.size() - 1
+#var _zoom_levels := [1.0, 2.0, 3.0, 4.0]
+var _zoom_levels := [1.0, 4.0]
+var _zoom_level_index := _zoom_levels.size() - 1
+var _zoom_duration := 0.2
+var _pan_speed := 30.0
+var _is_panning_with_mouse := false
 
 onready var tween: Tween = $Tween
 
 
 func _ready() -> void:
-	var zoom_level: float = zoom_levels[_zoom_level_index]
+	var zoom_level: float = _zoom_levels[_zoom_level_index]
 	zoom = Vector2(zoom_level, zoom_level)
 
 
 func _process(_delta: float) -> void:
-	# Can't pan when zoomed out
-	if _zoom_level_index == 3:
+	# Can't pan when zoomed out or panning with mouse
+	if _zoom_level_index == _zoom_levels.size() - 1 or _is_panning_with_mouse:
 		return
 
 	var direction := Vector2(
@@ -37,8 +37,8 @@ func _process(_delta: float) -> void:
 	if direction.length() > 1.0:
 		direction = direction.normalized()
 
-	var zoom_level: float = zoom_levels[_zoom_level_index]
-	var new_position: Vector2 = global_position + direction * pan_speed * zoom_level
+	var zoom_level: float = _zoom_levels[_zoom_level_index]
+	var new_position: Vector2 = global_position + direction * _pan_speed * zoom_level
 	var clamped_position: Vector2 = _keep_position_in_bounds(new_position)
 	global_position = clamped_position
 
@@ -48,22 +48,40 @@ func _unhandled_input(event: InputEvent) -> void:
 		event = event as InputEventMouseButton
 		if _zoom_level_index - 1 < 0:
 			return
-		var old_zoom_level: float = zoom_levels[_zoom_level_index]
+
+		var old_zoom_level: float = _zoom_levels[_zoom_level_index]
 		_zoom_level_index -= 1
-		var new_zoom_level: float = zoom_levels[_zoom_level_index]
+		var new_zoom_level: float = _zoom_levels[_zoom_level_index]
 		_zoom(old_zoom_level, new_zoom_level, event.position)
+
 	elif event.is_action_pressed("zoom_out"):
 		event = event as InputEventMouseButton
-		if _zoom_level_index + 1 >= zoom_levels.size():
+		if _zoom_level_index + 1 >= _zoom_levels.size():
 			return
-		var old_zoom_level: float = zoom_levels[_zoom_level_index]
+
+		var old_zoom_level: float = _zoom_levels[_zoom_level_index]
 		_zoom_level_index += 1
-		var new_zoom_level: float = zoom_levels[_zoom_level_index]
+		var new_zoom_level: float = _zoom_levels[_zoom_level_index]
 		_zoom(old_zoom_level, new_zoom_level, event.position)
+
+	elif event.is_action_pressed("mouse_pan"):
+		_is_panning_with_mouse = true
+
+	elif event.is_action_released("mouse_pan"):
+		_is_panning_with_mouse = false
+
+	elif (
+			_is_panning_with_mouse
+			and event is InputEventMouseMotion
+			and _zoom_level_index < _zoom_levels.size() - 1 # Not zoomed out
+	):
+		event = event as InputEventMouseMotion
+		var relative_motion: Vector2 = event.relative * zoom
+		global_position = _keep_position_in_bounds(global_position - relative_motion)
 
 
 func _keep_position_in_bounds(new_position: Vector2) -> Vector2:
-	var zoom_level: float = zoom_levels[_zoom_level_index]
+	var zoom_level: float = _zoom_levels[_zoom_level_index]
 	var minimum_x: float = -1 * (DESK_WIDTH - WINDOW_WIDTH * zoom_level) / 2 + CENTER_POSITION.x
 	var maximum_x: float = (DESK_WIDTH - WINDOW_WIDTH * zoom_level) / 2 + CENTER_POSITION.x
 	var minimum_y: float = -1 * (DESK_HEIGHT - WINDOW_HEIGHT * zoom_level) / 2 + CENTER_POSITION.y
@@ -79,7 +97,7 @@ func _zoom(old_zoom_level: float, new_zoom_level: float, mouse_position: Vector2
 		"zoom",
 		zoom,
 		Vector2(new_zoom_level, new_zoom_level),
-		zoom_duration,
+		_zoom_duration,
 		tween.TRANS_SINE,
 		tween.EASE_OUT
 	)
@@ -88,7 +106,7 @@ func _zoom(old_zoom_level: float, new_zoom_level: float, mouse_position: Vector2
 	var position_difference: Vector2 = (((viewport_size / 2) - mouse_position)
 			* (new_zoom_level - old_zoom_level))
 	var new_position = _keep_position_in_bounds(global_position + position_difference)
-	var is_zoomed_out: bool = new_zoom_level == zoom_levels[zoom_levels.size() - 1]
+	var is_zoomed_out: bool = new_zoom_level == _zoom_levels[_zoom_levels.size() - 1]
 	if is_zoomed_out:
 		new_position = CENTER_POSITION
 
@@ -97,7 +115,7 @@ func _zoom(old_zoom_level: float, new_zoom_level: float, mouse_position: Vector2
 		"global_position",
 		global_position,
 		new_position,
-		zoom_duration,
+		_zoom_duration,
 		tween.TRANS_SINE,
 		tween.EASE_OUT
 	)

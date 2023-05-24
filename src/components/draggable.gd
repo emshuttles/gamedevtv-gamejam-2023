@@ -1,38 +1,43 @@
 class_name Draggable
-extends Node2D
+extends Node
 
 
+var _is_mouse_inside := false
 var _is_held := false
-var click_position:Vector2
+var _click_position: Vector2
 
-onready var parent:Node = get_parent()
-
-signal drag_ended()
+onready var _parent: Node = get_parent()
 
 
 func _ready() -> void:
-	parent.connect("input_event",self,"_on_input_event")
-	
+	_parent.connect("mouse_entered", self, "_on_mouse_entered")
+	_parent.connect("mouse_exited", self, "_on_mouse_exited")
 
 
+# TODO: How to put most recently moved paper on top?
 func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventMouseMotion:
-		event = event as InputEventMouseMotion
-		if _is_held:
-			owner.global_position = event.position - click_position
-			get_tree().set_input_as_handled()
-
-
-func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if event is InputEventMouseButton:
+	if _is_mouse_inside and event.is_action("select"):
 		event = event as InputEventMouseButton
 		_is_held = event.pressed
+
+		# To keep mouse inside window when dragging
 		var mouse_mode: int = (Input.MOUSE_MODE_CONFINED
 				if event.pressed
 				else Input.MOUSE_MODE_VISIBLE)
 		Input.mouse_mode = mouse_mode
-		click_position = owner.get_local_mouse_position()
-		
-		if not event.pressed:
-			_is_held = false
-			emit_signal("drag_ended")
+
+		_click_position = owner.get_local_mouse_position()
+		get_tree().set_input_as_handled()
+	elif event is InputEventMouseMotion:
+		event = event as InputEventMouseMotion
+		if _is_held:
+			owner.global_position = owner.get_global_mouse_position() - _click_position
+			get_tree().set_input_as_handled()
+
+
+func _on_mouse_entered() -> void:
+	_is_mouse_inside = true
+
+
+func _on_mouse_exited() -> void:
+	_is_mouse_inside = false

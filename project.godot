@@ -9,7 +9,7 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Node2D",
+"base": "Node",
 "class": "Draggable",
 "language": "GDScript",
 "path": "res://src/components/draggable.gd"
@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="GameDev.tv Game Jam 2023"
-run/main_scene="res://src/objects/persometer/test_for_opening.tscn"
+run/main_scene="res://src/objects/Office.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -31,6 +31,24 @@ Game="*res://src/autoload/Game.tscn"
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
+
+[input]
+
+select={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+zoom_in={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":4,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+zoom_out={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":5,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
 
 [physics]
 

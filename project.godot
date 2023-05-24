@@ -21,13 +21,12 @@ _global_script_class_icons={
 [application]
 
 config/name="GameDev.tv Game Jam 2023"
-run/main_scene="res://src/main/Game.tscn"
+run/main_scene="res://src/objects/Office.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
-Signals="*res://src/autoload/signals.gd"
-Scenes="*res://src/autoload/scenes.tscn"
+Game="*res://src/autoload/Game.tscn"
 
 [display]
 

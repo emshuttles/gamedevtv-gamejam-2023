@@ -1,0 +1,187 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://src/objects/persometer/axis.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/objects/persometer/persometer.gd" type="Script" id=2]
+[ext_resource path="res://src/components/draggable.gd" type="Script" id=3]
+[ext_resource path="res://assets/persometer/use.png" type="Texture" id=4]
+[ext_resource path="res://assets/persometer/warmth.png" type="Texture" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 159, 163.5 )
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("AxisX:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -45.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AxisY:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -45.0 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "close"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 0,
+"values": [  ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AxisX:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( -2, -2 ),
+"update": 0,
+"values": [ 0.0, -45.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AxisY:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, -2 ),
+"update": 0,
+"values": [ -90.0002, -45.0 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "open"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 0,
+"values": [  ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AxisX:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( -2, -2 ),
+"update": 0,
+"values": [ -45.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AxisY:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( -2, 1 ),
+"update": 0,
+"values": [ -45.0, -90.0002 ]
+}
+
+[node name="Persometer" type="Node2D"]
+position = Vector2( 413, 360 )
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 90, -78 )
+shape = SubResource( 1 )
+
+[node name="Draggable" type="Node2D" parent="Area2D"]
+script = ExtResource( 3 )
+
+[node name="AxisX" parent="." instance=ExtResource( 1 )]
+rotation = -0.785398
+
+[node name="AxisY" parent="." instance=ExtResource( 1 )]
+rotation = -0.785398
+
+[node name="WarmtY" type="Sprite" parent="."]
+visible = false
+position = Vector2( 14, -203 )
+texture = ExtResource( 5 )
+
+[node name="MarkerY" type="VScrollBar" parent="."]
+visible = false
+margin_left = -2.0
+margin_top = -182.0
+margin_right = 30.0
+margin_bottom = -54.0
+rect_min_size = Vector2( 32, 128 )
+min_value = 1.0
+max_value = 5.0
+step = 1.0
+value = 1.0
+
+[node name="ButtonActivate" type="Button" parent="."]
+margin_right = 12.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 32, 32 )
+
+[node name="Uses" type="Sprite" parent="."]
+
+[node name="Use1" type="Sprite" parent="Uses"]
+position = Vector2( 15, -18 )
+texture = ExtResource( 4 )
+
+[node name="Use2" type="Sprite" parent="Uses"]
+position = Vector2( 49, 15 )
+texture = ExtResource( 4 )
+
+[node name="Use3" type="Sprite" parent="Uses"]
+position = Vector2( 15, 49 )
+texture = ExtResource( 4 )
+
+[node name="Use4" type="Sprite" parent="Uses"]
+position = Vector2( -18, 15 )
+texture = ExtResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+anims/RESET = SubResource( 2 )
+anims/close = SubResource( 4 )
+anims/open = SubResource( 3 )
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_Area2D_area_exited"]
+[connection signal="drag_ended" from="Area2D/Draggable" to="." method="_on_Draggable_drag_ended"]
+[connection signal="pressed" from="ButtonActivate" to="." method="_on_ButtonActivate_pressed"]

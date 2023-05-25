@@ -5,10 +5,12 @@
 [node name="Statement" type="MarginContainer"]
 margin_right = 684.0
 margin_bottom = 282.0
+mouse_filter = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_right = 684.0
 margin_bottom = 282.0
+mouse_filter = 2
 
 [node name="StatementNum" type="Label" parent="VBoxContainer"]
 margin_right = 684.0
@@ -28,11 +30,13 @@ margin_top = 46.0
 margin_right = 684.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 0, 18 )
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 margin_top = 68.0
 margin_right = 684.0
 margin_bottom = 92.0
+mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
@@ -42,44 +46,56 @@ margin_bottom = 19.0
 size_flags_horizontal = 3
 text = "Strongly Disagree"
 
-[node name="CheckBox1" type="CheckBox" parent="VBoxContainer/HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
 margin_left = 115.0
-margin_right = 206.0
+margin_right = 147.0
 margin_bottom = 24.0
+rect_min_size = Vector2( 32, 0 )
+mouse_filter = 2
+
+[node name="CheckBox1" type="CheckBox" parent="VBoxContainer/HBoxContainer"]
+margin_left = 151.0
+margin_right = 235.0
+margin_bottom = 24.0
+mouse_filter = 2
 size_flags_horizontal = 3
 expand_icon = true
 
 [node name="CheckBox2" type="CheckBox" parent="VBoxContainer/HBoxContainer"]
-margin_left = 210.0
-margin_right = 301.0
+margin_left = 239.0
+margin_right = 323.0
 margin_bottom = 24.0
+mouse_filter = 2
 size_flags_horizontal = 3
 icon_align = 1
 
 [node name="CheckBox3" type="CheckBox" parent="VBoxContainer/HBoxContainer"]
-margin_left = 305.0
-margin_right = 397.0
+margin_left = 327.0
+margin_right = 411.0
 margin_bottom = 24.0
+mouse_filter = 2
 size_flags_horizontal = 3
 icon_align = 1
 
 [node name="CheckBox4" type="CheckBox" parent="VBoxContainer/HBoxContainer"]
-margin_left = 401.0
-margin_right = 492.0
+margin_left = 415.0
+margin_right = 499.0
 margin_bottom = 24.0
+mouse_filter = 2
 size_flags_horizontal = 3
 icon_align = 1
 
 [node name="CheckBox5" type="CheckBox" parent="VBoxContainer/HBoxContainer"]
-margin_left = 496.0
-margin_right = 588.0
+margin_left = 503.0
+margin_right = 587.0
 margin_bottom = 24.0
+mouse_filter = 2
 size_flags_horizontal = 3
 icon_align = 1
 
 [node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer"]
-margin_left = 592.0
+margin_left = 591.0
 margin_top = 5.0
-margin_right = 684.0
+margin_right = 683.0
 margin_bottom = 19.0
 text = "Strongly Agree"

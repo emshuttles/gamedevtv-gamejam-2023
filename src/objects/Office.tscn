@@ -23,6 +23,8 @@ position = Vector2( 4200, -752 )
 
 [node name="Evaluation" parent="." instance=ExtResource( 4 )]
 position = Vector2( 4200, -752 )
+paper_name = "Page 1"
 
 [node name="Evaluation2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 4200, -752 )
+paper_name = "Page 2"

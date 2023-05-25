@@ -20,10 +20,10 @@ func _on_ButtonActivate_pressed() -> void:
 		var use_highlight = $Uses.get_child(use_count)
 		use_highlight.visible = false
 		use_count += 1
-		
+
 		$AxisX.check(target_x)
 		$AxisY.check(target_y)
-		
+
 	else:
 		print("out of uses!")
 

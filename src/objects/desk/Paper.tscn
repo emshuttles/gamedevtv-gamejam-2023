@@ -15,6 +15,7 @@
 extents = Vector2( 472, 715 )
 
 [node name="Paper" type="Area2D"]
+script = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
 visible = false
@@ -455,7 +456,11 @@ visible = false
 position = Vector2( 473, 710 )
 shape = SubResource( 1 )
 
-[node name="Draggable" type="Node" parent="."]
+[node name="Draggable" type="Control" parent="."]
+margin_left = -450.0
+margin_top = -690.0
+margin_right = 450.0
+margin_bottom = 690.0
 script = ExtResource( 2 )
 
 [editable path="MarginContainer/Content/VBoxContainer/Statements/Statement1"]

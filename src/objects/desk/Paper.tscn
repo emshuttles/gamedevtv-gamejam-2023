@@ -23,19 +23,19 @@ region_rect = Rect2( 1551, 2000, 0, 0 )
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 margin_right = 931.0
-margin_bottom = 1428.0
+margin_bottom = 1551.0
 mouse_filter = 2
 
 [node name="Color" type="Panel" parent="MarginContainer"]
 margin_right = 931.0
-margin_bottom = 1469.0
+margin_bottom = 1551.0
 mouse_filter = 2
 theme = ExtResource( 8 )
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer"]
 modulate = Color( 1, 1, 1, 0.121569 )
 margin_right = 931.0
-margin_bottom = 1469.0
+margin_bottom = 1551.0
 mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -45,7 +45,7 @@ stretch_mode = 2
 
 [node name="Content" type="MarginContainer" parent="MarginContainer"]
 margin_right = 931.0
-margin_bottom = 1469.0
+margin_bottom = 1551.0
 mouse_filter = 2
 theme = ExtResource( 7 )
 custom_constants/margin_right = 100
@@ -57,7 +57,7 @@ custom_constants/margin_bottom = 100
 margin_left = 100.0
 margin_top = 100.0
 margin_right = 831.0
-margin_bottom = 1369.0
+margin_bottom = 1451.0
 mouse_filter = 2
 custom_constants/separation = 12
 
@@ -73,10 +73,11 @@ margin_top = 138.0
 margin_right = 731.0
 margin_bottom = 170.0
 custom_fonts/font = ExtResource( 6 )
-text = "Our Beautiful and Civilized Imperial Democracy"
+text = "Our Beautiful and Civilized Imperial Democracy of Animalia"
 align = 1
 
 [node name="Label3" type="Label" parent="MarginContainer/Content/VBoxContainer"]
+visible = false
 margin_top = 182.0
 margin_right = 731.0
 margin_bottom = 224.0
@@ -85,54 +86,80 @@ text = "MINISTRY OF LABOR"
 align = 1
 
 [node name="Label6" type="Label" parent="MarginContainer/Content/VBoxContainer"]
-margin_top = 236.0
+margin_top = 182.0
 margin_right = 731.0
-margin_bottom = 278.0
+margin_bottom = 224.0
 custom_fonts/font = ExtResource( 5 )
 text = "DEPARTMENT OF ANIMAL RESOURCES"
 align = 1
 
 [node name="EmptySpace" type="MarginContainer" parent="MarginContainer/Content/VBoxContainer"]
-margin_top = 290.0
+margin_top = 236.0
 margin_right = 731.0
-margin_bottom = 320.0
+margin_bottom = 266.0
 rect_min_size = Vector2( 0, 30 )
 mouse_filter = 2
 
 [node name="Label4" type="Label" parent="MarginContainer/Content/VBoxContainer"]
-margin_top = 332.0
+margin_top = 278.0
 margin_right = 731.0
-margin_bottom = 356.0
+margin_bottom = 302.0
 custom_fonts/font = ExtResource( 9 )
 text = "Hors-Trudgman Evaluation of Personality and Interests"
 align = 1
 uppercase = true
 
-[node name="EmptySpace2" type="MarginContainer" parent="MarginContainer/Content/VBoxContainer"]
-margin_top = 368.0
+[node name="Label5" type="Label" parent="MarginContainer/Content/VBoxContainer"]
+margin_top = 314.0
 margin_right = 731.0
-margin_bottom = 428.0
-rect_min_size = Vector2( 0, 60 )
+margin_bottom = 392.0
+text = "This personality test will help us understand why you act the way that you do and how your personality is structured. Please mark how much you disagree or agree with each statement."
+autowrap = true
+
+[node name="EmptySpace2" type="MarginContainer" parent="MarginContainer/Content/VBoxContainer"]
+margin_top = 404.0
+margin_right = 731.0
+margin_bottom = 434.0
+rect_min_size = Vector2( 0, 30 )
 mouse_filter = 2
 
-[node name="Label5" type="Label" parent="MarginContainer/Content/VBoxContainer"]
-margin_top = 440.0
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Content/VBoxContainer"]
+margin_top = 446.0
 margin_right = 731.0
-margin_bottom = 464.0
-text = "Name"
+margin_bottom = 503.0
+
+[node name="Label5" type="Label" parent="MarginContainer/Content/VBoxContainer/VBoxContainer"]
+margin_right = 731.0
+margin_bottom = 24.0
+custom_fonts/font = ExtResource( 9 )
+text = "Citizen's Name"
 align = 1
 
-[node name="EmptySpace3" type="MarginContainer" parent="MarginContainer/Content/VBoxContainer"]
-margin_top = 476.0
+[node name="Label7" type="Label" parent="MarginContainer/Content/VBoxContainer/VBoxContainer"]
+margin_top = 28.0
 margin_right = 731.0
-margin_bottom = 536.0
-rect_min_size = Vector2( 0, 60 )
+margin_bottom = 52.0
+text = "Eloin Duvorak"
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/Content/VBoxContainer/VBoxContainer"]
+margin_top = 56.0
+margin_right = 731.0
+margin_bottom = 57.0
+rect_min_size = Vector2( 0, 1 )
+size_flags_horizontal = 3
+color = Color( 0.164706, 0.164706, 0.164706, 1 )
+
+[node name="EmptySpace3" type="MarginContainer" parent="MarginContainer/Content/VBoxContainer"]
+margin_top = 515.0
+margin_right = 731.0
+margin_bottom = 545.0
+rect_min_size = Vector2( 0, 30 )
 mouse_filter = 2
 
 [node name="Statements" type="VBoxContainer" parent="MarginContainer/Content/VBoxContainer"]
-margin_top = 548.0
+margin_top = 557.0
 margin_right = 731.0
-margin_bottom = 1269.0
+margin_bottom = 1351.0
 mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -201,30 +228,30 @@ margin_bottom = 24.0
 [node name="Statement2" parent="MarginContainer/Content/VBoxContainer/Statements" instance=ExtResource( 3 )]
 margin_top = 179.0
 margin_right = 731.0
-margin_bottom = 308.0
+margin_bottom = 335.0
 mouse_filter = 2
 
 [node name="VBoxContainer" parent="MarginContainer/Content/VBoxContainer/Statements/Statement2" index="0"]
 margin_right = 731.0
-margin_bottom = 129.0
+margin_bottom = 156.0
 
 [node name="StatementNum" parent="MarginContainer/Content/VBoxContainer/Statements/Statement2/VBoxContainer" index="0"]
 margin_right = 731.0
 
 [node name="StatementWording" parent="MarginContainer/Content/VBoxContainer/Statements/Statement2/VBoxContainer" index="1"]
 margin_right = 731.0
-margin_bottom = 79.0
-text = "I work with a lion and a gazelle. The lion has eaten the gazelle. After carefully analyzing this situation, I realize that I now work with a lion. I continue my work."
+margin_bottom = 106.0
+text = "I work with a lion and a gazelle. The lion has eaten the gazelle. After carefully analyzing this situation, I realize the following: I now work with a lion. I continue my work."
 
 [node name="MarginContainer" parent="MarginContainer/Content/VBoxContainer/Statements/Statement2/VBoxContainer" index="2"]
-margin_top = 83.0
+margin_top = 110.0
 margin_right = 731.0
-margin_bottom = 101.0
+margin_bottom = 128.0
 
 [node name="HBoxContainer" parent="MarginContainer/Content/VBoxContainer/Statements/Statement2/VBoxContainer" index="3"]
-margin_top = 105.0
+margin_top = 132.0
 margin_right = 731.0
-margin_bottom = 129.0
+margin_bottom = 156.0
 
 [node name="Label" parent="MarginContainer/Content/VBoxContainer/Statements/Statement2/VBoxContainer/HBoxContainer" index="0"]
 margin_top = 0.0
@@ -259,9 +286,9 @@ margin_right = 730.0
 margin_bottom = 24.0
 
 [node name="Statement3" parent="MarginContainer/Content/VBoxContainer/Statements" instance=ExtResource( 3 )]
-margin_top = 358.0
+margin_top = 385.0
 margin_right = 731.0
-margin_bottom = 487.0
+margin_bottom = 514.0
 mouse_filter = 2
 
 [node name="VBoxContainer" parent="MarginContainer/Content/VBoxContainer/Statements/Statement3" index="0"]
@@ -274,7 +301,7 @@ margin_right = 731.0
 [node name="StatementWording" parent="MarginContainer/Content/VBoxContainer/Statements/Statement3/VBoxContainer" index="1"]
 margin_right = 731.0
 margin_bottom = 79.0
-text = "In the grand city of Lours, there is a team of badgers and squirrels who are building an animal made of steel. I would love to assist them."
+text = "In the grand city of Lours, there is a team of badgers and squirrels who are building an animated, intelligent animal made of steel. I would love to assist them."
 
 [node name="MarginContainer" parent="MarginContainer/Content/VBoxContainer/Statements/Statement3/VBoxContainer" index="2"]
 margin_top = 83.0
@@ -319,9 +346,9 @@ margin_right = 730.0
 margin_bottom = 24.0
 
 [node name="Statement4" parent="MarginContainer/Content/VBoxContainer/Statements" instance=ExtResource( 3 )]
-margin_top = 537.0
+margin_top = 564.0
 margin_right = 731.0
-margin_bottom = 721.0
+margin_bottom = 748.0
 mouse_filter = 2
 
 [node name="VBoxContainer" parent="MarginContainer/Content/VBoxContainer/Statements/Statement4" index="0"]
@@ -341,7 +368,7 @@ margin_top = 110.0
 margin_right = 731.0
 margin_bottom = 134.0
 custom_fonts/font = ExtResource( 10 )
-text = "*This statement is merely hypothetical, yet legally binding."
+text = "*This statement is merely hypothetical, no such machine is in development. Yet it is legally binding."
 
 [node name="MarginContainer" parent="MarginContainer/Content/VBoxContainer/Statements/Statement4/VBoxContainer" index="3"]
 margin_top = 138.0

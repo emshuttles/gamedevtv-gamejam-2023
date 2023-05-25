@@ -26,7 +26,6 @@ config/icon="res://icon.png"
 
 [autoload]
 
-Game="*res://src/autoload/Game.tscn"
 Signals="*res://src/autoload/signals.gd"
 Scenes="*res://src/autoload/scenes.tscn"
 

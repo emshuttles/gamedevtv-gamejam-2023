@@ -7,7 +7,6 @@ const WINDOW_WIDTH := 1920.0
 const WINDOW_HEIGHT := 1080.0
 const CENTER_POSITION := Vector2(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2)
 
-#var _zoom_levels := [1.0, 2.0, 3.0, 4.0]
 var _zoom_levels := [1.0, 4.0]
 var _zoom_level_index := _zoom_levels.size() - 1
 var _zoom_duration := 0.2

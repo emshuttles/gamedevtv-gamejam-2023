@@ -7,11 +7,11 @@ var _is_mouse_inside := false
 var _is_held := false
 var _click_position: Vector2
 
-onready var _parent: Area2D = get_parent()
+onready var _parent = get_parent()
 
 
 func _ready() -> void:
-	_parent.input_pickable = false
+#	_parent.input_pickable = false
 #	_parent.connect("mouse_entered", self, "_on_mouse_entered")
 #	_parent.connect("mouse_exited", self, "_on_mouse_exited")
 	connect("mouse_entered", self, "_on_mouse_entered")
@@ -21,13 +21,13 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	# This is here instead of _unhandled_input so you can drag while panning
 	if _is_held:
-		owner.global_position = owner.get_global_mouse_position() - _click_position
+		owner.rect_position = owner.get_global_mouse_position() - _click_position
 
 
 func _gui_input(event: InputEvent) -> void:
 #	if _is_mouse_inside and event.is_action("select"):
 	if event.is_action("select"):
-		print(_parent.paper_name)
+#		print(_parent.paper_name)
 		event = event as InputEventMouseButton
 
 		# To keep mouse inside window when dragging
@@ -36,6 +36,7 @@ func _gui_input(event: InputEvent) -> void:
 				else Input.MOUSE_MODE_VISIBLE)
 		Input.mouse_mode = mouse_mode
 
+		_parent.raise()
 		_is_held = event.pressed
 		if _is_held:
 			_click_position = owner.get_local_mouse_position()

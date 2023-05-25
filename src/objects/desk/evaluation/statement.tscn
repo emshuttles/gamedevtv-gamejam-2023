@@ -1,4 +1,6 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/fonts/regular_bold.tres" type="DynamicFont" id=1]
 
 [node name="Statement" type="MarginContainer"]
 margin_right = 684.0
@@ -8,21 +10,29 @@ margin_bottom = 282.0
 margin_right = 684.0
 margin_bottom = 282.0
 
-[node name="Label" type="Label" parent="VBoxContainer"]
+[node name="StatementNum" type="Label" parent="VBoxContainer"]
 margin_right = 684.0
-margin_bottom = 14.0
+margin_bottom = 24.0
+custom_fonts/font = ExtResource( 1 )
 text = "Statement X"
 
-[node name="Label2" type="Label" parent="VBoxContainer"]
-margin_top = 18.0
+[node name="StatementWording" type="Label" parent="VBoxContainer"]
+margin_top = 28.0
 margin_right = 684.0
-margin_bottom = 32.0
+margin_bottom = 42.0
 text = "Lorem ipsum sjdfpçojsdklfç"
+autowrap = true
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+margin_top = 46.0
+margin_right = 684.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 0, 18 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 36.0
+margin_top = 68.0
 margin_right = 684.0
-margin_bottom = 60.0
+margin_bottom = 92.0
 size_flags_horizontal = 3
 
 [node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
@@ -32,7 +42,7 @@ margin_bottom = 19.0
 size_flags_horizontal = 3
 text = "Strongly Disagree"
 
-[node name="CheckBox" type="CheckBox" parent="VBoxContainer/HBoxContainer"]
+[node name="CheckBox1" type="CheckBox" parent="VBoxContainer/HBoxContainer"]
 margin_left = 115.0
 margin_right = 206.0
 margin_bottom = 24.0

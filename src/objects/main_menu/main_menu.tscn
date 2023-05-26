@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/main_menu/office.jpg" type="Texture" id=1]
 [ext_resource path="res://src/objects/main_menu/main_menu.gd" type="Script" id=2]
 [ext_resource path="res://assets/audio/music/violin.mp3" type="AudioStream" id=3]
+[ext_resource path="res://src/themes/menu_button.tres" type="Theme" id=4]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -158,6 +159,7 @@ margin_bottom = 1080.0
 margin_right = 371.0
 margin_bottom = 1020.0
 size_flags_horizontal = 3
+theme = ExtResource( 4 )
 alignment = 1
 
 [node name="ButtonWork" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]

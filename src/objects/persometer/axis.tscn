@@ -16,7 +16,7 @@ margin_right = 117.0
 margin_bottom = 39.0
 
 [node name="AxisHigher" type="Sprite" parent="Control"]
-position = Vector2( 296, 1 )
+position = Vector2( 296, 7 )
 texture = ExtResource( 4 )
 
 [node name="Warmth" type="Sprite" parent="Control"]
@@ -36,5 +36,5 @@ max_value = 5.0
 value = 1.0
 
 [node name="AxisLower" type="Sprite" parent="."]
-position = Vector2( 158, 1 )
+position = Vector2( 152, 4 )
 texture = ExtResource( 3 )

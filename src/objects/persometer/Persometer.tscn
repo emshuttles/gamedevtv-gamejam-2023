@@ -6,7 +6,7 @@
 [ext_resource path="res://src/objects/persometer/power.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/persometer/activator_small.png" type="Texture" id=5]
 [ext_resource path="res://src/themes/persometer.tres" type="Theme" id=6]
-[ext_resource path="res://assets/persometer/center.png" type="Texture" id=7]
+[ext_resource path="res://assets/persometer/center_shadow.png" type="Texture" id=7]
 [ext_resource path="res://assets/persometer/activator_small_highlight.png" type="Texture" id=8]
 [ext_resource path="res://assets/persometer/activator_small_pressed.png" type="Texture" id=9]
 
@@ -203,10 +203,10 @@ theme = ExtResource( 6 )
 script = ExtResource( 2 )
 
 [node name="Draggable" type="Control" parent="."]
-margin_left = -81.0
-margin_top = -252.0
-margin_right = 266.0
-margin_bottom = 100.0
+margin_left = -87.0
+margin_top = -404.0
+margin_right = 436.0
+margin_bottom = 122.0
 script = ExtResource( 3 )
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -228,7 +228,7 @@ position = Vector2( 17, 17 )
 rotation = -0.785398
 
 [node name="Center" type="Sprite" parent="."]
-position = Vector2( 16, 13 )
+position = Vector2( 6, 21 )
 texture = ExtResource( 7 )
 
 [node name="ButtonActivate" type="TextureButton" parent="."]

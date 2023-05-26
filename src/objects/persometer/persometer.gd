@@ -63,4 +63,4 @@ func _on_Draggable_drag_ended() -> void:
 			for axis in axes.values():
 				axis = axis as Axis
 				axis.reset_warmth()
-			
+

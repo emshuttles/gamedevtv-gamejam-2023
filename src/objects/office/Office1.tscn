@@ -5,18 +5,23 @@
 [ext_resource path="res://src/objects/desk/Paper.tscn" type="PackedScene" id=3]
 
 [node name="Office" instance=ExtResource( 1 )]
+engineer_quota = 1
+art_therapist_quota = 1
 
 [node name="Evaluation1" parent="." index="3" instance=ExtResource( 3 )]
 margin_left = 3736.0
 margin_top = -1456.0
 margin_right = 3736.0
 margin_bottom = -1456.0
+desired_job = 1
 
 [node name="Evaluation2" parent="." index="4" instance=ExtResource( 3 )]
 margin_left = 3144.0
 margin_top = -1368.0
 margin_right = 3144.0
 margin_bottom = -1368.0
+correct_job = 1
+desired_job = 2
 
 [node name="TrayEngineer" parent="." index="5" instance=ExtResource( 2 )]
 position = Vector2( -2200, -624 )

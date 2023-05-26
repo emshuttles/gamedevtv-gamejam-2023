@@ -8,9 +8,9 @@ const JOB_NAMES := {
 	Enums.Job.TOY_MAKER: "Toy Maker",
 }
 
-export(Enums.Job) var job: int
+export(Enums.Job) var job
 
-var papers_held := [] # of Papers
+var papers_held := [] # of Paper
 
 onready var label := $Label as Label
 

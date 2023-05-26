@@ -9,6 +9,16 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Node2D",
+"class": "Axis",
+"language": "GDScript",
+"path": "res://src/objects/persometer/axis.gd"
+}, {
+"base": "Reference",
+"class": "Candidate",
+"language": "GDScript",
+"path": "res://src/main/candidate.gd"
+}, {
 "base": "Control",
 "class": "Draggable",
 "language": "GDScript",
@@ -35,6 +45,8 @@ _global_script_classes=[ {
 "path": "res://src/objects/desk/tray.gd"
 } ]
 _global_script_class_icons={
+"Axis": "",
+"Candidate": "",
 "Draggable": "",
 "Paper": "",
 "Power": "",

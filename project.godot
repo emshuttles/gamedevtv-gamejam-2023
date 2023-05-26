@@ -13,20 +13,34 @@ _global_script_classes=[ {
 "class": "Draggable",
 "language": "GDScript",
 "path": "res://src/components/draggable.gd"
+}, {
+"base": "Control",
+"class": "Paper",
+"language": "GDScript",
+"path": "res://src/objects/desk/paper.gd"
+}, {
+"base": "Area2D",
+"class": "Tray",
+"language": "GDScript",
+"path": "res://src/objects/desk/tray.gd"
 } ]
 _global_script_class_icons={
-"Draggable": ""
+"Draggable": "",
+"Paper": "",
+"Tray": ""
 }
 
 [application]
 
 config/name="GameDev.tv Game Jam 2023"
-run/main_scene="res://src/objects/Office.tscn"
+run/main_scene="res://src/main/Game.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 Signals="*res://src/autoload/signals.gd"
+Enums="*res://src/autoload/enums.gd"
+Consts="*res://src/autoload/consts.gd"
 Scenes="*res://src/autoload/scenes.tscn"
 
 [display]

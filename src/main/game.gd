@@ -1,6 +1,9 @@
 extends Node
 
 
+var day: int = 0
+
+
 func _ready() -> void:
 	Signals.connect("scene_transition",self,"new_scene")
 

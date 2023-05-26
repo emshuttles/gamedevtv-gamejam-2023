@@ -13,4 +13,5 @@ extents = Vector2( 91.9536, 87.0995 )
 position = Vector2( 195, 224 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Paper"]
+position = Vector2( 302, 26 )
 shape = SubResource( 1 )

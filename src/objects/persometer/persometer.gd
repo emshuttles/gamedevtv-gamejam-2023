@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 
 export var target_x:int = 3

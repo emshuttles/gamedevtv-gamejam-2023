@@ -1,0 +1,67 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/themes/base_theme.tres" type="Theme" id=1]
+[ext_resource path="res://src/objects/desk/evaluation/statement.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/content/headers/headers.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/content/headers/name.tscn" type="PackedScene" id=4]
+
+[node name="EvaluationContent" type="MarginContainer"]
+margin_right = 931.0
+margin_bottom = 1551.0
+mouse_filter = 2
+theme = ExtResource( 1 )
+custom_constants/margin_right = 100
+custom_constants/margin_top = 100
+custom_constants/margin_left = 100
+custom_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 100.0
+margin_top = 100.0
+margin_right = 831.0
+margin_bottom = 1451.0
+mouse_filter = 2
+custom_constants/separation = 12
+
+[node name="Headers" type="VBoxContainer" parent="VBoxContainer" instance=ExtResource( 3 )]
+margin_right = 731.0
+margin_bottom = 398.0
+rect_pivot_offset = Vector2( -783, 224 )
+
+[node name="Name" type="VBoxContainer" parent="VBoxContainer" instance=ExtResource( 4 )]
+margin_top = 410.0
+margin_right = 731.0
+margin_bottom = 501.0
+mouse_filter = 2
+
+[node name="Statements" type="VBoxContainer" parent="VBoxContainer"]
+margin_top = 513.0
+margin_right = 731.0
+margin_bottom = 1351.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 50
+
+[node name="Statement1" type="MarginContainer" parent="VBoxContainer/Statements" instance=ExtResource( 2 )]
+margin_right = 731.0
+margin_bottom = 137.0
+mouse_filter = 2
+
+[node name="Statement2" type="MarginContainer" parent="VBoxContainer/Statements" instance=ExtResource( 2 )]
+margin_top = 187.0
+margin_right = 731.0
+margin_bottom = 351.0
+mouse_filter = 2
+
+[node name="Statement3" type="MarginContainer" parent="VBoxContainer/Statements" instance=ExtResource( 2 )]
+margin_top = 401.0
+margin_right = 731.0
+margin_bottom = 538.0
+mouse_filter = 2
+
+[node name="Statement4" type="MarginContainer" parent="VBoxContainer/Statements" instance=ExtResource( 2 )]
+margin_top = 588.0
+margin_right = 731.0
+margin_bottom = 780.0
+mouse_filter = 2

@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://src/objects/office.gd" type="Script" id=1]
+[ext_resource path="res://src/objects/desk/Desk.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/objects/desk/Tray.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/objects/desk/Paper.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/objects/Camera.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/objects/persometer/Persometer.tscn" type="PackedScene" id=6]
+
+[node name="Office" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Camera" parent="." instance=ExtResource( 5 )]
+position = Vector2( 960, 540 )
+
+[node name="Desk" parent="." instance=ExtResource( 2 )]
+position = Vector2( 960, 540 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Inbox" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4200, -752 )
+
+[node name="Evaluation" parent="." instance=ExtResource( 4 )]
+margin_left = 3736.0
+margin_top = -1456.0
+margin_right = 3736.0
+margin_bottom = -1456.0
+
+[node name="Evaluation2" parent="." instance=ExtResource( 4 )]
+margin_left = 3144.0
+margin_top = -1368.0
+margin_right = 3144.0
+margin_bottom = -1368.0
+
+[node name="Persometer" parent="." instance=ExtResource( 6 )]
+margin_left = 3181.0
+margin_top = -77.0
+margin_right = 3181.0
+margin_bottom = -77.0

@@ -19,6 +19,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/objects/desk/paper.gd"
 }, {
+"base": "Node2D",
+"class": "Power",
+"language": "GDScript",
+"path": "res://src/objects/persometer/power.gd"
+}, {
 "base": "Reference",
 "class": "Result",
 "language": "GDScript",
@@ -32,6 +37,7 @@ _global_script_classes=[ {
 _global_script_class_icons={
 "Draggable": "",
 "Paper": "",
+"Power": "",
 "Result": "",
 "Tray": ""
 }

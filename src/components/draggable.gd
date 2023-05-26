@@ -9,6 +9,9 @@ var _click_position: Vector2
 onready var _parent: CanvasItem = get_parent()
 
 
+signal drag_ended()
+
+
 func _process(_delta: float) -> void:
 	# This is here instead of _unhandled_input so you can drag while panning
 	if _is_held:
@@ -29,3 +32,5 @@ func _gui_input(event: InputEvent) -> void:
 		_is_held = event.pressed
 		if _is_held:
 			_click_position = owner.get_local_mouse_position()
+		else:
+			emit_signal("drag_ended")

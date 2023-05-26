@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/objects/office.gd" type="Script" id=1]
 [ext_resource path="res://src/objects/desk/Desk.tscn" type="PackedScene" id=2]
@@ -6,9 +6,6 @@
 [ext_resource path="res://src/objects/desk/Paper.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/objects/Camera.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/objects/persometer/Persometer.tscn" type="PackedScene" id=6]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 759.477, 812.55 )
 
 [node name="Office" type="Node"]
 script = ExtResource( 1 )
@@ -38,10 +35,7 @@ margin_right = 3144.0
 margin_bottom = -1368.0
 
 [node name="Persometer" parent="." instance=ExtResource( 6 )]
-
-[node name="Paper" type="Area2D" parent="."]
-position = Vector2( 3075, -90 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paper"]
-position = Vector2( 833.523, -546.45 )
-shape = SubResource( 1 )
+margin_left = 3181.0
+margin_top = -77.0
+margin_right = 3181.0
+margin_bottom = -77.0

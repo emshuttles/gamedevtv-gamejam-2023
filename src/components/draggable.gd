@@ -1,5 +1,5 @@
 class_name Draggable
-extends Control
+extends Node
 
 
 var _is_mouse_inside := false
@@ -10,6 +10,10 @@ onready var _parent: CanvasItem = get_parent()
 
 
 signal drag_ended()
+
+
+func _ready() -> void:
+	_parent.connect("gui_input",self,"_gui_input")
 
 
 func _process(_delta: float) -> void:
@@ -29,6 +33,8 @@ func _gui_input(event: InputEvent) -> void:
 		Input.mouse_mode = mouse_mode
 
 		_parent.raise()
+		Signals.emit_signal("raised")
+		
 		_is_held = event.pressed
 		if _is_held:
 			_click_position = owner.get_local_mouse_position()

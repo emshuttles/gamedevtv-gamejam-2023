@@ -14,10 +14,15 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/objects/persometer/axis.gd"
 }, {
-"base": "Control",
+"base": "Node",
 "class": "Draggable",
 "language": "GDScript",
 "path": "res://src/components/draggable.gd"
+}, {
+"base": "Control",
+"class": "Persometer",
+"language": "GDScript",
+"path": "res://src/objects/persometer/persometer.gd"
 }, {
 "base": "Node2D",
 "class": "Power",
@@ -27,6 +32,7 @@ _global_script_classes=[ {
 _global_script_class_icons={
 "Axis": "",
 "Draggable": "",
+"Persometer": "",
 "Power": ""
 }
 

@@ -22,6 +22,12 @@ __meta__ = {
 [node name="Inbox" parent="." instance=ExtResource( 3 )]
 position = Vector2( 4200, -752 )
 
-[node name="Evaluation1" parent="." instance=ExtResource( 4 )]
+[node name="Evaluation" parent="." instance=ExtResource( 4 )]
+margin_left = 1132.0
+margin_top = 646.0
+margin_right = 1132.0
+margin_bottom = 646.0
 
 [node name="Persometer" parent="." instance=ExtResource( 6 )]
+
+[node name="Evaluation2" parent="." instance=ExtResource( 4 )]

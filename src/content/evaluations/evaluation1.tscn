@@ -1,21 +1,24 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://src/content/paper_base.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/content/evaluation_base.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/components/draggable.gd" type="Script" id=3]
 
-[node name="Evaluation" type="Node"]
+[node name="Evaluation" type="Control"]
+mouse_filter = 1
 
 [node name="PaperBase" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 808.0
+margin_bottom = 1384.0
+mouse_filter = 1
 
 [node name="Color" parent="PaperBase" index="0"]
 margin_right = 808.0
 margin_bottom = 1384.0
 
 [node name="TextureRect" parent="PaperBase" index="1"]
-margin_right = 808.0
-margin_bottom = 1384.0
-
-[node name="Draggable" parent="PaperBase" index="2"]
 margin_right = 808.0
 margin_bottom = 1384.0
 
@@ -292,6 +295,9 @@ margin_left = 482.0
 margin_top = 4.0
 margin_right = 608.0
 margin_bottom = 28.0
+
+[node name="Draggable" type="Node" parent="."]
+script = ExtResource( 3 )
 
 [editable path="PaperBase"]
 [editable path="PaperBase/Evaluation"]

@@ -1,3 +1,4 @@
+class_name Persometer
 extends Control
 
 
@@ -7,6 +8,7 @@ export var use_max:int = 4
 export var use_count:int = 0
 
 var is_over_evaluation:bool = false
+var last_entered_area:Area2D
 
 onready var node_animation_player:AnimationPlayer = $"%AnimationPlayer"
 onready var button_activate := $"%ButtonActivate"
@@ -20,6 +22,7 @@ onready var uses:Array = $Uses.get_children()
 
 func _ready() -> void:
 	node_animation_player.assigned_animation = "close"
+	Signals.connect("raised",self,"_on_raised")
 
 
 func _on_ButtonActivate_pressed() -> void:
@@ -34,21 +37,27 @@ func _on_ButtonActivate_pressed() -> void:
 		axes.y.check(target_y)
 
 
+
+
+
 func _on_Area2D_area_entered(area: Area2D) -> void:
+	last_entered_area = area
 	for i in uses.size():
 		if use_count <= i:
 			var use:Power = uses[i]
 			use.power_up()
 	is_over_evaluation = true
 #	button_activate.disabled = false
-	print("collision with: ", area.name)
+	print("entered: ", area.owner.get_parent().name)
 
 
 
 func _on_Area2D_area_exited(area: Area2D) -> void:
-	for use in uses:
-		use.power_down()
-	is_over_evaluation = false
+	if area == last_entered_area:
+		print("left: ", area.owner.get_parent().name)
+		for use in uses:
+			use.power_down()
+		is_over_evaluation = false
 #	button_activate.disabled = true
 
 
@@ -64,3 +73,7 @@ func _on_Draggable_drag_ended() -> void:
 				axis = axis as Axis
 				axis.reset_warmth()
 			
+
+func _on_raised():
+	# NOTHING rises above me
+	raise()

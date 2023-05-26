@@ -2,7 +2,9 @@
 
 [ext_resource path="res://src/themes/paper_with_shadow.tres" type="Theme" id=1]
 [ext_resource path="res://assets/office/paper.png" type="Texture" id=2]
-[ext_resource path="res://src/components/draggable.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 416, 703.5 )
 
 [node name="PaperBase" type="MarginContainer"]
 anchor_right = 1.0
@@ -29,7 +31,8 @@ texture = ExtResource( 2 )
 expand = true
 stretch_mode = 2
 
-[node name="Draggable" type="Control" parent="."]
-margin_right = 710.0
-margin_bottom = 927.0
-script = ExtResource( 3 )
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 406, 693.5 )
+shape = SubResource( 1 )

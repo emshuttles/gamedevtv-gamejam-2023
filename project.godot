@@ -9,13 +9,25 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Node2D",
+"class": "Axis",
+"language": "GDScript",
+"path": "res://src/objects/persometer/axis.gd"
+}, {
 "base": "Control",
 "class": "Draggable",
 "language": "GDScript",
 "path": "res://src/components/draggable.gd"
+}, {
+"base": "Node2D",
+"class": "Power",
+"language": "GDScript",
+"path": "res://src/objects/persometer/power.gd"
 } ]
 _global_script_class_icons={
-"Draggable": ""
+"Axis": "",
+"Draggable": "",
+"Power": ""
 }
 
 [application]

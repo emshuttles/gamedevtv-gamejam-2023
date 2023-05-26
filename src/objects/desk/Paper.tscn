@@ -4,9 +4,13 @@
 [ext_resource path="res://src/components/draggable.gd" type="Script" id=2]
 [ext_resource path="res://src/objects/desk/evaluation/statement.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/themes/paper_with_shadow.tres" type="Theme" id=8]
+[ext_resource path="res://src/objects/desk/paper.gd" type="Script" id=11]
 
-[node name="Paper" type="Control"]
-script = ExtResource( 3 )
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 465.5, 775.5 )
+
+[node name="Paper" type="Control" groups=["paper"]]
+script = ExtResource( 11 )
 
 [node name="Color" type="Panel" parent="."]
 margin_right = 931.0
@@ -29,3 +33,17 @@ stretch_mode = 2
 margin_right = 931.0
 margin_bottom = 1551.0
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Area2D" type="Area2D" parent="."]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+position = Vector2( 465.5, 775.5 )
+shape = SubResource( 1 )

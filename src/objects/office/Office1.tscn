@@ -5,8 +5,6 @@
 [ext_resource path="res://src/objects/desk/Paper.tscn" type="PackedScene" id=3]
 
 [node name="Office" instance=ExtResource( 1 )]
-quota_engineer = 1
-quota_art_therapist = 1
 
 [node name="Evaluation1" parent="." index="3" instance=ExtResource( 3 )]
 margin_left = 3736.0

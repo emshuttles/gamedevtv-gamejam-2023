@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/objects/day_x/day_x.gd" type="Script" id=1]
 [ext_resource path="res://assets/audio/music/fanfare.mp3" type="AudioStream" id=2]
+[ext_resource path="res://src/fonts/title.tres" type="DynamicFont" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Fade_In_Out"
@@ -99,8 +100,9 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="LabelDay" type="Label" parent="CenterContainer"]
-margin_left = 942.0
-margin_top = 533.0
-margin_right = 978.0
-margin_bottom = 547.0
+margin_left = 848.0
+margin_top = 477.0
+margin_right = 1072.0
+margin_bottom = 603.0
+custom_fonts/font = ExtResource( 3 )
 text = "Day X"

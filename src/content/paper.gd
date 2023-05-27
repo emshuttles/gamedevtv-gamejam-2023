@@ -3,7 +3,7 @@ extends Control
 
 
 export(bool) var is_evaluation
-export(bool) var is_job_change
+export(bool) var is_job_request
 export(String) var candidate_name
 export(Enums.Job) var correct_job
 export(int) var kind

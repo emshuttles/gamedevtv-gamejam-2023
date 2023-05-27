@@ -8,8 +8,9 @@ export(int) var toy_maker_quota
 var _trays := [] # of Tray
 var _papers := [] # of Paper
 
-onready var game := get_parent() as Node
-onready var end_button := find_node("EndButton") as Button
+onready var game: Node = get_parent()
+onready var letter_spawn: Position2D = $"%LetterSpawn"
+onready var end_button: Button = $"%EndButton"
 
 
 func _ready() -> void:
@@ -17,6 +18,35 @@ func _ready() -> void:
 	_papers = get_tree().get_nodes_in_group("paper")
 
 	Signals.connect("tray_updated", self, "_on_tray_updated")
+
+	_create_job_requests()
+
+
+func _create_job_requests() -> void:
+	for candidate in game.want_different_job:
+		candidate = candidate as Candidate
+		var job_request: Paper = Scenes.job_request.instance()
+		_set_paper_variables(job_request, candidate)
+		var spawn_point: Vector2 = _get_spawn_point()
+		job_request.rect_position = spawn_point
+		add_child(job_request)
+
+
+func _set_paper_variables(paper: Paper, candidate: Candidate) -> void:
+	paper.candidate_name = candidate.name
+	paper.correct_job = candidate.correct_job
+	paper.desired_job = candidate.desired_job
+
+
+func _get_spawn_point() -> Vector2:
+	var random_x_offset: int = randi() % 20
+	var x_offset_sign: int = -1 if randf() < 0.5 else 1
+	var random_y_offset: int = randi() % 20
+	var y_offset_sign: int = -1 if randf() < 0.5 else 1
+	var spawn_point := Vector2(letter_spawn.position.x, letter_spawn.position.y)
+	spawn_point.x += x_offset_sign * random_x_offset
+	spawn_point.y += y_offset_sign * random_y_offset
+	return spawn_point
 
 
 func _on_EndDay_pressed() -> void:
@@ -63,7 +93,7 @@ func _on_tray_updated() -> void:
 	var num_of_papers_to_file: int = 0
 	for paper in _papers:
 		# paper could be instructions, etc.
-		if paper is Paper and (paper.is_evaluation or paper.is_job_change):
+		if paper is Paper and (paper.is_evaluation or paper.is_job_request):
 			num_of_papers_to_file += 1
 
 	end_button.disabled = num_of_filed_papers != num_of_papers_to_file

@@ -4,8 +4,8 @@ extends MarginContainer
 var has_skipped:bool = false
 
 onready var animation_player:AnimationPlayer = $"%AnimationPlayer"
-onready var game := get_parent() as Node
-onready var label := $CenterContainer/LabelDay as Label
+onready var game: Node = get_parent()
+onready var label: Label = $CenterContainer/LabelDay
 
 
 func _ready() -> void:

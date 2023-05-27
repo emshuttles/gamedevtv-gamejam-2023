@@ -40,7 +40,7 @@ func _gui_input(event: InputEvent) -> void:
 
 
 func _snap_to_tray() -> void:
-	if not (_parent is Paper and (_parent.is_evaluation or _parent.is_job_change)):
+	if not (_parent is Paper and (_parent.is_evaluation or _parent.is_job_request)):
 		return
 
 	_parent = _parent as Paper

@@ -1,6 +1,11 @@
 extends Node
 
 
+const JOB_NAMES := {
+	Enums.Job.ENGINEER: "Engineer",
+	Enums.Job.ART_THERAPIST: "Art Therapist",
+	Enums.Job.TOY_MAKER: "Toy Maker",
+}
 const IDEAL_TRAITS := {
 	Enums.Job.ENGINEER: {
 		Enums.Trait.ANALYTICAL: 5,

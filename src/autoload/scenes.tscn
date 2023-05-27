@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/autoload/scenes.gd" type="Script" id=1]
 [ext_resource path="res://src/objects/office/Office1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/objects/day_x/day_x.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/objects/office/Office3.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/objects/office/Office2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/content/letters/JobRequest.tscn" type="PackedScene" id=6]
 
 [node name="Node" type="Node"]
 script = ExtResource( 1 )
@@ -12,3 +13,4 @@ office_1 = ExtResource( 2 )
 office_2 = ExtResource( 5 )
 office_3 = ExtResource( 4 )
 day_x = ExtResource( 3 )
+job_request = ExtResource( 6 )

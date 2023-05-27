@@ -30,13 +30,17 @@ margin_right = 1251.0
 margin_bottom = 1930.0
 
 [node name="Evaluation3" parent="." index="7" instance=ExtResource( 3 )]
-margin_left = 3240.0
+margin_left = 3260.0
 margin_top = -1240.0
-margin_right = 4048.0
+margin_right = 4068.0
 margin_bottom = 63.0
+candidate_name = "Luke"
+desired_job = 1
 
 [node name="Evaluation4" parent="." index="8" instance=ExtResource( 3 )]
 margin_left = 3712.0
 margin_top = -832.0
 margin_right = 4520.0
 margin_bottom = 471.0
+candidate_name = "Arden"
+correct_job = 1

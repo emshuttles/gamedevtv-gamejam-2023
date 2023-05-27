@@ -5,7 +5,7 @@
 [ext_resource path="res://src/content/paper.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 101, 163 )
+extents = Vector2( 404, 651.5 )
 
 [node name="Evaluation3" instance=ExtResource( 1 )]
 script = ExtResource( 3 )

@@ -16,6 +16,7 @@ var _is_panning_with_mouse := false
 onready var tween: Tween = $Tween
 
 
+
 func _ready() -> void:
 	var zoom_level: float = _zoom_levels[_zoom_level_index]
 	zoom = Vector2(zoom_level, zoom_level)
@@ -42,7 +43,7 @@ func _process(_delta: float) -> void:
 	global_position = clamped_position
 
 
-func _unhandled_input(event: InputEvent) -> void:
+func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("zoom_in"):
 		event = event as InputEventMouseButton
 		if _zoom_level_index - 1 < 0:
@@ -119,3 +120,6 @@ func _zoom(old_zoom_level: float, new_zoom_level: float, mouse_position: Vector2
 		tween.EASE_OUT
 	)
 	tween.start()
+
+
+

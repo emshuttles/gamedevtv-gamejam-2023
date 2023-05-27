@@ -50,7 +50,7 @@ tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ) ]
+"values": [ Vector2( -69, 69 ) ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -217,6 +217,7 @@ position = Vector2( 90, -78 )
 shape = SubResource( 1 )
 
 [node name="Axes" type="Node2D" parent="."]
+position = Vector2( -69, 69 )
 
 [node name="AxisX" parent="Axes" instance=ExtResource( 1 )]
 unique_name_in_owner = true

@@ -19,7 +19,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/main/candidate.gd"
 }, {
-"base": "Control",
+"base": "Node",
 "class": "Draggable",
 "language": "GDScript",
 "path": "res://src/components/draggable.gd"
@@ -27,7 +27,12 @@ _global_script_classes=[ {
 "base": "Control",
 "class": "Paper",
 "language": "GDScript",
-"path": "res://src/objects/desk/paper.gd"
+"path": "res://src/content/paper.gd"
+}, {
+"base": "Control",
+"class": "Persometer",
+"language": "GDScript",
+"path": "res://src/objects/persometer/persometer.gd"
 }, {
 "base": "Node2D",
 "class": "Power",
@@ -49,6 +54,7 @@ _global_script_class_icons={
 "Candidate": "",
 "Draggable": "",
 "Paper": "",
+"Persometer": "",
 "Power": "",
 "Result": "",
 "Tray": ""

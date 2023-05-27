@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/themes/base_theme.tres" type="Theme" id=1]
+[ext_resource path="res://src/content/headers/headers.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/content/headers/name.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/content/evaluations/statement.tscn" type="PackedScene" id=4]
+
+[node name="Content" type="MarginContainer"]
+margin_right = 808.0
+margin_bottom = 1303.0
+mouse_filter = 2
+theme = ExtResource( 1 )
+custom_constants/margin_right = 100
+custom_constants/margin_top = 100
+custom_constants/margin_left = 100
+custom_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 100.0
+margin_top = 100.0
+margin_right = 708.0
+margin_bottom = 1203.0
+mouse_filter = 2
+custom_constants/separation = 12
+
+[node name="Headers" parent="VBoxContainer" instance=ExtResource( 2 )]
+margin_right = 608.0
+margin_bottom = 398.0
+rect_pivot_offset = Vector2( -783, 224 )
+
+[node name="Name" parent="VBoxContainer" instance=ExtResource( 3 )]
+margin_right = 608.0
+
+[node name="Statements" type="VBoxContainer" parent="VBoxContainer"]
+margin_top = 513.0
+margin_right = 608.0
+margin_bottom = 1103.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 50
+
+[node name="Statement1" parent="VBoxContainer/Statements" instance=ExtResource( 4 )]
+margin_right = 608.0
+margin_bottom = 110.0
+
+[node name="Statement2" parent="VBoxContainer/Statements" instance=ExtResource( 4 )]
+margin_top = 160.0
+margin_right = 608.0
+margin_bottom = 270.0
+
+[node name="Statement3" parent="VBoxContainer/Statements" instance=ExtResource( 4 )]
+margin_top = 320.0
+margin_right = 608.0
+margin_bottom = 430.0
+
+[node name="Statement4" parent="VBoxContainer/Statements" instance=ExtResource( 4 )]
+margin_top = 480.0
+margin_right = 608.0
+margin_bottom = 590.0

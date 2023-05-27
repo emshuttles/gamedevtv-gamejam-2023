@@ -1,16 +1,23 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/themes/paper_with_shadow.tres" type="Theme" id=1]
 [ext_resource path="res://assets/office/paper.png" type="Texture" id=2]
+[ext_resource path="res://src/themes/base_theme.tres" type="Theme" id=3]
+[ext_resource path="res://src/components/draggable.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 416, 703.5 )
 
 [node name="PaperBase" type="MarginContainer" groups=["paper"]]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_right = -1210.0
-margin_bottom = -153.0
+margin_right = 710.0
+margin_bottom = 927.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = ExtResource( 3 )
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
 
 [node name="Color" type="Panel" parent="."]
 margin_right = 710.0
@@ -36,3 +43,6 @@ stretch_mode = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 406, 693.5 )
 shape = SubResource( 1 )
+
+[node name="Draggable" type="Node" parent="."]
+script = ExtResource( 4 )

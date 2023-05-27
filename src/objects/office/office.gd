@@ -9,7 +9,7 @@ var _trays := [] # of Tray
 var _papers := [] # of Paper
 
 onready var game := get_parent() as Node
-onready var end_button := $EndButton as Button
+onready var end_button := find_node("EndButton") as Button
 
 
 func _ready() -> void:
@@ -60,4 +60,9 @@ func _on_tray_updated() -> void:
 		tray = tray as Tray
 		num_of_filed_papers += tray.papers_held.size()
 
-	end_button.disabled = num_of_filed_papers != _papers.size()
+	var num_of_evaluations:int
+	for paper in _papers:
+		if paper is Paper and paper.is_evaluation:
+			num_of_evaluations += 1
+	
+	end_button.disabled = num_of_filed_papers != num_of_evaluations

@@ -1,9 +1,9 @@
 extends Node
 
 
-export(int, 3) var engineer_quota
-export(int, 3) var art_therapist_quota
-export(int, 3) var toy_maker_quota
+export(int) var engineer_quota
+export(int) var art_therapist_quota
+export(int) var toy_maker_quota
 
 var _trays := [] # of Tray
 var _papers := [] # of Paper

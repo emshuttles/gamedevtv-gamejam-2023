@@ -17,18 +17,30 @@ position = Vector2( -872, -624 )
 job = 1
 
 [node name="Evaluation1" parent="." index="5" instance=ExtResource( 3 )]
-margin_left = 3696.0
-margin_top = -944.0
-margin_right = 3696.0
-margin_bottom = -944.0
+margin_left = 2728.0
+margin_top = -1368.0
+margin_right = 2728.0
+margin_bottom = -1368.0
+is_evaluation = true
+kind = 1
+analytical = 5
+engineer_interest = 5
+art_therapist_interest = 1
+toy_maker_interest = 3
 
 [node name="Evaluation2" parent="." index="6" instance=ExtResource( 3 )]
-margin_left = 3168.0
-margin_top = -1448.0
-margin_right = 3168.0
-margin_bottom = -1448.0
+margin_left = 3680.0
+margin_top = -1368.0
+margin_right = 3680.0
+margin_bottom = -1368.0
+is_evaluation = true
 correct_job = 1
+kind = 5
+analytical = 1
 desired_job = 1
+engineer_interest = 1
+art_therapist_interest = 5
+toy_maker_interest = 3
 
 [node name="Persometer" parent="." index="7" instance=ExtResource( 4 )]
 margin_left = 3181.0

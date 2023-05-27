@@ -268,7 +268,6 @@ anims/activate = SubResource( 5 )
 anims/close = SubResource( 4 )
 anims/open = SubResource( 3 )
 
-[connection signal="drag_ended" from="Draggable" to="." method="_on_Draggable_drag_ended"]
 [connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_Area2D_area_exited"]
 [connection signal="pressed" from="ButtonActivate" to="." method="_on_ButtonActivate_pressed"]

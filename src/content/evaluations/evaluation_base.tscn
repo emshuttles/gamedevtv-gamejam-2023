@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://src/themes/base_theme.tres" type="Theme" id=1]
-[ext_resource path="res://src/objects/desk/evaluation/statement.tscn" type="PackedScene" id=4]
-[ext_resource path="res://src/content/headers/headers.tscn" type="PackedScene" id=5]
-[ext_resource path="res://src/content/headers/name.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/content/headers/headers.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/content/headers/name.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/content/evaluations/statement.tscn" type="PackedScene" id=4]
 
 [node name="Content" type="MarginContainer"]
 margin_right = 808.0
@@ -23,12 +23,12 @@ margin_bottom = 1203.0
 mouse_filter = 2
 custom_constants/separation = 12
 
-[node name="Headers" parent="VBoxContainer" instance=ExtResource( 5 )]
+[node name="Headers" parent="VBoxContainer" instance=ExtResource( 2 )]
 margin_right = 608.0
 margin_bottom = 398.0
 rect_pivot_offset = Vector2( -783, 224 )
 
-[node name="Name" parent="VBoxContainer" instance=ExtResource( 6 )]
+[node name="Name" parent="VBoxContainer" instance=ExtResource( 3 )]
 margin_right = 608.0
 
 [node name="Statements" type="VBoxContainer" parent="VBoxContainer"]

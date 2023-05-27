@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 416, 703.5 )
 
-[node name="PaperBase" type="MarginContainer"]
+[node name="PaperBase" type="MarginContainer" groups=["paper"]]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = -1210.0

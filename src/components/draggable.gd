@@ -34,7 +34,7 @@ func _gui_input(event: InputEvent) -> void:
 
 		_parent.raise()
 		Signals.emit_signal("raised")
-		
+
 		_is_held = event.pressed
 		if _is_held:
 			_click_position = owner.get_local_mouse_position()

@@ -7,6 +7,7 @@ export var use_count:int = 0
 
 var is_over_evaluation:bool = false
 var last_entered_area:Area2D
+var active_evaluation:Paper
 
 var _target_x:int = 0 # Kind
 var _target_y:int = 0 # Analytical
@@ -37,10 +38,17 @@ func _on_ButtonActivate_pressed() -> void:
 
 
 func _on_Area2D_area_entered(area: Area2D) -> void:
-	if not (area.owner.owner is Paper and area.owner.owner.is_evaluation):
+	if not (area.owner is Paper and area.owner.is_evaluation):
 		return
 
-	var evaluation: Paper = area.owner.owner
+	var evaluation: Paper = area.owner
+	remove_highlight_from_paper()
+	
+	active_evaluation = evaluation
+	# Add highlight
+	evaluation.modulate = Color(1,1.1,1.1)
+	
+	
 	_target_x = evaluation.kind
 	_target_y = evaluation.analytical
 
@@ -55,10 +63,16 @@ func _on_Area2D_area_entered(area: Area2D) -> void:
 
 func _on_Area2D_area_exited(area: Area2D) -> void:
 	if area == last_entered_area:
+		remove_highlight_from_paper()
 		for use in uses:
 			use.power_down()
 		is_over_evaluation = false
 	_animate_axes()
+
+
+func remove_highlight_from_paper():
+	if active_evaluation:
+		active_evaluation.modulate = Color(1,1,1)
 
 
 func _animate_axes() -> void:

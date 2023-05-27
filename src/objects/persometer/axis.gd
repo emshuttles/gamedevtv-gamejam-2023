@@ -22,7 +22,7 @@ func check(target_value:int):
 	elif difference == 1:
 		warmth.modulate = Color(0.8,0.5,0.2,1)
 	elif difference == 2:
-		warmth.modulate = Color(0.5,0.5,0.5,1)
+		warmth.modulate = Color(0.4,0.5,0.6,1)
 	elif difference == 3:
 		warmth.modulate = Color(0.2,0.5,0.8,1)
 	elif difference == 4:

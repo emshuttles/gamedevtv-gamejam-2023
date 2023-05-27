@@ -1,0 +1,208 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://src/content/paper_base.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/illustrations/persometer_fig1.png" type="Texture" id=2]
+[ext_resource path="res://assets/illustrations/persometer_fig2.png" type="Texture" id=3]
+[ext_resource path="res://src/fonts/subtitle.tres" type="DynamicFont" id=4]
+[ext_resource path="res://src/fonts/title.tres" type="DynamicFont" id=5]
+[ext_resource path="res://src/fonts/subtitle_italic.tres" type="DynamicFont" id=6]
+[ext_resource path="res://src/fonts/italic.tres" type="DynamicFont" id=7]
+
+[node name="InstructionsPersometer" instance=ExtResource( 1 )]
+margin_right = 851.0
+margin_bottom = 1506.0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="Color" parent="." index="0"]
+margin_right = 851.0
+margin_bottom = 1506.0
+
+[node name="TextureRect" parent="." index="1"]
+margin_right = 851.0
+margin_bottom = 1506.0
+
+[node name="Control" type="Control" parent="." index="3"]
+margin_right = 851.0
+margin_bottom = 1506.0
+mouse_filter = 2
+
+[node name="fig1" type="TextureRect" parent="Control" index="0"]
+margin_left = 470.0
+margin_top = 365.0
+margin_right = 1122.0
+margin_bottom = 781.0
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 2 )
+
+[node name="Label2" type="Label" parent="Control" index="1"]
+margin_left = 244.0
+margin_top = 526.0
+margin_right = 895.0
+margin_bottom = 558.0
+custom_fonts/font = ExtResource( 6 )
+text = "Fig. 1"
+align = 1
+
+[node name="Control" type="Control" parent="Control" index="2"]
+margin_right = 40.0
+margin_bottom = 40.0
+mouse_filter = 2
+
+[node name="Label3" type="Label" parent="Control/Control" index="0"]
+margin_left = 548.0
+margin_top = 677.0
+margin_right = 594.0
+margin_bottom = 709.0
+custom_fonts/font = ExtResource( 6 )
+text = "Fig. 2"
+align = 1
+
+[node name="Label4" type="Label" parent="Control/Control" index="1"]
+margin_left = 292.0
+margin_top = 473.0
+margin_right = 400.0
+margin_bottom = 505.0
+custom_fonts/font = ExtResource( 6 )
+text = "Guess Sliders"
+align = 1
+
+[node name="Label5" type="Label" parent="Control/Control" index="2"]
+margin_left = 293.0
+margin_top = 577.0
+margin_right = 401.0
+margin_bottom = 644.0
+custom_fonts/font = ExtResource( 6 )
+text = "Personality
+Icons"
+align = 1
+
+[node name="Label6" type="Label" parent="Control/Control" index="3"]
+margin_left = 424.0
+margin_top = 738.0
+margin_right = 545.0
+margin_bottom = 805.0
+custom_fonts/font = ExtResource( 6 )
+text = "Reading Strip"
+align = 1
+
+[node name="Label7" type="Label" parent="Control/Control" index="4"]
+margin_left = 182.0
+margin_top = 772.0
+margin_right = 303.0
+margin_bottom = 839.0
+custom_fonts/font = ExtResource( 6 )
+text = "Activator"
+align = 1
+
+[node name="Label8" type="Label" parent="Control/Control" index="5"]
+margin_left = 71.0
+margin_top = 628.0
+margin_right = 192.0
+margin_bottom = 695.0
+custom_fonts/font = ExtResource( 6 )
+text = "Power
+Indicators"
+align = 1
+
+[node name="Label" type="Label" parent="Control/Control" index="6"]
+margin_left = 31.0
+margin_top = -24.0
+margin_right = 71.0
+
+[node name="fig2" type="TextureRect" parent="Control/Control" index="7"]
+margin_left = 136.0
+margin_top = 397.0
+margin_right = 930.0
+margin_bottom = 1324.0
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+texture = ExtResource( 3 )
+
+[node name="MarginContainer" type="MarginContainer" parent="." index="4"]
+margin_right = 851.0
+margin_bottom = 1506.0
+mouse_filter = 2
+size_flags_horizontal = 0
+custom_constants/margin_right = 100
+custom_constants/margin_top = 100
+custom_constants/margin_left = 100
+custom_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" index="0"]
+margin_left = 100.0
+margin_top = 100.0
+margin_right = 751.0
+margin_bottom = 1406.0
+rect_pivot_offset = Vector2( -858, 85 )
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" index="0"]
+margin_right = 651.0
+margin_bottom = 126.0
+custom_fonts/font = ExtResource( 5 )
+text = "The \"Persometer\""
+align = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer" index="1"]
+margin_top = 130.0
+margin_right = 651.0
+margin_bottom = 130.0
+mouse_filter = 2
+
+[node name="Label5" type="Label" parent="MarginContainer/VBoxContainer" index="2"]
+margin_top = 134.0
+margin_right = 651.0
+margin_bottom = 266.0
+text = "This fine invention allows you to guess two different axes of an animal’s personality.
+
+To ready it for use, place it on top of a Hors-Trudgman Evaluation of Personality and Interests**. See Fig. 1 below."
+autowrap = true
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer" index="1"]
+margin_left = 100.0
+margin_top = 100.0
+margin_right = 751.0
+margin_bottom = 1406.0
+mouse_filter = 2
+custom_constants/separation = 10
+alignment = 2
+
+[node name="Label6" type="Label" parent="MarginContainer/VBoxContainer2" index="0"]
+margin_top = 703.0
+margin_right = 651.0
+margin_bottom = 745.0
+custom_fonts/font = ExtResource( 4 )
+text = "INSTRUCTIONS"
+align = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer2" index="1"]
+margin_top = 755.0
+margin_right = 651.0
+margin_bottom = 1184.0
+text = "1. Use the Guess Sliders to make guesses about the intensity of a personality trait in an animal, from 1 (Very Low) at the base to 5 (Very High) at the tip. Notice that, in this particular Persometer, the vertical axis (gear Personality Icon) allows you to guess how Analytic an animal is, while the horizontal axis (heart Personality Icon) allows you to guess how how Kind they are.
+
+2. Press the Activator Button after making your best guess. One of the Power Indicators will power off to to show that you have one less use left.
+
+3. Look at the Reading Strips. They will display how correct your guess was. The results are color coded:
+- Red means your guess was spot-on.
+- Orange means your guess was close.
+- Blue means your guess was far. The deeper the blue, the farther it was. If this happens, don’t be discouraged: you can make another guess by moving the Guess Sliders and pressing the Activator Button again."
+autowrap = true
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer2" index="2"]
+margin_top = 1194.0
+margin_right = 651.0
+margin_bottom = 1218.0
+rect_min_size = Vector2( 0, 24 )
+mouse_filter = 2
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer2" index="3"]
+margin_top = 1228.0
+margin_right = 651.0
+margin_bottom = 1306.0
+custom_fonts/font = ExtResource( 7 )
+text = "*The Persometer is patented by Sottonon Fullock Enterprises. It has been licensed by the Imperial Office under the Reformed Regulatory Act. Few animals were injured in its development.
+**All rights reserved to the Hors-Trudgman Animal Psychology and Behavior Center."
+autowrap = true

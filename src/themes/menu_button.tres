@@ -2,7 +2,17 @@
 
 [ext_resource path="res://src/fonts/subtitle.tres" type="DynamicFont" id=1]
 
-[sub_resource type="StyleBoxEmpty" id=4]
+[sub_resource type="StyleBoxFlat" id=6]
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.8, 0.8, 0.8, 0.313726 )
+corner_radius_top_left = 100
+corner_radius_bottom_right = 100
+corner_detail = 20
+anti_aliasing_size = 0.6
 
 [sub_resource type="StyleBoxEmpty" id=5]
 
@@ -41,7 +51,7 @@ anti_aliasing_size = 0.6
 
 [resource]
 Button/fonts/font = ExtResource( 1 )
-Button/styles/disabled = SubResource( 4 )
+Button/styles/disabled = SubResource( 6 )
 Button/styles/focus = SubResource( 5 )
 Button/styles/hover = SubResource( 2 )
 Button/styles/normal = SubResource( 1 )

@@ -20,16 +20,16 @@ func _ready() -> void:
 
 
 func _on_Tray_area_entered(area: Area2D) -> void:
-	if not area.owner.owner is Paper:
+	if not area.owner is Paper:
 		return
 
-	papers_held.append(area.owner.owner)
+	papers_held.append(area.owner)
 	Signals.emit_signal("tray_updated")
 
 
 func _on_Tray_area_exited(area: Area2D) -> void:
-	if not area.owner.owner is Paper:
+	if not area.owner is Paper:
 		return
 
-	papers_held.erase(area.owner.owner)
+	papers_held.erase(area.owner)
 	Signals.emit_signal("tray_updated")

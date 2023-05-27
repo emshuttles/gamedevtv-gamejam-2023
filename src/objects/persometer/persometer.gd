@@ -43,12 +43,12 @@ func _on_Area2D_area_entered(area: Area2D) -> void:
 
 	var evaluation: Paper = area.owner
 	remove_highlight_from_paper()
-	
+
 	active_evaluation = evaluation
 	# Add highlight
 	evaluation.modulate = Color(1,1.1,1.1)
-	
-	
+
+
 	_target_x = evaluation.kind
 	_target_y = evaluation.analytical
 

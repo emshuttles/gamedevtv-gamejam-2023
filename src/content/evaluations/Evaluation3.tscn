@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://src/content/paper_base.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/content/evaluations/evaluation_base.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/content/paper.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 101, 163 )
 
 [node name="Evaluation3" instance=ExtResource( 1 )]
 script = ExtResource( 3 )
@@ -15,6 +18,10 @@ margin_bottom = 1303.0
 [node name="TextureRect" parent="." index="1"]
 margin_right = 808.0
 margin_bottom = 1303.0
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2( 404, 651.5 )
+shape = SubResource( 1 )
 
 [node name="Evaluation" parent="." index="4" instance=ExtResource( 2 )]
 

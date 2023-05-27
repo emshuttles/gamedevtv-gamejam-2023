@@ -60,9 +60,10 @@ func _on_tray_updated() -> void:
 		tray = tray as Tray
 		num_of_filed_papers += tray.papers_held.size()
 
-	var num_of_evaluations:int
+	var num_of_papers_to_file: int = 0
 	for paper in _papers:
-		if paper is Paper and paper.is_evaluation:
-			num_of_evaluations += 1
-	
-	end_button.disabled = num_of_filed_papers != num_of_evaluations
+		# paper could be instructions, etc.
+		if paper is Paper and (paper.is_evaluation or paper.is_job_change):
+			num_of_papers_to_file += 1
+
+	end_button.disabled = num_of_filed_papers != num_of_papers_to_file

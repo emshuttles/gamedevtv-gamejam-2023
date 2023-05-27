@@ -11,32 +11,32 @@ engineer_quota = 1
 art_therapist_quota = 1
 
 [node name="TrayEngineer" parent="." index="3" instance=ExtResource( 2 )]
-position = Vector2( -2200, -624 )
+position = Vector2( -2144, -624 )
 
 [node name="TrayArtTherapist" parent="." index="4" instance=ExtResource( 2 )]
-position = Vector2( 4124, -660 )
+position = Vector2( -864, -624 )
 job = 1
 
 [node name="Persometer" parent="." index="5" instance=ExtResource( 4 )]
-margin_left = 2696.0
-margin_top = 800.0
-margin_right = 2696.0
-margin_bottom = 800.0
+margin_left = 2512.0
+margin_top = 704.0
+margin_right = 2512.0
+margin_bottom = 704.0
 
 [node name="InstructionsPersometer" parent="." index="6" instance=ExtResource( 5 )]
-margin_left = 1119.0
-margin_top = -325.0
-margin_right = 1970.0
-margin_bottom = 1181.0
+margin_left = 400.0
+margin_top = 424.0
+margin_right = 1251.0
+margin_bottom = 1930.0
 
 [node name="Evaluation3" parent="." index="7" instance=ExtResource( 3 )]
-margin_left = -23.0
-margin_top = 581.0
-margin_right = 785.0
-margin_bottom = 1884.0
+margin_left = 3240.0
+margin_top = -1240.0
+margin_right = 4048.0
+margin_bottom = 63.0
 
 [node name="Evaluation4" parent="." index="8" instance=ExtResource( 3 )]
-margin_left = 314.0
-margin_top = 911.0
-margin_right = 1122.0
-margin_bottom = 2214.0
+margin_left = 3712.0
+margin_top = -832.0
+margin_right = 4520.0
+margin_bottom = 471.0

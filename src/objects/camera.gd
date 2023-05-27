@@ -7,7 +7,7 @@ const WINDOW_WIDTH := 1920.0
 const WINDOW_HEIGHT := 1080.0
 const CENTER_POSITION := Vector2(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2)
 
-var _zoom_levels := [1.0, 4.0]
+var _zoom_levels := [1.0, 3.0]
 var _zoom_level_index := _zoom_levels.size() - 1
 var _zoom_duration := 0.2
 var _pan_speed := 30.0
@@ -16,15 +16,14 @@ var _is_panning_with_mouse := false
 onready var tween: Tween = $Tween
 
 
-
 func _ready() -> void:
 	var zoom_level: float = _zoom_levels[_zoom_level_index]
 	zoom = Vector2(zoom_level, zoom_level)
 
 
 func _process(_delta: float) -> void:
-	# Can't pan when zoomed out or panning with mouse
-	if _zoom_level_index == _zoom_levels.size() - 1 or _is_panning_with_mouse:
+	# Can't pan with keys while panning with mouse
+	if _is_panning_with_mouse:
 		return
 
 	var direction := Vector2(
@@ -73,7 +72,6 @@ func _input(event: InputEvent) -> void:
 	elif (
 			_is_panning_with_mouse
 			and event is InputEventMouseMotion
-			and _zoom_level_index < _zoom_levels.size() - 1 # Not zoomed out
 	):
 		event = event as InputEventMouseMotion
 		var relative_motion: Vector2 = event.relative * zoom
@@ -120,6 +118,3 @@ func _zoom(old_zoom_level: float, new_zoom_level: float, mouse_position: Vector2
 		tween.EASE_OUT
 	)
 	tween.start()
-
-
-

@@ -9,9 +9,6 @@ var _click_position: Vector2
 onready var _parent: CanvasItem = get_parent()
 
 
-signal drag_ended()
-
-
 func _ready() -> void:
 	_parent.connect("gui_input",self,"_gui_input")
 
@@ -39,4 +36,19 @@ func _gui_input(event: InputEvent) -> void:
 		if _is_held:
 			_click_position = owner.get_local_mouse_position()
 		else:
-			emit_signal("drag_ended")
+			_snap_to_tray()
+
+
+func _snap_to_tray() -> void:
+	if not (_parent is Paper and (_parent.is_evaluation or _parent.is_job_change)):
+		return
+
+	_parent = _parent as Paper
+	var paper_area: Area2D = _parent.get_node("Area2D")
+	var trays: Array = get_tree().get_nodes_in_group("tray")
+	for tray in trays:
+		tray = tray as Tray
+		if tray.overlaps_area(paper_area):
+			_parent.rect_position = tray.position # Top-left corner is in center of tray
+			_parent.rect_position.x -= _parent.rect_size.x / 2
+			_parent.rect_position.y -= _parent.rect_size.y / 2 # Actually centered in tray

@@ -2,7 +2,8 @@ class_name Paper
 extends Control
 
 
-export(bool) var is_evaluation # So Persometer can differentiate from job change request
+export(bool) var is_evaluation
+export(bool) var is_job_change
 export(String) var candidate_name
 export(Enums.Job) var correct_job
 export(int) var kind

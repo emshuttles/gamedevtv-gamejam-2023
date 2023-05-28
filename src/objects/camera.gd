@@ -13,11 +13,16 @@ var _zoom_duration := 0.2
 var _pan_speed := 30.0
 var _is_panning_with_mouse := false
 
+export var start_zoomed_in:bool = false
 onready var tween: Tween = $Tween
 
 
 func _ready() -> void:
 	var zoom_level: float = _zoom_levels[_zoom_level_index]
+	if start_zoomed_in:
+		zoom_level = _zoom_levels.size() - 1
+		_zoom_level_index = 0
+	
 	zoom = Vector2(zoom_level, zoom_level)
 
 

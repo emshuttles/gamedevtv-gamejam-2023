@@ -12,7 +12,7 @@ onready var leather: TextureRect = $"%Leather"
 
 func _ready() -> void:
 	label.text = Consts.JOB_NAMES[job]
-	
+
 	if job == Enums.Job.ENGINEER:
 		leather.modulate = Color8(255,255,255)
 	elif job == Enums.Job.ART_THERAPIST:

@@ -27,8 +27,8 @@ func _ready() -> void:
 	rng.randomize()
 	_song_index_current = rng.randi_range(0,_playlist.size() -1)
 	_song_load_and_play()
-	
-	
+
+
 	_trays = get_tree().get_nodes_in_group("tray")
 	_papers = get_tree().get_nodes_in_group("paper")
 

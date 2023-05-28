@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://src/content/letters/job_request.gd" type="Script" id=1]
 [ext_resource path="res://src/fonts/subtitle.tres" type="DynamicFont" id=2]
@@ -7,6 +7,16 @@
 
 [node name="PaperBase" instance=ExtResource( 3 )]
 script = ExtResource( 1 )
+is_evaluation = null
+is_job_request = null
+candidate_name = null
+correct_job = null
+kind = null
+analytical = null
+desired_job = null
+engineer_interest = null
+art_therapist_interest = null
+toy_maker_interest = null
 
 [node name="PLACEHOLDER" type="VBoxContainer" parent="." index="4"]
 margin_right = 1022.0

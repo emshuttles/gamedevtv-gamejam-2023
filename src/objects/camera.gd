@@ -22,7 +22,7 @@ func _ready() -> void:
 	if start_zoomed_in:
 		zoom_level = _zoom_levels.size() - 1
 		_zoom_level_index = 0
-	
+
 	zoom = Vector2(zoom_level, zoom_level)
 
 
@@ -109,9 +109,9 @@ func _zoom(old_zoom_level: float, new_zoom_level: float, mouse_position: Vector2
 	var position_difference: Vector2 = (((viewport_size / 2) - mouse_position)
 			* (new_zoom_level - old_zoom_level))
 	var new_position = _keep_position_in_bounds(global_position + position_difference)
-	var is_zoomed_out: bool = new_zoom_level == _zoom_levels[_zoom_levels.size() - 1]
-	if is_zoomed_out:
-		new_position = CENTER_POSITION
+#	var is_zoomed_out: bool = new_zoom_level == _zoom_levels[_zoom_levels.size() - 1]
+#	if is_zoomed_out:
+#		new_position = CENTER_POSITION
 
 	tween.interpolate_property(
 		self,

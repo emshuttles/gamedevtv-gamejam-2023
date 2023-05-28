@@ -6,7 +6,7 @@
 [ext_resource path="res://src/components/draggable.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 516.5, 740.5 )
+extents = Vector2( 511, 743.5 )
 
 [node name="PaperBase" type="MarginContainer" groups=["paper"]]
 margin_right = 1022.0
@@ -41,7 +41,7 @@ stretch_mode = 2
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 506.5, 730.5 )
+position = Vector2( 511, 743.5 )
 shape = SubResource( 1 )
 
 [node name="Draggable" type="Node" parent="."]

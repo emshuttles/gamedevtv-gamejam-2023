@@ -22,10 +22,11 @@ func _ready() -> void:
 
 	_create_job_requests()
 	_count_fileable_papers()
+	_create_reprimand()
 
 
 func _create_job_requests() -> void:
-	for candidate in game.pending_job_request:
+	for candidate in game.pending_job_requests:
 		candidate = candidate as Candidate
 		var job_request: Paper = Scenes.job_request.instance()
 		_set_paper_variables(job_request, candidate)
@@ -56,6 +57,14 @@ func _count_fileable_papers() -> void:
 		# paper could be instructions, etc.
 		if Utils.is_fileable(paper):
 			_fileable_papers_count += 1
+
+
+func _create_reprimand() -> void:
+	if not game.was_perfect_today:
+		var reprimand: MarginContainer = Scenes.reprimand.instance()
+		var spawn_point: Vector2 = _get_spawn_point()
+		reprimand.rect_position = spawn_point
+		add_child(reprimand)
 
 
 func _on_EndDay_pressed() -> void:

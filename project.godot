@@ -24,11 +24,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/components/draggable.gd"
 }, {
-"base": "Paper",
-"class": "JobRequest",
-"language": "GDScript",
-"path": "res://src/content/letters/job_request.gd"
-}, {
 "base": "Control",
 "class": "Paper",
 "language": "GDScript",
@@ -58,7 +53,6 @@ _global_script_class_icons={
 "Axis": "",
 "Candidate": "",
 "Draggable": "",
-"JobRequest": "",
 "Paper": "",
 "Persometer": "",
 "Power": "",

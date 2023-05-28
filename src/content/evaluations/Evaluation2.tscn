@@ -8,282 +8,303 @@
 script = ExtResource( 3 )
 is_evaluation = true
 
-[node name="Color" parent="." index="0"]
-margin_bottom = 1787.0
-
-[node name="TextureRect" parent="." index="1"]
-margin_bottom = 1787.0
-
 [node name="Evaluation" parent="." index="4" instance=ExtResource( 2 )]
-margin_right = 1022.0
-margin_bottom = 1787.0
+margin_right = 1163.0
+margin_bottom = 1538.0
 
 [node name="VBoxContainer" parent="Evaluation" index="0"]
-margin_right = 922.0
-margin_bottom = 1687.0
+margin_right = 1063.0
+margin_bottom = 1438.0
 
 [node name="Headers" parent="Evaluation/VBoxContainer" index="0"]
-margin_right = 822.0
+margin_right = 963.0
 margin_bottom = 371.0
 
 [node name="Name" parent="Evaluation/VBoxContainer" index="1"]
 margin_top = 383.0
-margin_right = 822.0
+margin_right = 963.0
 margin_bottom = 474.0
 
 [node name="Statements" parent="Evaluation/VBoxContainer" index="2"]
 margin_top = 486.0
-margin_right = 822.0
-margin_bottom = 1587.0
+margin_right = 963.0
+margin_bottom = 1338.0
 
 [node name="Statement1" parent="Evaluation/VBoxContainer/Statements" index="0"]
-margin_right = 822.0
+margin_right = 963.0
 margin_bottom = 191.0
 
 [node name="VBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement1" index="0"]
-margin_right = 822.0
+margin_right = 963.0
 margin_bottom = 191.0
 
 [node name="StatementNum" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer" index="0"]
-margin_right = 822.0
+margin_right = 963.0
 
 [node name="StatementWording" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer" index="1"]
-margin_right = 822.0
+margin_right = 963.0
 margin_bottom = 133.0
-text = "I am walking down the street in a day of light rain. Suddenly, a carriage collides with one of these fancy new automobiles. The machine is intact, yet the carriage breaks apart. This strikes me as a metaphor for these changing times. I rush to see that the horses are alright. They’re fine, but worried that they’ll lose their jobs and be replaced by machines. I empathize with their plight."
+text = "I’m lying down in a green field surrounded by flowers at the southern coast. I look at the shapeshifting clouds. One has the form of a sheep. A thought occurs to me: “This would be a fine place for a pasture. I could get several herds of fellow animals and then butcher them for meat to sell on the black market. This would be very profitable”. This thought sounds appealing to me."
 
 [node name="MarginContainer" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer" index="2"]
 margin_top = 137.0
-margin_right = 822.0
+margin_right = 963.0
 margin_bottom = 155.0
 
 [node name="HBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer" index="3"]
 margin_top = 159.0
-margin_right = 822.0
+margin_right = 963.0
 margin_bottom = 191.0
 
+[node name="Label" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer/HBoxContainer" index="0"]
+margin_top = 4.0
+margin_right = 150.0
+margin_bottom = 28.0
+
+[node name="MarginContainer" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer/HBoxContainer" index="1"]
+margin_left = 154.0
+margin_right = 186.0
+margin_bottom = 32.0
+
 [node name="CheckBox1" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer/HBoxContainer" index="2"]
-margin_right = 287.0
+margin_left = 190.0
+margin_right = 315.0
+margin_bottom = 32.0
 
 [node name="CheckBox2" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer/HBoxContainer" index="3"]
-margin_left = 291.0
-margin_right = 388.0
+margin_left = 319.0
+margin_right = 444.0
+margin_bottom = 32.0
 
 [node name="CheckBox3" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer/HBoxContainer" index="4"]
-margin_left = 392.0
-margin_right = 489.0
+margin_left = 448.0
+margin_right = 574.0
+margin_bottom = 32.0
 
 [node name="CheckBox4" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer/HBoxContainer" index="5"]
-margin_left = 493.0
-margin_right = 590.0
+margin_left = 578.0
+margin_right = 703.0
+margin_bottom = 32.0
 
 [node name="CheckBox5" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer/HBoxContainer" index="6"]
-margin_left = 594.0
-margin_right = 691.0
+margin_left = 707.0
+margin_right = 833.0
+margin_bottom = 32.0
 
 [node name="Label2" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer/HBoxContainer" index="7"]
-margin_left = 695.0
-margin_right = 821.0
+margin_left = 837.0
+margin_top = 4.0
+margin_right = 963.0
+margin_bottom = 28.0
 
 [node name="Statement2" parent="Evaluation/VBoxContainer/Statements" index="1"]
 margin_top = 241.0
-margin_right = 822.0
-margin_bottom = 378.0
+margin_right = 963.0
+margin_bottom = 405.0
 
 [node name="VBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement2" index="0"]
-margin_right = 822.0
-margin_bottom = 137.0
+margin_right = 963.0
+margin_bottom = 164.0
 
 [node name="StatementNum" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer" index="0"]
-margin_right = 822.0
+margin_right = 963.0
 
 [node name="StatementWording" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer" index="1"]
-margin_right = 822.0
-margin_bottom = 79.0
-text = "If I was an object, I would be a magnifying glass. Or a microscope. Or a tape measure. Then I wouldn’t be sad. Have you ever seen a sad tape measure?"
+margin_right = 963.0
+margin_bottom = 106.0
+text = "As I read these questions, I am thinking about what the optimal answers are in order to get my desired outcome. I am also wondering who Hors-Trudgman is, or whether it’s two people: one named Hors, and the other named Trudgman."
 
 [node name="MarginContainer" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer" index="2"]
-margin_top = 83.0
-margin_right = 822.0
-margin_bottom = 101.0
+margin_top = 110.0
+margin_right = 963.0
+margin_bottom = 128.0
 
 [node name="HBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer" index="3"]
-margin_top = 105.0
-margin_right = 822.0
-margin_bottom = 137.0
+margin_top = 132.0
+margin_right = 963.0
+margin_bottom = 164.0
+
+[node name="Label" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer/HBoxContainer" index="0"]
+margin_top = 4.0
+margin_right = 150.0
+margin_bottom = 28.0
+
+[node name="MarginContainer" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer/HBoxContainer" index="1"]
+margin_left = 154.0
+margin_right = 186.0
+margin_bottom = 32.0
 
 [node name="CheckBox1" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer/HBoxContainer" index="2"]
-margin_right = 287.0
+margin_left = 190.0
+margin_right = 315.0
+margin_bottom = 32.0
 
 [node name="CheckBox2" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer/HBoxContainer" index="3"]
-margin_left = 291.0
-margin_right = 388.0
+margin_left = 319.0
+margin_right = 444.0
+margin_bottom = 32.0
 
 [node name="CheckBox3" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer/HBoxContainer" index="4"]
-margin_left = 392.0
-margin_right = 489.0
+margin_left = 448.0
+margin_right = 574.0
+margin_bottom = 32.0
 
 [node name="CheckBox4" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer/HBoxContainer" index="5"]
-margin_left = 493.0
-margin_right = 590.0
+margin_left = 578.0
+margin_right = 703.0
+margin_bottom = 32.0
 
 [node name="CheckBox5" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer/HBoxContainer" index="6"]
-margin_left = 594.0
-margin_right = 691.0
+margin_left = 707.0
+margin_right = 833.0
+margin_bottom = 32.0
 
 [node name="Label2" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer/HBoxContainer" index="7"]
-margin_left = 695.0
-margin_right = 821.0
+margin_left = 837.0
+margin_top = 4.0
+margin_right = 963.0
+margin_bottom = 28.0
 
 [node name="Statement3" parent="Evaluation/VBoxContainer/Statements" index="2"]
-margin_top = 428.0
-margin_right = 822.0
-margin_bottom = 619.0
+margin_top = 455.0
+margin_right = 963.0
+margin_bottom = 646.0
 
 [node name="VBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement3" index="0"]
-margin_right = 822.0
+margin_right = 963.0
 margin_bottom = 191.0
 
 [node name="StatementNum" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer" index="0"]
-margin_right = 822.0
+margin_right = 963.0
 
 [node name="StatementWording" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer" index="1"]
-margin_right = 822.0
+margin_right = 963.0
 margin_bottom = 133.0
-text = "I am a self-proclaimed expert in understanding how things work and making them better. It's like a sick addiction - I just can't resist the thrill of dismantling something and putting it back together again. I mean, I'm pretty sure I could take apart an animal body and figure out how to optimize it. But don't worry, I'll stick to inanimate objects for now."
+text = "When I look at the trees atop Hoof Mountain, swaying in the wind, their leaves rumbling, I can’t help but wonder how vast the world is. I wonder how many of these fine trees there are. So I determine that there must be about 256 in a square kilometer, and then I start multiplying that by the size of the Earth. Then I consider that most areas don’t have trees, and adjust my calculations."
 
 [node name="MarginContainer" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer" index="2"]
 margin_top = 137.0
-margin_right = 822.0
+margin_right = 963.0
 margin_bottom = 155.0
 
 [node name="HBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer" index="3"]
 margin_top = 159.0
-margin_right = 822.0
+margin_right = 963.0
 margin_bottom = 191.0
 
+[node name="Label" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer/HBoxContainer" index="0"]
+margin_top = 4.0
+margin_right = 150.0
+margin_bottom = 28.0
+
+[node name="MarginContainer" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer/HBoxContainer" index="1"]
+margin_left = 154.0
+margin_right = 186.0
+margin_bottom = 32.0
+
 [node name="CheckBox1" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer/HBoxContainer" index="2"]
-margin_right = 287.0
+margin_left = 190.0
+margin_right = 315.0
+margin_bottom = 32.0
 
 [node name="CheckBox2" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer/HBoxContainer" index="3"]
-margin_left = 291.0
-margin_right = 388.0
+margin_left = 319.0
+margin_right = 444.0
+margin_bottom = 32.0
 
 [node name="CheckBox3" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer/HBoxContainer" index="4"]
-margin_left = 392.0
-margin_right = 489.0
+margin_left = 448.0
+margin_right = 574.0
+margin_bottom = 32.0
 
 [node name="CheckBox4" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer/HBoxContainer" index="5"]
-margin_left = 493.0
-margin_right = 590.0
+margin_left = 578.0
+margin_right = 703.0
+margin_bottom = 32.0
 
 [node name="CheckBox5" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer/HBoxContainer" index="6"]
-margin_left = 594.0
-margin_right = 691.0
+margin_left = 707.0
+margin_right = 833.0
+margin_bottom = 32.0
 
 [node name="Label2" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer/HBoxContainer" index="7"]
-margin_left = 695.0
-margin_right = 821.0
+margin_left = 837.0
+margin_top = 4.0
+margin_right = 963.0
+margin_bottom = 28.0
 
 [node name="Statement4" parent="Evaluation/VBoxContainer/Statements" index="3"]
-margin_top = 669.0
-margin_right = 822.0
+margin_top = 696.0
+margin_right = 963.0
 margin_bottom = 833.0
 
 [node name="VBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement4" index="0"]
-margin_right = 822.0
-margin_bottom = 164.0
+margin_right = 963.0
+margin_bottom = 137.0
 
 [node name="StatementNum" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer" index="0"]
-margin_right = 822.0
+margin_right = 963.0
 
 [node name="StatementWording" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer" index="1"]
-margin_right = 822.0
-margin_bottom = 106.0
-text = "I have been imprisoned for stealing a sculpture of a lamb from the Imperial Museum. It was quite heavy. As I smoke tobacco with my fellow inmates, I look back on my life choices and ultimately decide that it was worth it."
+margin_right = 963.0
+margin_bottom = 79.0
+text = "A great virus has spread around the Empire. Corpses are piling up in the streets. All I can think about is how unfortunate it is that the museums are closed."
 
 [node name="MarginContainer" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer" index="2"]
-margin_top = 110.0
-margin_right = 822.0
-margin_bottom = 128.0
+margin_top = 83.0
+margin_right = 963.0
+margin_bottom = 101.0
 
 [node name="HBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer" index="3"]
-margin_top = 132.0
-margin_right = 822.0
-margin_bottom = 164.0
+margin_top = 105.0
+margin_right = 963.0
+margin_bottom = 137.0
+
+[node name="Label" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer/HBoxContainer" index="0"]
+margin_top = 4.0
+margin_right = 150.0
+margin_bottom = 28.0
+
+[node name="MarginContainer" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer/HBoxContainer" index="1"]
+margin_left = 154.0
+margin_right = 186.0
+margin_bottom = 32.0
 
 [node name="CheckBox1" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer/HBoxContainer" index="2"]
-margin_right = 287.0
+margin_left = 190.0
+margin_right = 315.0
+margin_bottom = 32.0
 
 [node name="CheckBox2" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer/HBoxContainer" index="3"]
-margin_left = 291.0
-margin_right = 388.0
+margin_left = 319.0
+margin_right = 444.0
+margin_bottom = 32.0
 
 [node name="CheckBox3" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer/HBoxContainer" index="4"]
-margin_left = 392.0
-margin_right = 489.0
+margin_left = 448.0
+margin_right = 574.0
+margin_bottom = 32.0
 
 [node name="CheckBox4" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer/HBoxContainer" index="5"]
-margin_left = 493.0
-margin_right = 590.0
+margin_left = 578.0
+margin_right = 703.0
+margin_bottom = 32.0
 
 [node name="CheckBox5" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer/HBoxContainer" index="6"]
-margin_left = 594.0
-margin_right = 691.0
+margin_left = 707.0
+margin_right = 833.0
+margin_bottom = 32.0
 
 [node name="Label2" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer/HBoxContainer" index="7"]
-margin_left = 695.0
-margin_right = 821.0
+margin_left = 837.0
+margin_top = 4.0
+margin_right = 963.0
+margin_bottom = 28.0
 
 [node name="Statement5" parent="Evaluation/VBoxContainer/Statements" index="4"]
-margin_top = 883.0
-margin_right = 822.0
-margin_bottom = 1101.0
-
-[node name="VBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement5" index="0"]
-margin_right = 822.0
-margin_bottom = 218.0
-
-[node name="StatementNum" parent="Evaluation/VBoxContainer/Statements/Statement5/VBoxContainer" index="0"]
-margin_right = 822.0
-
-[node name="StatementWording" parent="Evaluation/VBoxContainer/Statements/Statement5/VBoxContainer" index="1"]
-margin_right = 822.0
-margin_bottom = 160.0
-text = "I have a peculiar obsession with creating unusual objects. I create things that scream when you squeeze them or whisper dark secrets in the night. They may seem twisted, but they're just a reflection of my unique vision. Who knows, maybe one day my creations will take over the world and bring a little joy to everyone — or perhaps they'll bring about the world's destruction and plunge us into an era of darkness. Only time will tell."
-
-[node name="MarginContainer" parent="Evaluation/VBoxContainer/Statements/Statement5/VBoxContainer" index="2"]
-margin_top = 164.0
-margin_right = 822.0
-margin_bottom = 182.0
-
-[node name="HBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement5/VBoxContainer" index="3"]
-margin_top = 186.0
-margin_right = 822.0
-margin_bottom = 218.0
-
-[node name="CheckBox1" parent="Evaluation/VBoxContainer/Statements/Statement5/VBoxContainer/HBoxContainer" index="2"]
-margin_right = 287.0
-
-[node name="CheckBox2" parent="Evaluation/VBoxContainer/Statements/Statement5/VBoxContainer/HBoxContainer" index="3"]
-margin_left = 291.0
-margin_right = 388.0
-
-[node name="CheckBox3" parent="Evaluation/VBoxContainer/Statements/Statement5/VBoxContainer/HBoxContainer" index="4"]
-margin_left = 392.0
-margin_right = 489.0
-
-[node name="CheckBox4" parent="Evaluation/VBoxContainer/Statements/Statement5/VBoxContainer/HBoxContainer" index="5"]
-margin_left = 493.0
-margin_right = 590.0
-
-[node name="CheckBox5" parent="Evaluation/VBoxContainer/Statements/Statement5/VBoxContainer/HBoxContainer" index="6"]
-margin_left = 594.0
-margin_right = 691.0
-
-[node name="Label2" parent="Evaluation/VBoxContainer/Statements/Statement5/VBoxContainer/HBoxContainer" index="7"]
-margin_left = 695.0
-margin_right = 821.0
+visible = false
+margin_top = 1045.0
+margin_bottom = 1155.0
 
 [node name="Statement6" parent="Evaluation/VBoxContainer/Statements" index="5"]
 visible = false
@@ -295,5 +316,3 @@ margin_bottom = 1155.0
 [editable path="Evaluation/VBoxContainer/Statements/Statement2"]
 [editable path="Evaluation/VBoxContainer/Statements/Statement3"]
 [editable path="Evaluation/VBoxContainer/Statements/Statement4"]
-[editable path="Evaluation/VBoxContainer/Statements/Statement5"]
-[editable path="Evaluation/VBoxContainer/Statements/Statement6"]

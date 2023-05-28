@@ -1,0 +1,90 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/content/paper_base.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/fonts/title.tres" type="DynamicFont" id=2]
+[ext_resource path="res://src/fonts/regular_bold.tres" type="DynamicFont" id=3]
+
+[node name="Welcome" instance=ExtResource( 1 )]
+margin_bottom = 594.0
+
+[node name="Color" parent="." index="0"]
+margin_bottom = 688.0
+
+[node name="TextureRect" parent="." index="1"]
+margin_bottom = 688.0
+
+[node name="MarginContainer" type="MarginContainer" parent="." index="4"]
+margin_right = 1022.0
+margin_bottom = 688.0
+mouse_filter = 2
+custom_constants/margin_right = 100
+custom_constants/margin_top = 100
+custom_constants/margin_left = 100
+custom_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" index="0"]
+margin_left = 100.0
+margin_top = 100.0
+margin_right = 922.0
+margin_bottom = 588.0
+mouse_filter = 2
+custom_constants/separation = 20
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" index="0"]
+margin_right = 822.0
+margin_bottom = 126.0
+custom_fonts/font = ExtResource( 2 )
+text = "Welcome"
+align = 1
+
+[node name="Label6" type="Label" parent="MarginContainer/VBoxContainer" index="1"]
+margin_top = 146.0
+margin_right = 822.0
+margin_bottom = 170.0
+text = "Citizen! You have been selected for this most important work:"
+autowrap = true
+
+[node name="Label5" type="Label" parent="MarginContainer/VBoxContainer" index="2"]
+margin_top = 190.0
+margin_right = 822.0
+margin_bottom = 214.0
+custom_fonts/font = ExtResource( 3 )
+text = "Assign Jobs to Candidates"
+autowrap = true
+
+[node name="Label7" type="Label" parent="MarginContainer/VBoxContainer" index="3"]
+margin_top = 234.0
+margin_right = 822.0
+margin_bottom = 285.0
+text = "In your desk, you will find personality tests that will help you decide which job is a better fit for each candidate. They may or may not be former rebels and traitors to the Empress."
+autowrap = true
+
+[node name="Label11" type="Label" parent="MarginContainer/VBoxContainer" index="4"]
+margin_top = 305.0
+margin_right = 822.0
+margin_bottom = 329.0
+custom_fonts/font = ExtResource( 3 )
+text = "Drag each Evaluation into the appropriate Job Tray."
+autowrap = true
+
+[node name="Label8" type="Label" parent="MarginContainer/VBoxContainer" index="5"]
+margin_top = 349.0
+margin_right = 822.0
+margin_bottom = 373.0
+text = "Please note that we have a daily quota. You will find it in the paper titled \"Quota\"."
+autowrap = true
+
+[node name="Label10" type="Label" parent="MarginContainer/VBoxContainer" index="6"]
+margin_top = 393.0
+margin_right = 822.0
+margin_bottom = 417.0
+custom_fonts/font = ExtResource( 3 )
+text = "We will only tolerate 2 misassignments."
+autowrap = true
+
+[node name="Label9" type="Label" parent="MarginContainer/VBoxContainer" index="7"]
+margin_top = 437.0
+margin_right = 822.0
+margin_bottom = 488.0
+text = "You may find that a candidate’s passions and aptitude do not align. If so, disregard the candidate's interests. The Empire's needs are paramount."
+autowrap = true

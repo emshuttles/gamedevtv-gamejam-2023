@@ -9,18 +9,18 @@ script = ExtResource( 3 )
 is_evaluation = true
 
 [node name="Color" parent="." index="0"]
-margin_bottom = 1787.0
+margin_bottom = 1812.0
 
 [node name="TextureRect" parent="." index="1"]
-margin_bottom = 1787.0
+margin_bottom = 1812.0
 
 [node name="Evaluation" parent="." index="4" instance=ExtResource( 2 )]
 margin_right = 1022.0
-margin_bottom = 1787.0
+margin_bottom = 1812.0
 
 [node name="VBoxContainer" parent="Evaluation" index="0"]
 margin_right = 922.0
-margin_bottom = 1687.0
+margin_bottom = 1712.0
 
 [node name="Headers" parent="Evaluation/VBoxContainer" index="0"]
 margin_right = 822.0
@@ -34,33 +34,33 @@ margin_bottom = 474.0
 [node name="Statements" parent="Evaluation/VBoxContainer" index="2"]
 margin_top = 486.0
 margin_right = 822.0
-margin_bottom = 1587.0
+margin_bottom = 1612.0
 
 [node name="Statement1" parent="Evaluation/VBoxContainer/Statements" index="0"]
 margin_right = 822.0
-margin_bottom = 191.0
+margin_bottom = 164.0
 
 [node name="VBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement1" index="0"]
 margin_right = 822.0
-margin_bottom = 191.0
+margin_bottom = 164.0
 
 [node name="StatementNum" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer" index="0"]
 margin_right = 822.0
 
 [node name="StatementWording" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer" index="1"]
 margin_right = 822.0
-margin_bottom = 133.0
-text = "I am walking down the street in a day of light rain. Suddenly, a carriage collides with one of these fancy new automobiles. The machine is intact, yet the carriage breaks apart. This strikes me as a metaphor for these changing times. I rush to see that the horses are alright. They’re fine, but worried that they’ll lose their jobs and be replaced by machines. I empathize with their plight."
+margin_bottom = 106.0
+text = "The collective of the February Uprising were a band of romantic youths. Their ideals of communal living and property sharing were noble, yet unrealistic. It’s good that the movement has been crushed, yet I am touched by the loss of animal life."
 
 [node name="MarginContainer" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer" index="2"]
-margin_top = 137.0
+margin_top = 110.0
 margin_right = 822.0
-margin_bottom = 155.0
+margin_bottom = 128.0
 
 [node name="HBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer" index="3"]
-margin_top = 159.0
+margin_top = 132.0
 margin_right = 822.0
-margin_bottom = 191.0
+margin_bottom = 164.0
 
 [node name="CheckBox1" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer/HBoxContainer" index="2"]
 margin_right = 287.0
@@ -86,31 +86,31 @@ margin_left = 695.0
 margin_right = 821.0
 
 [node name="Statement2" parent="Evaluation/VBoxContainer/Statements" index="1"]
-margin_top = 241.0
+margin_top = 214.0
 margin_right = 822.0
 margin_bottom = 378.0
 
 [node name="VBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement2" index="0"]
 margin_right = 822.0
-margin_bottom = 137.0
+margin_bottom = 164.0
 
 [node name="StatementNum" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer" index="0"]
 margin_right = 822.0
 
 [node name="StatementWording" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer" index="1"]
 margin_right = 822.0
-margin_bottom = 79.0
-text = "If I was an object, I would be a magnifying glass. Or a microscope. Or a tape measure. Then I wouldn’t be sad. Have you ever seen a sad tape measure?"
+margin_bottom = 106.0
+text = "The Walrus Intelligentsia, also known as The Society of Tusk and Whisker, have given us a couple of decent ideas, many bad ones and no good ones. I have done precise calculations on this matter."
 
 [node name="MarginContainer" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer" index="2"]
-margin_top = 83.0
+margin_top = 110.0
 margin_right = 822.0
-margin_bottom = 101.0
+margin_bottom = 128.0
 
 [node name="HBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer" index="3"]
-margin_top = 105.0
+margin_top = 132.0
 margin_right = 822.0
-margin_bottom = 137.0
+margin_bottom = 164.0
 
 [node name="CheckBox1" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer/HBoxContainer" index="2"]
 margin_right = 287.0
@@ -138,29 +138,23 @@ margin_right = 821.0
 [node name="Statement3" parent="Evaluation/VBoxContainer/Statements" index="2"]
 margin_top = 428.0
 margin_right = 822.0
-margin_bottom = 619.0
+margin_bottom = 538.0
 
 [node name="VBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement3" index="0"]
 margin_right = 822.0
-margin_bottom = 191.0
 
 [node name="StatementNum" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer" index="0"]
 margin_right = 822.0
 
 [node name="StatementWording" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer" index="1"]
 margin_right = 822.0
-margin_bottom = 133.0
-text = "I am a self-proclaimed expert in understanding how things work and making them better. It's like a sick addiction - I just can't resist the thrill of dismantling something and putting it back together again. I mean, I'm pretty sure I could take apart an animal body and figure out how to optimize it. But don't worry, I'll stick to inanimate objects for now."
+text = "I have insights into how the Capybara Famine could've been avoided. "
 
 [node name="MarginContainer" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer" index="2"]
-margin_top = 137.0
 margin_right = 822.0
-margin_bottom = 155.0
 
 [node name="HBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer" index="3"]
-margin_top = 159.0
 margin_right = 822.0
-margin_bottom = 191.0
 
 [node name="CheckBox1" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer/HBoxContainer" index="2"]
 margin_right = 287.0
@@ -186,31 +180,31 @@ margin_left = 695.0
 margin_right = 821.0
 
 [node name="Statement4" parent="Evaluation/VBoxContainer/Statements" index="3"]
-margin_top = 669.0
+margin_top = 588.0
 margin_right = 822.0
-margin_bottom = 833.0
+margin_bottom = 725.0
 
 [node name="VBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement4" index="0"]
 margin_right = 822.0
-margin_bottom = 164.0
+margin_bottom = 137.0
 
 [node name="StatementNum" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer" index="0"]
 margin_right = 822.0
 
 [node name="StatementWording" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer" index="1"]
 margin_right = 822.0
-margin_bottom = 106.0
-text = "I have been imprisoned for stealing a sculpture of a lamb from the Imperial Museum. It was quite heavy. As I smoke tobacco with my fellow inmates, I look back on my life choices and ultimately decide that it was worth it."
+margin_bottom = 79.0
+text = "Music heals. When I hear the Imperial Anthem, I feel a surge of pride and inspiration. It is like the great bear composer Urovski once said: “You can’t trust a cat”."
 
 [node name="MarginContainer" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer" index="2"]
-margin_top = 110.0
+margin_top = 83.0
 margin_right = 822.0
-margin_bottom = 128.0
+margin_bottom = 101.0
 
 [node name="HBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer" index="3"]
-margin_top = 132.0
+margin_top = 105.0
 margin_right = 822.0
-margin_bottom = 164.0
+margin_bottom = 137.0
 
 [node name="CheckBox1" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer/HBoxContainer" index="2"]
 margin_right = 287.0
@@ -236,31 +230,31 @@ margin_left = 695.0
 margin_right = 821.0
 
 [node name="Statement5" parent="Evaluation/VBoxContainer/Statements" index="4"]
-margin_top = 883.0
+margin_top = 775.0
 margin_right = 822.0
-margin_bottom = 1101.0
+margin_bottom = 939.0
 
 [node name="VBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement5" index="0"]
 margin_right = 822.0
-margin_bottom = 218.0
+margin_bottom = 164.0
 
 [node name="StatementNum" parent="Evaluation/VBoxContainer/Statements/Statement5/VBoxContainer" index="0"]
 margin_right = 822.0
 
 [node name="StatementWording" parent="Evaluation/VBoxContainer/Statements/Statement5/VBoxContainer" index="1"]
 margin_right = 822.0
-margin_bottom = 160.0
-text = "I have a peculiar obsession with creating unusual objects. I create things that scream when you squeeze them or whisper dark secrets in the night. They may seem twisted, but they're just a reflection of my unique vision. Who knows, maybe one day my creations will take over the world and bring a little joy to everyone — or perhaps they'll bring about the world's destruction and plunge us into an era of darkness. Only time will tell."
+margin_bottom = 106.0
+text = "Some of the new machines being invented by ingenious animals of the Empire are delightful. These include the Sight Capturer, the Quadricycle, the Claw Clipper, the Pizza Cutter and, of course, the Persometer."
 
 [node name="MarginContainer" parent="Evaluation/VBoxContainer/Statements/Statement5/VBoxContainer" index="2"]
-margin_top = 164.0
+margin_top = 110.0
 margin_right = 822.0
-margin_bottom = 182.0
+margin_bottom = 128.0
 
 [node name="HBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement5/VBoxContainer" index="3"]
-margin_top = 186.0
+margin_top = 132.0
 margin_right = 822.0
-margin_bottom = 218.0
+margin_bottom = 164.0
 
 [node name="CheckBox1" parent="Evaluation/VBoxContainer/Statements/Statement5/VBoxContainer/HBoxContainer" index="2"]
 margin_right = 287.0
@@ -286,9 +280,55 @@ margin_left = 695.0
 margin_right = 821.0
 
 [node name="Statement6" parent="Evaluation/VBoxContainer/Statements" index="5"]
-visible = false
-margin_top = 1045.0
-margin_bottom = 1155.0
+margin_top = 989.0
+margin_right = 822.0
+margin_bottom = 1126.0
+
+[node name="VBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement6" index="0"]
+margin_right = 822.0
+margin_bottom = 137.0
+
+[node name="StatementNum" parent="Evaluation/VBoxContainer/Statements/Statement6/VBoxContainer" index="0"]
+margin_right = 822.0
+
+[node name="StatementWording" parent="Evaluation/VBoxContainer/Statements/Statement6/VBoxContainer" index="1"]
+margin_right = 822.0
+margin_bottom = 79.0
+text = "The Empire is the crown, the Empress is its jewel, and the Conservative Party is the strong, furry, feathered and scaly paw that holds it all together."
+
+[node name="MarginContainer" parent="Evaluation/VBoxContainer/Statements/Statement6/VBoxContainer" index="2"]
+margin_top = 83.0
+margin_right = 822.0
+margin_bottom = 101.0
+
+[node name="HBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement6/VBoxContainer" index="3"]
+margin_top = 105.0
+margin_right = 822.0
+margin_bottom = 137.0
+
+[node name="CheckBox1" parent="Evaluation/VBoxContainer/Statements/Statement6/VBoxContainer/HBoxContainer" index="2"]
+margin_right = 287.0
+
+[node name="CheckBox2" parent="Evaluation/VBoxContainer/Statements/Statement6/VBoxContainer/HBoxContainer" index="3"]
+margin_left = 291.0
+margin_right = 388.0
+
+[node name="CheckBox3" parent="Evaluation/VBoxContainer/Statements/Statement6/VBoxContainer/HBoxContainer" index="4"]
+margin_left = 392.0
+margin_right = 489.0
+
+[node name="CheckBox4" parent="Evaluation/VBoxContainer/Statements/Statement6/VBoxContainer/HBoxContainer" index="5"]
+margin_left = 493.0
+margin_right = 590.0
+
+[node name="CheckBox5" parent="Evaluation/VBoxContainer/Statements/Statement6/VBoxContainer/HBoxContainer" index="6"]
+margin_left = 594.0
+margin_right = 691.0
+pressed = true
+
+[node name="Label2" parent="Evaluation/VBoxContainer/Statements/Statement6/VBoxContainer/HBoxContainer" index="7"]
+margin_left = 695.0
+margin_right = 821.0
 
 [editable path="Evaluation"]
 [editable path="Evaluation/VBoxContainer/Statements/Statement1"]

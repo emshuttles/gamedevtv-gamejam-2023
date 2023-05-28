@@ -1,0 +1,97 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/content/paper_base.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/fonts/title.tres" type="DynamicFont" id=2]
+[ext_resource path="res://src/fonts/regular_bold.tres" type="DynamicFont" id=3]
+
+[node name="Quota" instance=ExtResource( 1 )]
+margin_bottom = 594.0
+
+[node name="Color" parent="." index="0"]
+margin_bottom = 594.0
+
+[node name="TextureRect" parent="." index="1"]
+margin_bottom = 594.0
+
+[node name="MarginContainer" type="MarginContainer" parent="." index="4"]
+margin_right = 1022.0
+margin_bottom = 594.0
+mouse_filter = 2
+custom_constants/margin_right = 100
+custom_constants/margin_top = 100
+custom_constants/margin_left = 100
+custom_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" index="0"]
+margin_left = 100.0
+margin_top = 100.0
+margin_right = 922.0
+margin_bottom = 494.0
+mouse_filter = 2
+custom_constants/separation = 20
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" index="0"]
+margin_right = 822.0
+margin_bottom = 126.0
+custom_fonts/font = ExtResource( 2 )
+text = "Quota"
+align = 1
+
+[node name="Label6" type="Label" parent="MarginContainer/VBoxContainer" index="1"]
+margin_top = 146.0
+margin_right = 822.0
+margin_bottom = 170.0
+text = "These are the workers the Empire needs today, plus their personality requirements:"
+autowrap = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer" index="2"]
+margin_top = 190.0
+margin_right = 822.0
+margin_bottom = 270.0
+
+[node name="Label5" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer" index="0"]
+margin_right = 822.0
+margin_bottom = 24.0
+custom_fonts/font = ExtResource( 3 )
+text = "Naval Engineer ( 1 )"
+autowrap = true
+
+[node name="Label7" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer" index="1"]
+margin_top = 28.0
+margin_right = 822.0
+margin_bottom = 52.0
+text = "Analytic: High"
+autowrap = true
+
+[node name="Label8" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer" index="2"]
+margin_top = 56.0
+margin_right = 822.0
+margin_bottom = 80.0
+text = "Kind: Low"
+autowrap = true
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer" index="3"]
+margin_top = 290.0
+margin_right = 822.0
+margin_bottom = 370.0
+
+[node name="Label5" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer2" index="0"]
+margin_right = 822.0
+margin_bottom = 24.0
+custom_fonts/font = ExtResource( 3 )
+text = "Art Therapist ( 1 )"
+autowrap = true
+
+[node name="Label7" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer2" index="1"]
+margin_top = 28.0
+margin_right = 822.0
+margin_bottom = 52.0
+text = "Analytic: Medium"
+autowrap = true
+
+[node name="Label8" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer2" index="2"]
+margin_top = 56.0
+margin_right = 822.0
+margin_bottom = 80.0
+text = "Kind: Very High"
+autowrap = true

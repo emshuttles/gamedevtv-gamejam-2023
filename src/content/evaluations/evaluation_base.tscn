@@ -19,7 +19,7 @@ custom_constants/margin_bottom = 100
 margin_left = 100.0
 margin_top = 100.0
 margin_right = 708.0
-margin_bottom = 1203.0
+margin_bottom = 1523.0
 mouse_filter = 2
 custom_constants/separation = 12
 
@@ -34,7 +34,7 @@ margin_right = 608.0
 [node name="Statements" type="VBoxContainer" parent="VBoxContainer"]
 margin_top = 513.0
 margin_right = 608.0
-margin_bottom = 1103.0
+margin_bottom = 1423.0
 mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -44,17 +44,412 @@ custom_constants/separation = 50
 margin_right = 608.0
 margin_bottom = 110.0
 
+[node name="VBoxContainer" parent="VBoxContainer/Statements/Statement1" index="0"]
+margin_right = 608.0
+margin_bottom = 110.0
+
+[node name="StatementNum" parent="VBoxContainer/Statements/Statement1/VBoxContainer" index="0"]
+margin_right = 608.0
+text = "Statement 1"
+
+[node name="StatementWording" parent="VBoxContainer/Statements/Statement1/VBoxContainer" index="1"]
+margin_right = 608.0
+margin_bottom = 52.0
+
+[node name="MarginContainer" parent="VBoxContainer/Statements/Statement1/VBoxContainer" index="2"]
+margin_top = 56.0
+margin_right = 608.0
+margin_bottom = 74.0
+
+[node name="HBoxContainer" parent="VBoxContainer/Statements/Statement1/VBoxContainer" index="3"]
+margin_top = 78.0
+margin_right = 608.0
+margin_bottom = 110.0
+
+[node name="Label" parent="VBoxContainer/Statements/Statement1/VBoxContainer/HBoxContainer" index="0"]
+margin_top = 4.0
+margin_right = 150.0
+margin_bottom = 28.0
+
+[node name="MarginContainer" parent="VBoxContainer/Statements/Statement1/VBoxContainer/HBoxContainer" index="1"]
+margin_left = 154.0
+margin_right = 186.0
+margin_bottom = 32.0
+
+[node name="CheckBox1" parent="VBoxContainer/Statements/Statement1/VBoxContainer/HBoxContainer" index="2"]
+margin_left = 190.0
+margin_right = 244.0
+margin_bottom = 32.0
+
+[node name="CheckBox2" parent="VBoxContainer/Statements/Statement1/VBoxContainer/HBoxContainer" index="3"]
+margin_left = 248.0
+margin_right = 302.0
+margin_bottom = 32.0
+
+[node name="CheckBox3" parent="VBoxContainer/Statements/Statement1/VBoxContainer/HBoxContainer" index="4"]
+margin_left = 306.0
+margin_right = 361.0
+margin_bottom = 32.0
+
+[node name="CheckBox4" parent="VBoxContainer/Statements/Statement1/VBoxContainer/HBoxContainer" index="5"]
+margin_left = 365.0
+margin_right = 419.0
+margin_bottom = 32.0
+
+[node name="CheckBox5" parent="VBoxContainer/Statements/Statement1/VBoxContainer/HBoxContainer" index="6"]
+margin_left = 423.0
+margin_right = 478.0
+margin_bottom = 32.0
+
+[node name="Label2" parent="VBoxContainer/Statements/Statement1/VBoxContainer/HBoxContainer" index="7"]
+margin_left = 482.0
+margin_top = 4.0
+margin_right = 608.0
+margin_bottom = 28.0
+
 [node name="Statement2" parent="VBoxContainer/Statements" instance=ExtResource( 4 )]
 margin_top = 160.0
 margin_right = 608.0
 margin_bottom = 270.0
+
+[node name="VBoxContainer" parent="VBoxContainer/Statements/Statement2" index="0"]
+margin_right = 608.0
+margin_bottom = 110.0
+
+[node name="StatementNum" parent="VBoxContainer/Statements/Statement2/VBoxContainer" index="0"]
+margin_right = 608.0
+text = "Statement 2"
+
+[node name="StatementWording" parent="VBoxContainer/Statements/Statement2/VBoxContainer" index="1"]
+margin_right = 608.0
+margin_bottom = 52.0
+
+[node name="MarginContainer" parent="VBoxContainer/Statements/Statement2/VBoxContainer" index="2"]
+margin_top = 56.0
+margin_right = 608.0
+margin_bottom = 74.0
+
+[node name="HBoxContainer" parent="VBoxContainer/Statements/Statement2/VBoxContainer" index="3"]
+margin_top = 78.0
+margin_right = 608.0
+margin_bottom = 110.0
+
+[node name="Label" parent="VBoxContainer/Statements/Statement2/VBoxContainer/HBoxContainer" index="0"]
+margin_top = 4.0
+margin_right = 150.0
+margin_bottom = 28.0
+
+[node name="MarginContainer" parent="VBoxContainer/Statements/Statement2/VBoxContainer/HBoxContainer" index="1"]
+margin_left = 154.0
+margin_right = 186.0
+margin_bottom = 32.0
+
+[node name="CheckBox1" parent="VBoxContainer/Statements/Statement2/VBoxContainer/HBoxContainer" index="2"]
+margin_left = 190.0
+margin_right = 244.0
+margin_bottom = 32.0
+
+[node name="CheckBox2" parent="VBoxContainer/Statements/Statement2/VBoxContainer/HBoxContainer" index="3"]
+margin_left = 248.0
+margin_right = 302.0
+margin_bottom = 32.0
+
+[node name="CheckBox3" parent="VBoxContainer/Statements/Statement2/VBoxContainer/HBoxContainer" index="4"]
+margin_left = 306.0
+margin_right = 361.0
+margin_bottom = 32.0
+
+[node name="CheckBox4" parent="VBoxContainer/Statements/Statement2/VBoxContainer/HBoxContainer" index="5"]
+margin_left = 365.0
+margin_right = 419.0
+margin_bottom = 32.0
+
+[node name="CheckBox5" parent="VBoxContainer/Statements/Statement2/VBoxContainer/HBoxContainer" index="6"]
+margin_left = 423.0
+margin_right = 478.0
+margin_bottom = 32.0
+
+[node name="Label2" parent="VBoxContainer/Statements/Statement2/VBoxContainer/HBoxContainer" index="7"]
+margin_left = 482.0
+margin_top = 4.0
+margin_right = 608.0
+margin_bottom = 28.0
 
 [node name="Statement3" parent="VBoxContainer/Statements" instance=ExtResource( 4 )]
 margin_top = 320.0
 margin_right = 608.0
 margin_bottom = 430.0
 
+[node name="VBoxContainer" parent="VBoxContainer/Statements/Statement3" index="0"]
+margin_right = 608.0
+margin_bottom = 110.0
+
+[node name="StatementNum" parent="VBoxContainer/Statements/Statement3/VBoxContainer" index="0"]
+margin_right = 608.0
+text = "Statement 3"
+
+[node name="StatementWording" parent="VBoxContainer/Statements/Statement3/VBoxContainer" index="1"]
+margin_right = 608.0
+margin_bottom = 52.0
+
+[node name="MarginContainer" parent="VBoxContainer/Statements/Statement3/VBoxContainer" index="2"]
+margin_top = 56.0
+margin_right = 608.0
+margin_bottom = 74.0
+
+[node name="HBoxContainer" parent="VBoxContainer/Statements/Statement3/VBoxContainer" index="3"]
+margin_top = 78.0
+margin_right = 608.0
+margin_bottom = 110.0
+
+[node name="Label" parent="VBoxContainer/Statements/Statement3/VBoxContainer/HBoxContainer" index="0"]
+margin_top = 4.0
+margin_right = 150.0
+margin_bottom = 28.0
+
+[node name="MarginContainer" parent="VBoxContainer/Statements/Statement3/VBoxContainer/HBoxContainer" index="1"]
+margin_left = 154.0
+margin_right = 186.0
+margin_bottom = 32.0
+
+[node name="CheckBox1" parent="VBoxContainer/Statements/Statement3/VBoxContainer/HBoxContainer" index="2"]
+margin_left = 190.0
+margin_right = 244.0
+margin_bottom = 32.0
+
+[node name="CheckBox2" parent="VBoxContainer/Statements/Statement3/VBoxContainer/HBoxContainer" index="3"]
+margin_left = 248.0
+margin_right = 302.0
+margin_bottom = 32.0
+
+[node name="CheckBox3" parent="VBoxContainer/Statements/Statement3/VBoxContainer/HBoxContainer" index="4"]
+margin_left = 306.0
+margin_right = 361.0
+margin_bottom = 32.0
+
+[node name="CheckBox4" parent="VBoxContainer/Statements/Statement3/VBoxContainer/HBoxContainer" index="5"]
+margin_left = 365.0
+margin_right = 419.0
+margin_bottom = 32.0
+
+[node name="CheckBox5" parent="VBoxContainer/Statements/Statement3/VBoxContainer/HBoxContainer" index="6"]
+margin_left = 423.0
+margin_right = 478.0
+margin_bottom = 32.0
+
+[node name="Label2" parent="VBoxContainer/Statements/Statement3/VBoxContainer/HBoxContainer" index="7"]
+margin_left = 482.0
+margin_top = 4.0
+margin_right = 608.0
+margin_bottom = 28.0
+
 [node name="Statement4" parent="VBoxContainer/Statements" instance=ExtResource( 4 )]
 margin_top = 480.0
 margin_right = 608.0
 margin_bottom = 590.0
+
+[node name="VBoxContainer" parent="VBoxContainer/Statements/Statement4" index="0"]
+margin_right = 608.0
+margin_bottom = 110.0
+
+[node name="StatementNum" parent="VBoxContainer/Statements/Statement4/VBoxContainer" index="0"]
+margin_right = 608.0
+text = "Statement 4"
+
+[node name="StatementWording" parent="VBoxContainer/Statements/Statement4/VBoxContainer" index="1"]
+margin_right = 608.0
+margin_bottom = 52.0
+
+[node name="MarginContainer" parent="VBoxContainer/Statements/Statement4/VBoxContainer" index="2"]
+margin_top = 56.0
+margin_right = 608.0
+margin_bottom = 74.0
+
+[node name="HBoxContainer" parent="VBoxContainer/Statements/Statement4/VBoxContainer" index="3"]
+margin_top = 78.0
+margin_right = 608.0
+margin_bottom = 110.0
+
+[node name="Label" parent="VBoxContainer/Statements/Statement4/VBoxContainer/HBoxContainer" index="0"]
+margin_top = 4.0
+margin_right = 150.0
+margin_bottom = 28.0
+
+[node name="MarginContainer" parent="VBoxContainer/Statements/Statement4/VBoxContainer/HBoxContainer" index="1"]
+margin_left = 154.0
+margin_right = 186.0
+margin_bottom = 32.0
+
+[node name="CheckBox1" parent="VBoxContainer/Statements/Statement4/VBoxContainer/HBoxContainer" index="2"]
+margin_left = 190.0
+margin_right = 244.0
+margin_bottom = 32.0
+
+[node name="CheckBox2" parent="VBoxContainer/Statements/Statement4/VBoxContainer/HBoxContainer" index="3"]
+margin_left = 248.0
+margin_right = 302.0
+margin_bottom = 32.0
+
+[node name="CheckBox3" parent="VBoxContainer/Statements/Statement4/VBoxContainer/HBoxContainer" index="4"]
+margin_left = 306.0
+margin_right = 361.0
+margin_bottom = 32.0
+
+[node name="CheckBox4" parent="VBoxContainer/Statements/Statement4/VBoxContainer/HBoxContainer" index="5"]
+margin_left = 365.0
+margin_right = 419.0
+margin_bottom = 32.0
+
+[node name="CheckBox5" parent="VBoxContainer/Statements/Statement4/VBoxContainer/HBoxContainer" index="6"]
+margin_left = 423.0
+margin_right = 478.0
+margin_bottom = 32.0
+
+[node name="Label2" parent="VBoxContainer/Statements/Statement4/VBoxContainer/HBoxContainer" index="7"]
+margin_left = 482.0
+margin_top = 4.0
+margin_right = 608.0
+margin_bottom = 28.0
+
+[node name="Statement5" parent="VBoxContainer/Statements" instance=ExtResource( 4 )]
+margin_top = 640.0
+margin_right = 608.0
+margin_bottom = 750.0
+
+[node name="VBoxContainer" parent="VBoxContainer/Statements/Statement5" index="0"]
+margin_right = 608.0
+margin_bottom = 110.0
+
+[node name="StatementNum" parent="VBoxContainer/Statements/Statement5/VBoxContainer" index="0"]
+margin_right = 608.0
+text = "Statement 5"
+
+[node name="StatementWording" parent="VBoxContainer/Statements/Statement5/VBoxContainer" index="1"]
+margin_right = 608.0
+margin_bottom = 52.0
+
+[node name="MarginContainer" parent="VBoxContainer/Statements/Statement5/VBoxContainer" index="2"]
+margin_top = 56.0
+margin_right = 608.0
+margin_bottom = 74.0
+
+[node name="HBoxContainer" parent="VBoxContainer/Statements/Statement5/VBoxContainer" index="3"]
+margin_top = 78.0
+margin_right = 608.0
+margin_bottom = 110.0
+
+[node name="Label" parent="VBoxContainer/Statements/Statement5/VBoxContainer/HBoxContainer" index="0"]
+margin_top = 4.0
+margin_right = 150.0
+margin_bottom = 28.0
+
+[node name="MarginContainer" parent="VBoxContainer/Statements/Statement5/VBoxContainer/HBoxContainer" index="1"]
+margin_left = 154.0
+margin_right = 186.0
+margin_bottom = 32.0
+
+[node name="CheckBox1" parent="VBoxContainer/Statements/Statement5/VBoxContainer/HBoxContainer" index="2"]
+margin_left = 190.0
+margin_right = 244.0
+margin_bottom = 32.0
+
+[node name="CheckBox2" parent="VBoxContainer/Statements/Statement5/VBoxContainer/HBoxContainer" index="3"]
+margin_left = 248.0
+margin_right = 302.0
+margin_bottom = 32.0
+
+[node name="CheckBox3" parent="VBoxContainer/Statements/Statement5/VBoxContainer/HBoxContainer" index="4"]
+margin_left = 306.0
+margin_right = 361.0
+margin_bottom = 32.0
+
+[node name="CheckBox4" parent="VBoxContainer/Statements/Statement5/VBoxContainer/HBoxContainer" index="5"]
+margin_left = 365.0
+margin_right = 419.0
+margin_bottom = 32.0
+
+[node name="CheckBox5" parent="VBoxContainer/Statements/Statement5/VBoxContainer/HBoxContainer" index="6"]
+margin_left = 423.0
+margin_right = 478.0
+margin_bottom = 32.0
+
+[node name="Label2" parent="VBoxContainer/Statements/Statement5/VBoxContainer/HBoxContainer" index="7"]
+margin_left = 482.0
+margin_top = 4.0
+margin_right = 608.0
+margin_bottom = 28.0
+
+[node name="Statement6" parent="VBoxContainer/Statements" instance=ExtResource( 4 )]
+margin_top = 800.0
+margin_right = 608.0
+margin_bottom = 910.0
+
+[node name="VBoxContainer" parent="VBoxContainer/Statements/Statement6" index="0"]
+margin_right = 608.0
+margin_bottom = 110.0
+
+[node name="StatementNum" parent="VBoxContainer/Statements/Statement6/VBoxContainer" index="0"]
+margin_right = 608.0
+text = "Statement 6"
+
+[node name="StatementWording" parent="VBoxContainer/Statements/Statement6/VBoxContainer" index="1"]
+margin_right = 608.0
+margin_bottom = 52.0
+
+[node name="MarginContainer" parent="VBoxContainer/Statements/Statement6/VBoxContainer" index="2"]
+margin_top = 56.0
+margin_right = 608.0
+margin_bottom = 74.0
+
+[node name="HBoxContainer" parent="VBoxContainer/Statements/Statement6/VBoxContainer" index="3"]
+margin_top = 78.0
+margin_right = 608.0
+margin_bottom = 110.0
+
+[node name="Label" parent="VBoxContainer/Statements/Statement6/VBoxContainer/HBoxContainer" index="0"]
+margin_top = 4.0
+margin_right = 150.0
+margin_bottom = 28.0
+
+[node name="MarginContainer" parent="VBoxContainer/Statements/Statement6/VBoxContainer/HBoxContainer" index="1"]
+margin_left = 154.0
+margin_right = 186.0
+margin_bottom = 32.0
+
+[node name="CheckBox1" parent="VBoxContainer/Statements/Statement6/VBoxContainer/HBoxContainer" index="2"]
+margin_left = 190.0
+margin_right = 244.0
+margin_bottom = 32.0
+
+[node name="CheckBox2" parent="VBoxContainer/Statements/Statement6/VBoxContainer/HBoxContainer" index="3"]
+margin_left = 248.0
+margin_right = 302.0
+margin_bottom = 32.0
+
+[node name="CheckBox3" parent="VBoxContainer/Statements/Statement6/VBoxContainer/HBoxContainer" index="4"]
+margin_left = 306.0
+margin_right = 361.0
+margin_bottom = 32.0
+
+[node name="CheckBox4" parent="VBoxContainer/Statements/Statement6/VBoxContainer/HBoxContainer" index="5"]
+margin_left = 365.0
+margin_right = 419.0
+margin_bottom = 32.0
+
+[node name="CheckBox5" parent="VBoxContainer/Statements/Statement6/VBoxContainer/HBoxContainer" index="6"]
+margin_left = 423.0
+margin_right = 478.0
+margin_bottom = 32.0
+
+[node name="Label2" parent="VBoxContainer/Statements/Statement6/VBoxContainer/HBoxContainer" index="7"]
+margin_left = 482.0
+margin_top = 4.0
+margin_right = 608.0
+margin_bottom = 28.0
+
+[editable path="VBoxContainer/Statements/Statement1"]
+[editable path="VBoxContainer/Statements/Statement2"]
+[editable path="VBoxContainer/Statements/Statement3"]
+[editable path="VBoxContainer/Statements/Statement4"]
+[editable path="VBoxContainer/Statements/Statement5"]
+[editable path="VBoxContainer/Statements/Statement6"]

@@ -1,0 +1,453 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/content/paper_base.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/content/evaluations/evaluation_base.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/content/paper.gd" type="Script" id=3]
+
+[node name="Evaluation" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+is_evaluation = true
+
+[node name="Color" parent="." index="0"]
+margin_bottom = 1679.0
+
+[node name="TextureRect" parent="." index="1"]
+margin_bottom = 1679.0
+
+[node name="Evaluation" parent="." index="4" instance=ExtResource( 2 )]
+margin_right = 1163.0
+margin_bottom = 1679.0
+
+[node name="VBoxContainer" parent="Evaluation" index="0"]
+margin_right = 1063.0
+margin_bottom = 1579.0
+
+[node name="Headers" parent="Evaluation/VBoxContainer" index="0"]
+margin_right = 963.0
+margin_bottom = 371.0
+
+[node name="Name" parent="Evaluation/VBoxContainer" index="1"]
+margin_top = 383.0
+margin_right = 963.0
+margin_bottom = 474.0
+
+[node name="Statements" parent="Evaluation/VBoxContainer" index="2"]
+margin_top = 486.0
+margin_right = 963.0
+margin_bottom = 1479.0
+
+[node name="Statement1" parent="Evaluation/VBoxContainer/Statements" index="0"]
+margin_right = 963.0
+margin_bottom = 137.0
+
+[node name="VBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement1" index="0"]
+margin_right = 963.0
+margin_bottom = 137.0
+
+[node name="StatementNum" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer" index="0"]
+margin_right = 963.0
+
+[node name="StatementWording" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer" index="1"]
+margin_right = 963.0
+margin_bottom = 79.0
+text = "I’m in a desert. I look down and I see a tortoise. He has been flipped on his back. He’s baking in the hot sun and can’t turn himself over. He cries for help. Yet, I’m not helping the tortoise."
+
+[node name="MarginContainer" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer" index="2"]
+margin_top = 83.0
+margin_right = 963.0
+margin_bottom = 101.0
+
+[node name="HBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer" index="3"]
+margin_top = 105.0
+margin_right = 963.0
+margin_bottom = 137.0
+
+[node name="Label" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer/HBoxContainer" index="0"]
+margin_top = 4.0
+margin_right = 150.0
+margin_bottom = 28.0
+
+[node name="MarginContainer" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer/HBoxContainer" index="1"]
+margin_left = 154.0
+margin_right = 186.0
+margin_bottom = 32.0
+
+[node name="CheckBox1" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer/HBoxContainer" index="2"]
+margin_left = 190.0
+margin_right = 315.0
+margin_bottom = 32.0
+
+[node name="CheckBox2" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer/HBoxContainer" index="3"]
+margin_left = 319.0
+margin_right = 444.0
+margin_bottom = 32.0
+
+[node name="CheckBox3" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer/HBoxContainer" index="4"]
+margin_left = 448.0
+margin_right = 574.0
+margin_bottom = 32.0
+
+[node name="CheckBox4" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer/HBoxContainer" index="5"]
+margin_left = 578.0
+margin_right = 703.0
+margin_bottom = 32.0
+
+[node name="CheckBox5" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer/HBoxContainer" index="6"]
+margin_left = 707.0
+margin_right = 833.0
+margin_bottom = 32.0
+
+[node name="Label2" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer/HBoxContainer" index="7"]
+margin_left = 837.0
+margin_top = 4.0
+margin_right = 963.0
+margin_bottom = 28.0
+
+[node name="Statement2" parent="Evaluation/VBoxContainer/Statements" index="1"]
+margin_top = 187.0
+margin_right = 963.0
+margin_bottom = 351.0
+
+[node name="VBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement2" index="0"]
+margin_right = 963.0
+margin_bottom = 164.0
+
+[node name="StatementNum" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer" index="0"]
+margin_right = 963.0
+
+[node name="StatementWording" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer" index="1"]
+margin_right = 963.0
+margin_bottom = 106.0
+text = "After not helping, I find out that the tortoise has managed to turn himself over. The tortoise remembers. The tortoise has friends. Shady friends. I decide to flee our beloved Animalia to save my life. I am able to plan a complex escape plan and disappear into the night."
+
+[node name="MarginContainer" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer" index="2"]
+margin_top = 110.0
+margin_right = 963.0
+margin_bottom = 128.0
+
+[node name="HBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer" index="3"]
+margin_top = 132.0
+margin_right = 963.0
+margin_bottom = 164.0
+
+[node name="Label" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer/HBoxContainer" index="0"]
+margin_top = 4.0
+margin_right = 150.0
+margin_bottom = 28.0
+
+[node name="MarginContainer" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer/HBoxContainer" index="1"]
+margin_left = 154.0
+margin_right = 186.0
+margin_bottom = 32.0
+
+[node name="CheckBox1" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer/HBoxContainer" index="2"]
+margin_left = 190.0
+margin_right = 315.0
+margin_bottom = 32.0
+
+[node name="CheckBox2" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer/HBoxContainer" index="3"]
+margin_left = 319.0
+margin_right = 444.0
+margin_bottom = 32.0
+
+[node name="CheckBox3" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer/HBoxContainer" index="4"]
+margin_left = 448.0
+margin_right = 574.0
+margin_bottom = 32.0
+
+[node name="CheckBox4" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer/HBoxContainer" index="5"]
+margin_left = 578.0
+margin_right = 703.0
+margin_bottom = 32.0
+
+[node name="CheckBox5" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer/HBoxContainer" index="6"]
+margin_left = 707.0
+margin_right = 833.0
+margin_bottom = 32.0
+
+[node name="Label2" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer/HBoxContainer" index="7"]
+margin_left = 837.0
+margin_top = 4.0
+margin_right = 963.0
+margin_bottom = 28.0
+
+[node name="Statement3" parent="Evaluation/VBoxContainer/Statements" index="2"]
+margin_top = 401.0
+margin_right = 963.0
+margin_bottom = 538.0
+
+[node name="VBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement3" index="0"]
+margin_right = 963.0
+margin_bottom = 137.0
+
+[node name="StatementNum" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer" index="0"]
+margin_right = 963.0
+
+[node name="StatementWording" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer" index="1"]
+margin_right = 963.0
+margin_bottom = 79.0
+text = "My chosen escape route is through the Bay of Sidaria. I get on a steam battleship and admire its beauty. Rather than looking out to sea, I spend an unusual amount of time learning about the ship’s explosive shells."
+
+[node name="MarginContainer" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer" index="2"]
+margin_top = 83.0
+margin_right = 963.0
+margin_bottom = 101.0
+
+[node name="HBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer" index="3"]
+margin_top = 105.0
+margin_right = 963.0
+margin_bottom = 137.0
+
+[node name="Label" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer/HBoxContainer" index="0"]
+margin_top = 4.0
+margin_right = 150.0
+margin_bottom = 28.0
+
+[node name="MarginContainer" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer/HBoxContainer" index="1"]
+margin_left = 154.0
+margin_right = 186.0
+margin_bottom = 32.0
+
+[node name="CheckBox1" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer/HBoxContainer" index="2"]
+margin_left = 190.0
+margin_right = 315.0
+margin_bottom = 32.0
+
+[node name="CheckBox2" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer/HBoxContainer" index="3"]
+margin_left = 319.0
+margin_right = 444.0
+margin_bottom = 32.0
+
+[node name="CheckBox3" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer/HBoxContainer" index="4"]
+margin_left = 448.0
+margin_right = 574.0
+margin_bottom = 32.0
+
+[node name="CheckBox4" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer/HBoxContainer" index="5"]
+margin_left = 578.0
+margin_right = 703.0
+margin_bottom = 32.0
+
+[node name="CheckBox5" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer/HBoxContainer" index="6"]
+margin_left = 707.0
+margin_right = 833.0
+margin_bottom = 32.0
+
+[node name="Label2" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer/HBoxContainer" index="7"]
+margin_left = 837.0
+margin_top = 4.0
+margin_right = 963.0
+margin_bottom = 28.0
+
+[node name="Statement4" parent="Evaluation/VBoxContainer/Statements" index="3"]
+margin_top = 588.0
+margin_right = 963.0
+margin_bottom = 779.0
+
+[node name="VBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement4" index="0"]
+margin_right = 963.0
+margin_bottom = 191.0
+
+[node name="StatementNum" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer" index="0"]
+margin_right = 963.0
+
+[node name="StatementWording" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer" index="1"]
+margin_right = 963.0
+margin_bottom = 133.0
+text = "The shells explode in my face, but through my resilience I survive. However, I am depressed about the loss of several unspecified limbs. In the hospital, a tortoise helps me laugh by a puppet show. He is the tortoise I denied help. With a newfound sense of purpose, I become a puppeteer, and perhaps also join an underground criminal organization."
+
+[node name="MarginContainer" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer" index="2"]
+margin_top = 137.0
+margin_right = 963.0
+margin_bottom = 155.0
+
+[node name="HBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer" index="3"]
+margin_top = 159.0
+margin_right = 963.0
+margin_bottom = 191.0
+
+[node name="Label" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer/HBoxContainer" index="0"]
+margin_top = 4.0
+margin_right = 150.0
+margin_bottom = 28.0
+
+[node name="MarginContainer" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer/HBoxContainer" index="1"]
+margin_left = 154.0
+margin_right = 186.0
+margin_bottom = 32.0
+
+[node name="CheckBox1" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer/HBoxContainer" index="2"]
+margin_left = 190.0
+margin_right = 315.0
+margin_bottom = 32.0
+
+[node name="CheckBox2" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer/HBoxContainer" index="3"]
+margin_left = 319.0
+margin_right = 444.0
+margin_bottom = 32.0
+
+[node name="CheckBox3" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer/HBoxContainer" index="4"]
+margin_left = 448.0
+margin_right = 574.0
+margin_bottom = 32.0
+
+[node name="CheckBox4" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer/HBoxContainer" index="5"]
+margin_left = 578.0
+margin_right = 703.0
+margin_bottom = 32.0
+
+[node name="CheckBox5" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer/HBoxContainer" index="6"]
+margin_left = 707.0
+margin_right = 833.0
+margin_bottom = 32.0
+
+[node name="Label2" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer/HBoxContainer" index="7"]
+margin_left = 837.0
+margin_top = 4.0
+margin_right = 963.0
+margin_bottom = 28.0
+
+[node name="Statement5" parent="Evaluation/VBoxContainer/Statements" index="4"]
+margin_top = 829.0
+margin_right = 963.0
+margin_bottom = 993.0
+
+[node name="VBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement5" index="0"]
+margin_right = 963.0
+margin_bottom = 164.0
+
+[node name="StatementNum" parent="Evaluation/VBoxContainer/Statements/Statement5/VBoxContainer" index="0"]
+margin_right = 963.0
+
+[node name="StatementWording" parent="Evaluation/VBoxContainer/Statements/Statement5/VBoxContainer" index="1"]
+margin_right = 963.0
+margin_bottom = 106.0
+text = "I decide to combine my newfound interest in puppetry with my love of crafting things. I start a business creating custom-made puppets. As my business grows, I also use my connections in the criminal underworld to expand my market and protect my enterprise."
+
+[node name="MarginContainer" parent="Evaluation/VBoxContainer/Statements/Statement5/VBoxContainer" index="2"]
+margin_top = 110.0
+margin_right = 963.0
+margin_bottom = 128.0
+
+[node name="HBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement5/VBoxContainer" index="3"]
+margin_top = 132.0
+margin_right = 963.0
+margin_bottom = 164.0
+
+[node name="Label" parent="Evaluation/VBoxContainer/Statements/Statement5/VBoxContainer/HBoxContainer" index="0"]
+margin_top = 4.0
+margin_right = 150.0
+margin_bottom = 28.0
+
+[node name="MarginContainer" parent="Evaluation/VBoxContainer/Statements/Statement5/VBoxContainer/HBoxContainer" index="1"]
+margin_left = 154.0
+margin_right = 186.0
+margin_bottom = 32.0
+
+[node name="CheckBox1" parent="Evaluation/VBoxContainer/Statements/Statement5/VBoxContainer/HBoxContainer" index="2"]
+margin_left = 190.0
+margin_right = 315.0
+margin_bottom = 32.0
+
+[node name="CheckBox2" parent="Evaluation/VBoxContainer/Statements/Statement5/VBoxContainer/HBoxContainer" index="3"]
+margin_left = 319.0
+margin_right = 444.0
+margin_bottom = 32.0
+
+[node name="CheckBox3" parent="Evaluation/VBoxContainer/Statements/Statement5/VBoxContainer/HBoxContainer" index="4"]
+margin_left = 448.0
+margin_right = 574.0
+margin_bottom = 32.0
+
+[node name="CheckBox4" parent="Evaluation/VBoxContainer/Statements/Statement5/VBoxContainer/HBoxContainer" index="5"]
+margin_left = 578.0
+margin_right = 703.0
+margin_bottom = 32.0
+
+[node name="CheckBox5" parent="Evaluation/VBoxContainer/Statements/Statement5/VBoxContainer/HBoxContainer" index="6"]
+margin_left = 707.0
+margin_right = 833.0
+margin_bottom = 32.0
+
+[node name="Label2" parent="Evaluation/VBoxContainer/Statements/Statement5/VBoxContainer/HBoxContainer" index="7"]
+margin_left = 837.0
+margin_top = 4.0
+margin_right = 963.0
+margin_bottom = 28.0
+
+[node name="Statement6" parent="Evaluation/VBoxContainer/Statements" index="5"]
+visible = false
+margin_top = 1043.0
+margin_right = 963.0
+margin_bottom = 1207.0
+
+[node name="VBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement6" index="0"]
+margin_right = 963.0
+margin_bottom = 164.0
+
+[node name="StatementNum" parent="Evaluation/VBoxContainer/Statements/Statement6/VBoxContainer" index="0"]
+margin_right = 963.0
+
+[node name="StatementWording" parent="Evaluation/VBoxContainer/Statements/Statement6/VBoxContainer" index="1"]
+margin_right = 963.0
+margin_bottom = 106.0
+text = "I decide to combine my newfound interest in puppetry with my love of crafting things. I start a business creating custom-made puppets. As my business grows, I also use my connections in the criminal underworld to expand my market and protect my enterprise."
+
+[node name="MarginContainer" parent="Evaluation/VBoxContainer/Statements/Statement6/VBoxContainer" index="2"]
+margin_top = 110.0
+margin_right = 963.0
+margin_bottom = 128.0
+
+[node name="HBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement6/VBoxContainer" index="3"]
+margin_top = 132.0
+margin_right = 963.0
+margin_bottom = 164.0
+
+[node name="Label" parent="Evaluation/VBoxContainer/Statements/Statement6/VBoxContainer/HBoxContainer" index="0"]
+margin_top = 4.0
+margin_right = 150.0
+margin_bottom = 28.0
+
+[node name="MarginContainer" parent="Evaluation/VBoxContainer/Statements/Statement6/VBoxContainer/HBoxContainer" index="1"]
+margin_left = 154.0
+margin_right = 186.0
+margin_bottom = 32.0
+
+[node name="CheckBox1" parent="Evaluation/VBoxContainer/Statements/Statement6/VBoxContainer/HBoxContainer" index="2"]
+margin_left = 190.0
+margin_right = 315.0
+margin_bottom = 32.0
+
+[node name="CheckBox2" parent="Evaluation/VBoxContainer/Statements/Statement6/VBoxContainer/HBoxContainer" index="3"]
+margin_left = 319.0
+margin_right = 444.0
+margin_bottom = 32.0
+
+[node name="CheckBox3" parent="Evaluation/VBoxContainer/Statements/Statement6/VBoxContainer/HBoxContainer" index="4"]
+margin_left = 448.0
+margin_right = 574.0
+margin_bottom = 32.0
+
+[node name="CheckBox4" parent="Evaluation/VBoxContainer/Statements/Statement6/VBoxContainer/HBoxContainer" index="5"]
+margin_left = 578.0
+margin_right = 703.0
+margin_bottom = 32.0
+
+[node name="CheckBox5" parent="Evaluation/VBoxContainer/Statements/Statement6/VBoxContainer/HBoxContainer" index="6"]
+margin_left = 707.0
+margin_right = 833.0
+margin_bottom = 32.0
+
+[node name="Label2" parent="Evaluation/VBoxContainer/Statements/Statement6/VBoxContainer/HBoxContainer" index="7"]
+margin_left = 837.0
+margin_top = 4.0
+margin_right = 963.0
+margin_bottom = 28.0
+
+[editable path="Evaluation"]
+[editable path="Evaluation/VBoxContainer/Statements/Statement1"]
+[editable path="Evaluation/VBoxContainer/Statements/Statement2"]
+[editable path="Evaluation/VBoxContainer/Statements/Statement3"]
+[editable path="Evaluation/VBoxContainer/Statements/Statement4"]
+[editable path="Evaluation/VBoxContainer/Statements/Statement5"]
+[editable path="Evaluation/VBoxContainer/Statements/Statement6"]

@@ -1,0 +1,327 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/fonts/italic.tres" type="DynamicFont" id=1]
+[ext_resource path="res://src/content/paper.gd" type="Script" id=2]
+[ext_resource path="res://src/content/paper_base.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/content/evaluations/evaluation_base.tscn" type="PackedScene" id=4]
+
+[node name="Evaluation" instance=ExtResource( 3 )]
+script = ExtResource( 2 )
+is_evaluation = true
+
+[node name="Evaluation" parent="." index="4" instance=ExtResource( 4 )]
+margin_right = 1163.0
+margin_bottom = 1538.0
+
+[node name="VBoxContainer" parent="Evaluation" index="0"]
+margin_right = 1063.0
+margin_bottom = 1438.0
+
+[node name="Headers" parent="Evaluation/VBoxContainer" index="0"]
+margin_right = 963.0
+margin_bottom = 371.0
+
+[node name="Name" parent="Evaluation/VBoxContainer" index="1"]
+margin_top = 383.0
+margin_right = 963.0
+margin_bottom = 474.0
+
+[node name="Statements" parent="Evaluation/VBoxContainer" index="2"]
+margin_top = 486.0
+margin_right = 963.0
+margin_bottom = 1338.0
+
+[node name="Statement1" parent="Evaluation/VBoxContainer/Statements" index="0"]
+margin_right = 963.0
+margin_bottom = 137.0
+
+[node name="VBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement1" index="0"]
+margin_right = 963.0
+margin_bottom = 137.0
+
+[node name="StatementNum" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer" index="0"]
+margin_right = 963.0
+
+[node name="StatementWording" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer" index="1"]
+margin_right = 963.0
+margin_bottom = 79.0
+text = "The office is on fire. My colleagues are on fire. The imperial documents are on fire. I must save the imperial documents."
+
+[node name="MarginContainer" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer" index="2"]
+margin_top = 83.0
+margin_right = 963.0
+margin_bottom = 101.0
+
+[node name="HBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer" index="3"]
+margin_top = 105.0
+margin_right = 963.0
+margin_bottom = 137.0
+
+[node name="Label" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer/HBoxContainer" index="0"]
+margin_top = 4.0
+margin_right = 150.0
+margin_bottom = 28.0
+
+[node name="MarginContainer" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer/HBoxContainer" index="1"]
+margin_left = 154.0
+margin_right = 186.0
+margin_bottom = 32.0
+
+[node name="CheckBox1" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer/HBoxContainer" index="2"]
+margin_left = 190.0
+margin_right = 315.0
+margin_bottom = 32.0
+
+[node name="CheckBox2" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer/HBoxContainer" index="3"]
+margin_left = 319.0
+margin_right = 444.0
+margin_bottom = 32.0
+
+[node name="CheckBox3" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer/HBoxContainer" index="4"]
+margin_left = 448.0
+margin_right = 574.0
+margin_bottom = 32.0
+
+[node name="CheckBox4" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer/HBoxContainer" index="5"]
+margin_left = 578.0
+margin_right = 703.0
+margin_bottom = 32.0
+
+[node name="CheckBox5" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer/HBoxContainer" index="6"]
+margin_left = 707.0
+margin_right = 833.0
+margin_bottom = 32.0
+
+[node name="Label2" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer/HBoxContainer" index="7"]
+margin_left = 837.0
+margin_top = 4.0
+margin_right = 963.0
+margin_bottom = 28.0
+
+[node name="Statement2" parent="Evaluation/VBoxContainer/Statements" index="1"]
+margin_top = 187.0
+margin_right = 963.0
+margin_bottom = 324.0
+
+[node name="VBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement2" index="0"]
+margin_right = 963.0
+margin_bottom = 137.0
+
+[node name="StatementNum" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer" index="0"]
+margin_right = 963.0
+
+[node name="StatementWording" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer" index="1"]
+margin_right = 963.0
+margin_bottom = 79.0
+text = "I work with a lion and a gazelle. The lion has eaten the gazelle. After carefully analyzing this situation, I realize the following: I now work with a lion. I continue my work."
+
+[node name="MarginContainer" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer" index="2"]
+margin_top = 83.0
+margin_right = 963.0
+margin_bottom = 101.0
+
+[node name="HBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer" index="3"]
+margin_top = 105.0
+margin_right = 963.0
+margin_bottom = 137.0
+
+[node name="Label" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer/HBoxContainer" index="0"]
+margin_top = 4.0
+margin_right = 150.0
+margin_bottom = 28.0
+
+[node name="MarginContainer" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer/HBoxContainer" index="1"]
+margin_left = 154.0
+margin_right = 186.0
+margin_bottom = 32.0
+
+[node name="CheckBox1" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer/HBoxContainer" index="2"]
+margin_left = 190.0
+margin_right = 315.0
+margin_bottom = 32.0
+
+[node name="CheckBox2" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer/HBoxContainer" index="3"]
+margin_left = 319.0
+margin_right = 444.0
+margin_bottom = 32.0
+
+[node name="CheckBox3" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer/HBoxContainer" index="4"]
+margin_left = 448.0
+margin_right = 574.0
+margin_bottom = 32.0
+
+[node name="CheckBox4" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer/HBoxContainer" index="5"]
+margin_left = 578.0
+margin_right = 703.0
+margin_bottom = 32.0
+
+[node name="CheckBox5" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer/HBoxContainer" index="6"]
+margin_left = 707.0
+margin_right = 833.0
+margin_bottom = 32.0
+
+[node name="Label2" parent="Evaluation/VBoxContainer/Statements/Statement2/VBoxContainer/HBoxContainer" index="7"]
+margin_left = 837.0
+margin_top = 4.0
+margin_right = 963.0
+margin_bottom = 28.0
+
+[node name="Statement3" parent="Evaluation/VBoxContainer/Statements" index="2"]
+margin_top = 374.0
+margin_right = 963.0
+margin_bottom = 511.0
+
+[node name="VBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement3" index="0"]
+margin_right = 963.0
+margin_bottom = 137.0
+
+[node name="StatementNum" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer" index="0"]
+margin_right = 963.0
+
+[node name="StatementWording" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer" index="1"]
+margin_right = 963.0
+margin_bottom = 79.0
+text = "In the grand city of Lours, there is a team of badgers and squirrels who are building an animated, intelligent animal made of steel. I would love to assist them."
+
+[node name="MarginContainer" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer" index="2"]
+margin_top = 83.0
+margin_right = 963.0
+margin_bottom = 101.0
+
+[node name="HBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer" index="3"]
+margin_top = 105.0
+margin_right = 963.0
+margin_bottom = 137.0
+
+[node name="Label" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer/HBoxContainer" index="0"]
+margin_top = 4.0
+margin_right = 150.0
+margin_bottom = 28.0
+
+[node name="MarginContainer" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer/HBoxContainer" index="1"]
+margin_left = 154.0
+margin_right = 186.0
+margin_bottom = 32.0
+
+[node name="CheckBox1" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer/HBoxContainer" index="2"]
+margin_left = 190.0
+margin_right = 315.0
+margin_bottom = 32.0
+
+[node name="CheckBox2" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer/HBoxContainer" index="3"]
+margin_left = 319.0
+margin_right = 444.0
+margin_bottom = 32.0
+
+[node name="CheckBox3" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer/HBoxContainer" index="4"]
+margin_left = 448.0
+margin_right = 574.0
+margin_bottom = 32.0
+
+[node name="CheckBox4" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer/HBoxContainer" index="5"]
+margin_left = 578.0
+margin_right = 703.0
+margin_bottom = 32.0
+
+[node name="CheckBox5" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer/HBoxContainer" index="6"]
+margin_left = 707.0
+margin_right = 833.0
+margin_bottom = 32.0
+
+[node name="Label2" parent="Evaluation/VBoxContainer/Statements/Statement3/VBoxContainer/HBoxContainer" index="7"]
+margin_left = 837.0
+margin_top = 4.0
+margin_right = 963.0
+margin_bottom = 28.0
+
+[node name="Statement4" parent="Evaluation/VBoxContainer/Statements" index="3"]
+margin_top = 561.0
+margin_right = 963.0
+margin_bottom = 726.0
+
+[node name="VBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement4" index="0"]
+margin_right = 963.0
+margin_bottom = 165.0
+
+[node name="StatementNum" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer" index="0"]
+margin_right = 963.0
+
+[node name="StatementWording" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer" index="1"]
+margin_right = 963.0
+margin_bottom = 79.0
+text = "I am fascinated with the inner workings of the animal mind. If there was an experimental new technology allowing one to enter another's mind, I would volunteer to try it, even at the risk of death.*"
+
+[node name="Label" type="Label" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer" index="2"]
+margin_top = 83.0
+margin_right = 963.0
+margin_bottom = 107.0
+custom_fonts/font = ExtResource( 1 )
+text = "*This statement is merely hypothetical, no such machine is in development. Yet it is legally binding."
+autowrap = true
+
+[node name="MarginContainer" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer" index="3"]
+margin_top = 111.0
+margin_right = 963.0
+margin_bottom = 129.0
+
+[node name="HBoxContainer" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer" index="4"]
+margin_top = 133.0
+margin_right = 963.0
+margin_bottom = 165.0
+
+[node name="Label" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer/HBoxContainer" index="0"]
+margin_top = 4.0
+margin_right = 150.0
+margin_bottom = 28.0
+
+[node name="MarginContainer" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer/HBoxContainer" index="1"]
+margin_left = 154.0
+margin_right = 186.0
+margin_bottom = 32.0
+
+[node name="CheckBox1" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer/HBoxContainer" index="2"]
+margin_left = 190.0
+margin_right = 315.0
+margin_bottom = 32.0
+
+[node name="CheckBox2" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer/HBoxContainer" index="3"]
+margin_left = 319.0
+margin_right = 444.0
+margin_bottom = 32.0
+
+[node name="CheckBox3" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer/HBoxContainer" index="4"]
+margin_left = 448.0
+margin_right = 574.0
+margin_bottom = 32.0
+
+[node name="CheckBox4" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer/HBoxContainer" index="5"]
+margin_left = 578.0
+margin_right = 703.0
+margin_bottom = 32.0
+
+[node name="CheckBox5" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer/HBoxContainer" index="6"]
+margin_left = 707.0
+margin_right = 833.0
+margin_bottom = 32.0
+
+[node name="Label2" parent="Evaluation/VBoxContainer/Statements/Statement4/VBoxContainer/HBoxContainer" index="7"]
+margin_left = 837.0
+margin_top = 4.0
+margin_right = 963.0
+margin_bottom = 28.0
+
+[node name="Statement5" parent="Evaluation/VBoxContainer/Statements" index="4"]
+visible = false
+margin_top = 884.0
+margin_bottom = 994.0
+
+[node name="Statement6" parent="Evaluation/VBoxContainer/Statements" index="5"]
+visible = false
+margin_top = 884.0
+margin_bottom = 994.0
+
+[editable path="Evaluation"]
+[editable path="Evaluation/VBoxContainer/Statements/Statement1"]
+[editable path="Evaluation/VBoxContainer/Statements/Statement2"]
+[editable path="Evaluation/VBoxContainer/Statements/Statement3"]
+[editable path="Evaluation/VBoxContainer/Statements/Statement4"]

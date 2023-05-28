@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/themes/base_theme.tres" type="Theme" id=1]
 [ext_resource path="res://src/content/headers/headers.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/content/headers/name.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/content/evaluations/statement.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/portraits/portrait1.jpg" type="Texture" id=5]
 
 [node name="Content" type="MarginContainer"]
 margin_right = 808.0
@@ -446,6 +447,22 @@ margin_left = 482.0
 margin_top = 4.0
 margin_right = 608.0
 margin_bottom = 28.0
+
+[node name="Control" type="Control" parent="."]
+margin_left = 100.0
+margin_top = 100.0
+margin_right = 708.0
+margin_bottom = 1523.0
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+margin_left = -108.0
+margin_top = -110.0
+margin_right = 170.0
+margin_bottom = 240.0
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 6
 
 [editable path="VBoxContainer/Statements/Statement1"]
 [editable path="VBoxContainer/Statements/Statement2"]

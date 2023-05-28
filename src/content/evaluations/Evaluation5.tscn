@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://src/content/paper_base.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/content/evaluations/evaluation_base.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/content/paper.gd" type="Script" id=3]
+[ext_resource path="res://assets/portraits/portrait4.jpg" type="Texture" id=4]
 
 [node name="Evaluation" instance=ExtResource( 1 )]
 script = ExtResource( 3 )
@@ -329,6 +330,13 @@ pressed = true
 [node name="Label2" parent="Evaluation/VBoxContainer/Statements/Statement6/VBoxContainer/HBoxContainer" index="7"]
 margin_left = 695.0
 margin_right = 821.0
+
+[node name="Control" parent="Evaluation" index="1"]
+margin_right = 922.0
+margin_bottom = 1712.0
+
+[node name="TextureRect" parent="Evaluation/Control" index="0"]
+texture = ExtResource( 4 )
 
 [editable path="Evaluation"]
 [editable path="Evaluation/VBoxContainer/Statements/Statement1"]

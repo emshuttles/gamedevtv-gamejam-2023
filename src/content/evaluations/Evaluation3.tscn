@@ -290,6 +290,10 @@ visible = false
 margin_top = 1045.0
 margin_bottom = 1155.0
 
+[node name="Control" parent="Evaluation" index="1"]
+margin_right = 922.0
+margin_bottom = 1687.0
+
 [editable path="Evaluation"]
 [editable path="Evaluation/VBoxContainer/Statements/Statement1"]
 [editable path="Evaluation/VBoxContainer/Statements/Statement2"]

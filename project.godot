@@ -78,6 +78,7 @@ Signals="*res://src/autoload/signals.gd"
 Enums="*res://src/autoload/enums.gd"
 Consts="*res://src/autoload/consts.gd"
 Scenes="*res://src/autoload/scenes.tscn"
+Utils="*res://src/autoload/utils.gd"
 
 [display]
 

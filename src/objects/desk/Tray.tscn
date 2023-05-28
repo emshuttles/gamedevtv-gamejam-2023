@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://assets/images/tray.png" type="Texture" id=1]
+[ext_resource path="res://assets/office/paper.png" type="Texture" id=1]
 [ext_resource path="res://src/objects/desk/tray.gd" type="Script" id=2]
 [ext_resource path="res://src/fonts/title.tres" type="DynamicFont" id=3]
+[ext_resource path="res://assets/office/leather_green.jpg" type="Texture" id=4]
+[ext_resource path="res://assets/office/dark_border.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 120, 180 )
@@ -10,18 +12,68 @@ extents = Vector2( 120, 180 )
 [node name="Tray" type="Area2D" groups=["tray"]]
 script = ExtResource( 2 )
 
-[node name="Sprite" type="Sprite" parent="."]
-texture = ExtResource( 1 )
+[node name="TextureRect" type="MarginContainer" parent="."]
+margin_left = -490.0
+margin_top = -728.0
+margin_right = 534.0
+margin_bottom = 1039.0
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect"]
+margin_right = 1024.0
+margin_bottom = 1767.0
+texture = ExtResource( 4 )
+stretch_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="TextureRect"]
+margin_right = 1024.0
+margin_bottom = 1767.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 5 )
+patch_margin_left = 100
+patch_margin_top = 100
+patch_margin_right = 283
+patch_margin_bottom = 100
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
 shape = SubResource( 1 )
 
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_left = -363.0
+margin_top = 757.0
+margin_right = 364.0
+margin_bottom = 906.0
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer"]
+margin_right = 727.0
+margin_bottom = 149.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0.682353, 0.670588, 0.666667, 1 )
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+modulate = Color( 1, 1, 1, 0.462745 )
+margin_right = 727.0
+margin_bottom = 149.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 2
+
 [node name="Label" type="Label" parent="."]
-margin_left = -250.0
-margin_right = -210.0
-margin_bottom = 126.0
+margin_left = -274.0
+margin_top = 758.0
+margin_right = 276.0
+margin_bottom = 884.0
+custom_colors/font_color = Color( 0.160784, 0.160784, 0.160784, 1 )
 custom_fonts/font = ExtResource( 3 )
+text = "Art Therapist"
+align = 1
 
 [connection signal="area_entered" from="." to="." method="_on_Tray_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_Tray_area_exited"]

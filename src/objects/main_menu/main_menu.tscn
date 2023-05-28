@@ -160,20 +160,21 @@ margin_right = 371.0
 margin_bottom = 1020.0
 size_flags_horizontal = 3
 theme = ExtResource( 4 )
+custom_constants/separation = 30
 alignment = 1
 
 [node name="ButtonWork" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-margin_top = 438.0
+margin_top = 425.0
 margin_right = 371.0
-margin_bottom = 508.0
+margin_bottom = 495.0
 rect_min_size = Vector2( 240, 70 )
 size_flags_vertical = 0
 text = "Work"
 
 [node name="ButtonQuit" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-margin_top = 512.0
+margin_top = 525.0
 margin_right = 371.0
-margin_bottom = 582.0
+margin_bottom = 595.0
 rect_min_size = Vector2( 240, 70 )
 size_flags_vertical = 0
 text = "Quit"

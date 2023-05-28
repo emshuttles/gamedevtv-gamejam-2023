@@ -9,45 +9,45 @@
 [ext_resource path="res://src/fonts/italic.tres" type="DynamicFont" id=7]
 
 [node name="InstructionsPersometer" instance=ExtResource( 1 )]
-margin_right = 851.0
-margin_bottom = 1506.0
-size_flags_horizontal = 1
-size_flags_vertical = 1
+margin_right = 958.0
+margin_bottom = 1566.0
 
 [node name="Color" parent="." index="0"]
-margin_right = 851.0
-margin_bottom = 1506.0
+margin_right = 958.0
+margin_bottom = 1566.0
 
 [node name="TextureRect" parent="." index="1"]
-margin_right = 851.0
-margin_bottom = 1506.0
+margin_right = 958.0
+margin_bottom = 1566.0
 
 [node name="Control" type="Control" parent="." index="3"]
-margin_right = 851.0
-margin_bottom = 1506.0
+margin_right = 958.0
+margin_bottom = 1566.0
 mouse_filter = 2
 
 [node name="fig1" type="TextureRect" parent="Control" index="0"]
-margin_left = 470.0
-margin_top = 365.0
-margin_right = 1122.0
-margin_bottom = 781.0
+margin_left = 507.0
+margin_top = 368.0
+margin_right = 1159.0
+margin_bottom = 784.0
 rect_scale = Vector2( 0.5, 0.5 )
 mouse_filter = 2
 texture = ExtResource( 2 )
 
 [node name="Label2" type="Label" parent="Control" index="1"]
-margin_left = 244.0
-margin_top = 526.0
-margin_right = 895.0
-margin_bottom = 558.0
+margin_left = 281.0
+margin_top = 529.0
+margin_right = 932.0
+margin_bottom = 561.0
 custom_fonts/font = ExtResource( 6 )
 text = "Fig. 1"
 align = 1
 
 [node name="Control" type="Control" parent="Control" index="2"]
-margin_right = 40.0
-margin_bottom = 40.0
+margin_left = 37.0
+margin_top = 3.0
+margin_right = 77.0
+margin_bottom = 43.0
 mouse_filter = 2
 
 [node name="Label3" type="Label" parent="Control/Control" index="0"]
@@ -121,10 +121,9 @@ mouse_filter = 2
 texture = ExtResource( 3 )
 
 [node name="MarginContainer" type="MarginContainer" parent="." index="4"]
-margin_right = 851.0
-margin_bottom = 1506.0
+margin_right = 958.0
+margin_bottom = 1566.0
 mouse_filter = 2
-size_flags_horizontal = 0
 custom_constants/margin_right = 100
 custom_constants/margin_top = 100
 custom_constants/margin_left = 100
@@ -133,28 +132,28 @@ custom_constants/margin_bottom = 100
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" index="0"]
 margin_left = 100.0
 margin_top = 100.0
-margin_right = 751.0
-margin_bottom = 1406.0
+margin_right = 858.0
+margin_bottom = 1466.0
 rect_pivot_offset = Vector2( -858, 85 )
 mouse_filter = 2
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer" index="0"]
-margin_right = 651.0
+margin_right = 758.0
 margin_bottom = 126.0
 custom_fonts/font = ExtResource( 5 )
-text = "The \"Persometer\""
+text = "The Persometer*"
 align = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer" index="1"]
 margin_top = 130.0
-margin_right = 651.0
+margin_right = 758.0
 margin_bottom = 130.0
 mouse_filter = 2
 
 [node name="Label5" type="Label" parent="MarginContainer/VBoxContainer" index="2"]
 margin_top = 134.0
-margin_right = 651.0
-margin_bottom = 266.0
+margin_right = 758.0
+margin_bottom = 239.0
 text = "This fine invention allows you to guess two different axes of an animal’s personality.
 
 To ready it for use, place it on top of a Hors-Trudgman Evaluation of Personality and Interests**. See Fig. 1 below."
@@ -163,24 +162,24 @@ autowrap = true
 [node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer" index="1"]
 margin_left = 100.0
 margin_top = 100.0
-margin_right = 751.0
-margin_bottom = 1406.0
+margin_right = 858.0
+margin_bottom = 1466.0
 mouse_filter = 2
 custom_constants/separation = 10
 alignment = 2
 
 [node name="Label6" type="Label" parent="MarginContainer/VBoxContainer2" index="0"]
-margin_top = 703.0
-margin_right = 651.0
-margin_bottom = 745.0
+margin_top = 763.0
+margin_right = 758.0
+margin_bottom = 805.0
 custom_fonts/font = ExtResource( 4 )
 text = "INSTRUCTIONS"
 align = 1
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer2" index="1"]
-margin_top = 755.0
-margin_right = 651.0
-margin_bottom = 1184.0
+margin_top = 815.0
+margin_right = 758.0
+margin_bottom = 1244.0
 text = "1. Use the Guess Sliders to make guesses about the intensity of a personality trait in an animal, from 1 (Very Low) at the base to 5 (Very High) at the tip. Notice that, in this particular Persometer, the vertical axis (gear Personality Icon) allows you to guess how Analytic an animal is, while the horizontal axis (heart Personality Icon) allows you to guess how how Kind they are.
 
 2. Press the Activator Button after making your best guess. One of the Power Indicators will power off to to show that you have one less use left.
@@ -192,16 +191,16 @@ text = "1. Use the Guess Sliders to make guesses about the intensity of a person
 autowrap = true
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer2" index="2"]
-margin_top = 1194.0
-margin_right = 651.0
-margin_bottom = 1218.0
+margin_top = 1254.0
+margin_right = 758.0
+margin_bottom = 1278.0
 rect_min_size = Vector2( 0, 24 )
 mouse_filter = 2
 
 [node name="Label3" type="Label" parent="MarginContainer/VBoxContainer2" index="3"]
-margin_top = 1228.0
-margin_right = 651.0
-margin_bottom = 1306.0
+margin_top = 1288.0
+margin_right = 758.0
+margin_bottom = 1366.0
 custom_fonts/font = ExtResource( 7 )
 text = "*The Persometer is patented by Sottonon Fullock Enterprises. It has been licensed by the Imperial Office under the Reformed Regulatory Act. Few animals were injured in its development.
 **All rights reserved to the Hors-Trudgman Animal Psychology and Behavior Center."

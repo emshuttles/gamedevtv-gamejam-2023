@@ -2,9 +2,9 @@
 
 [ext_resource path="res://src/objects/office/BaseOffice.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/objects/desk/Tray.tscn" type="PackedScene" id=2]
-[ext_resource path="res://src/content/evaluations/Evaluation3.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/content/evaluations/Evaluation2.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/objects/persometer/Persometer.tscn" type="PackedScene" id=4]
-[ext_resource path="res://src/content/instructions/instructions_persometer.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/content/evaluations/Evaluation1.tscn" type="PackedScene" id=5]
 
 [node name="Office" instance=ExtResource( 1 )]
 engineer_quota = 1
@@ -23,24 +23,10 @@ margin_top = 704.0
 margin_right = 2512.0
 margin_bottom = 704.0
 
-[node name="InstructionsPersometer" parent="." index="6" instance=ExtResource( 5 )]
-margin_left = 400.0
-margin_top = 424.0
-margin_right = 1251.0
-margin_bottom = 1930.0
+[node name="Evaluation" parent="." index="6" instance=ExtResource( 5 )]
 
-[node name="Evaluation3" parent="." index="7" instance=ExtResource( 3 )]
-margin_left = 3260.0
-margin_top = -1240.0
-margin_right = 4068.0
-margin_bottom = 63.0
-candidate_name = "Luke"
-desired_job = 1
-
-[node name="Evaluation4" parent="." index="8" instance=ExtResource( 3 )]
-margin_left = 3712.0
-margin_top = -832.0
-margin_right = 4520.0
-margin_bottom = 471.0
-candidate_name = "Arden"
-correct_job = 1
+[node name="Evaluation2" parent="." index="7" instance=ExtResource( 3 )]
+margin_left = 1018.0
+margin_top = 241.0
+margin_right = 2040.0
+margin_bottom = 1787.0

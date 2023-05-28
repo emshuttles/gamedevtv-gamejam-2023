@@ -38,6 +38,7 @@ func _set_paper_variables(paper: Paper, candidate: Candidate) -> void:
 	paper.candidate_name = candidate.name
 	paper.correct_job = candidate.correct_job
 	paper.desired_job = candidate.desired_job
+	paper.portrait = candidate.portrait
 
 
 func _get_spawn_point() -> Vector2:

@@ -1,12 +1,14 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://src/content/paper_base.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/content/evaluations/evaluation_base.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/content/paper.gd" type="Script" id=3]
+[ext_resource path="res://assets/portraits/portrait7.jpg" type="Texture" id=4]
 
 [node name="Evaluation" instance=ExtResource( 1 )]
 script = ExtResource( 3 )
 is_evaluation = true
+portrait = ExtResource( 4 )
 
 [node name="Color" parent="." index="0"]
 margin_bottom = 1839.0

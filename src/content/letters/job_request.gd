@@ -10,3 +10,4 @@ func _ready() -> void:
 	correct_job_label.text = Consts.JOB_NAMES[correct_job]
 	var desired_job_label: Label = $PLACEHOLDER/DesiredJob
 	desired_job_label.text = Consts.JOB_NAMES[desired_job]
+	$Portrait.texture = portrait

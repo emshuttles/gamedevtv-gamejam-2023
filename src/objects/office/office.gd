@@ -8,13 +8,27 @@ export(int) var toy_maker_quota
 var _trays := [] # of Tray
 var _papers := [] # of Paper
 var _fileable_papers_count: int = 0
+var _song_index_current:int = 0
+var _playlist := [
+	"res://assets/audio/music/allegro.mp3",
+	"res://assets/audio/music/piano.mp3",
+	"res://assets/audio/music/stacatto.mp3",
+]
 
 onready var game: Node = get_parent()
 onready var letter_spawn: Position2D = $"%LetterSpawn"
 onready var end_button: Button = $"%EndButton"
+onready var node_music: AudioStreamPlayer = $Music
+onready var node_silence_timer:Timer = $"%SilenceTimer"
 
 
 func _ready() -> void:
+	var rng := RandomNumberGenerator.new()
+	rng.randomize()
+	_song_index_current = rng.randi_range(0,_playlist.size() -1)
+	_song_load_and_play()
+	
+	
 	_trays = get_tree().get_nodes_in_group("tray")
 	_papers = get_tree().get_nodes_in_group("paper")
 
@@ -100,3 +114,23 @@ func _on_tray_updated() -> void:
 		filed_papers_count += tray.papers_held.size()
 
 	end_button.disabled = filed_papers_count != _fileable_papers_count
+
+
+func _song_load_and_play():
+	node_music.stream = load(_playlist[_song_index_current])
+	node_music.play()
+
+
+func _on_Music_finished() -> void:
+	_song_index_current += 1
+	if _song_index_current >= _playlist.size():
+		_song_index_current = 0
+	node_silence_timer.start()
+
+
+func _on_SilenceTimer_timeout() -> void:
+	_song_load_and_play()
+
+
+func _on_CutTimer_timeout() -> void:
+	node_music.emit_signal("finished")

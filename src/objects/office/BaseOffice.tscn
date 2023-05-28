@@ -11,6 +11,17 @@ script = ExtResource( 1 )
 [node name="Camera" parent="." instance=ExtResource( 3 )]
 position = Vector2( 960, 540 )
 
+[node name="Music" type="AudioStreamPlayer" parent="."]
+volume_db = -10.0
+
+[node name="SilenceTimer" type="Timer" parent="Music"]
+unique_name_in_owner = true
+wait_time = 0.1
+one_shot = true
+
+[node name="CutTimer" type="Timer" parent="Music"]
+wait_time = 1.5
+
 [node name="Desk" parent="." instance=ExtResource( 4 )]
 position = Vector2( 960, 540 )
 __meta__ = {
@@ -53,4 +64,7 @@ theme = ExtResource( 2 )
 disabled = true
 text = "End Day"
 
+[connection signal="finished" from="Music" to="." method="_on_Music_finished"]
+[connection signal="timeout" from="Music/SilenceTimer" to="." method="_on_SilenceTimer_timeout"]
+[connection signal="timeout" from="Music/CutTimer" to="." method="_on_CutTimer_timeout"]
 [connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer/EndButton" to="." method="_on_EndDay_pressed"]

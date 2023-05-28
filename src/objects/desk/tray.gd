@@ -14,7 +14,7 @@ func _ready() -> void:
 
 
 func _on_Tray_area_entered(area: Area2D) -> void:
-	if not area.owner is Paper:
+	if not Utils.is_fileable(area.owner):
 		return
 
 	papers_held.append(area.owner)
@@ -22,7 +22,7 @@ func _on_Tray_area_entered(area: Area2D) -> void:
 
 
 func _on_Tray_area_exited(area: Area2D) -> void:
-	if not area.owner is Paper:
+	if not Utils.is_fileable(area.owner):
 		return
 
 	papers_held.erase(area.owner)

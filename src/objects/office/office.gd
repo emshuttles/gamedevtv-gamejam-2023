@@ -7,6 +7,7 @@ export(int) var toy_maker_quota
 
 var _trays := [] # of Tray
 var _papers := [] # of Paper
+var _fileable_papers_count: int = 0
 
 onready var game: Node = get_parent()
 onready var letter_spawn: Position2D = $"%LetterSpawn"
@@ -20,10 +21,11 @@ func _ready() -> void:
 	Signals.connect("tray_updated", self, "_on_tray_updated")
 
 	_create_job_requests()
+	_count_fileable_papers()
 
 
 func _create_job_requests() -> void:
-	for candidate in game.want_different_job:
+	for candidate in game.pending_job_request:
 		candidate = candidate as Candidate
 		var job_request: Paper = Scenes.job_request.instance()
 		_set_paper_variables(job_request, candidate)
@@ -47,6 +49,13 @@ func _get_spawn_point() -> Vector2:
 	spawn_point.x += x_offset_sign * random_x_offset
 	spawn_point.y += y_offset_sign * random_y_offset
 	return spawn_point
+
+
+func _count_fileable_papers() -> void:
+	for paper in _papers:
+		# paper could be instructions, etc.
+		if Utils.is_fileable(paper):
+			_fileable_papers_count += 1
 
 
 func _on_EndDay_pressed() -> void:
@@ -85,15 +94,9 @@ func _get_candidates(tray: Tray) -> Array:
 
 
 func _on_tray_updated() -> void:
-	var num_of_filed_papers: int = 0
+	var filed_papers_count: int = 0
 	for tray in _trays:
 		tray = tray as Tray
-		num_of_filed_papers += tray.papers_held.size()
+		filed_papers_count += tray.papers_held.size()
 
-	var num_of_papers_to_file: int = 0
-	for paper in _papers:
-		# paper could be instructions, etc.
-		if paper is Paper and (paper.is_evaluation or paper.is_job_request):
-			num_of_papers_to_file += 1
-
-	end_button.disabled = num_of_filed_papers != num_of_papers_to_file
+	end_button.disabled = filed_papers_count != _fileable_papers_count

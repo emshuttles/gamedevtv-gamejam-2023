@@ -2,7 +2,7 @@
 
 [ext_resource path="res://assets/office/paper.png" type="Texture" id=1]
 [ext_resource path="res://src/objects/desk/tray.gd" type="Script" id=2]
-[ext_resource path="res://src/fonts/title.tres" type="DynamicFont" id=3]
+[ext_resource path="res://src/fonts/subtitle_huge.tres" type="DynamicFont" id=3]
 [ext_resource path="res://assets/office/leather_green.jpg" type="Texture" id=4]
 [ext_resource path="res://assets/office/dark_border.png" type="Texture" id=5]
 
@@ -18,7 +18,9 @@ margin_top = -728.0
 margin_right = 534.0
 margin_bottom = 1039.0
 
-[node name="TextureRect" type="TextureRect" parent="TextureRect"]
+[node name="Leather" type="TextureRect" parent="TextureRect"]
+unique_name_in_owner = true
+modulate = Color( 0.619608, 0.894118, 1, 1 )
 margin_right = 1024.0
 margin_bottom = 1767.0
 texture = ExtResource( 4 )
@@ -70,10 +72,11 @@ margin_left = -274.0
 margin_top = 758.0
 margin_right = 276.0
 margin_bottom = 884.0
-custom_colors/font_color = Color( 0.160784, 0.160784, 0.160784, 1 )
+custom_colors/font_color = Color( 0.188235, 0.188235, 0.188235, 1 )
 custom_fonts/font = ExtResource( 3 )
 text = "Art Therapist"
 align = 1
+valign = 1
 
 [connection signal="area_entered" from="." to="." method="_on_Tray_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_Tray_area_exited"]

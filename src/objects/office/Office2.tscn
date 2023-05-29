@@ -12,50 +12,55 @@
 
 [node name="Office" instance=ExtResource( 1 )]
 
-[node name="TrayArtTherapist" parent="." index="3" instance=ExtResource( 4 )]
+[node name="TrayEngineer" parent="." index="3" instance=ExtResource( 4 )]
 position = Vector2( -2144, -624 )
+
+[node name="TrayArtTherapist" parent="." index="4" instance=ExtResource( 4 )]
+position = Vector2( -927, -634 )
 job = 1
 
-[node name="TrayToyMaker" parent="." index="4" instance=ExtResource( 4 )]
-position = Vector2( -864, -624 )
+[node name="TrayToyMaker" parent="." index="5" instance=ExtResource( 4 )]
+position = Vector2( 278, -634 )
 job = 2
 
-[node name="Evaluation3" parent="." index="5" instance=ExtResource( 5 )]
+[node name="Evaluation3" parent="." index="6" instance=ExtResource( 5 )]
 margin_left = -2384.0
 margin_top = 528.0
 margin_right = -1362.0
 margin_bottom = 2315.0
 
-[node name="Evaluation4" parent="." index="6" instance=ExtResource( 3 )]
+[node name="Evaluation4" parent="." index="7" instance=ExtResource( 3 )]
 margin_left = -1728.0
 margin_top = 832.0
 margin_right = -706.0
 margin_bottom = 2671.0
 
-[node name="Welcome" parent="." index="7" instance=ExtResource( 6 )]
+[node name="Welcome" parent="." index="8" instance=ExtResource( 6 )]
+visible = false
 margin_left = 2136.0
 margin_top = 544.0
 margin_right = 3158.0
 margin_bottom = 1232.0
 
-[node name="Controls" parent="." index="8" instance=ExtResource( 7 )]
+[node name="Controls" parent="." index="9" instance=ExtResource( 7 )]
+visible = false
 margin_left = 2424.0
 margin_top = 1000.0
 margin_right = 3446.0
 margin_bottom = 1597.0
 
-[node name="Quota" parent="." index="9" instance=ExtResource( 2 )]
-margin_left = 312.0
-margin_top = -792.0
-margin_right = 1334.0
-margin_bottom = -198.0
+[node name="Quota" parent="." index="10" instance=ExtResource( 2 )]
+margin_left = 1782.0
+margin_top = 664.0
+margin_right = 2804.0
+margin_bottom = 1258.0
 
-[node name="InstructionsPersometer" parent="." index="10" instance=ExtResource( 9 )]
+[node name="InstructionsPersometer" parent="." index="11" instance=ExtResource( 9 )]
 margin_left = 536.0
 margin_right = 1494.0
 
-[node name="Persometer" parent="." index="11" instance=ExtResource( 8 )]
-margin_left = 240.0
-margin_top = 1104.0
-margin_right = 240.0
-margin_bottom = 1104.0
+[node name="Persometer" parent="." index="12" instance=ExtResource( 8 )]
+margin_left = 275.0
+margin_top = 709.0
+margin_right = 275.0
+margin_bottom = 709.0

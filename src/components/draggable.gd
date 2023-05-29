@@ -2,14 +2,17 @@ class_name Draggable
 extends Node
 
 
-const PAPER_PICK_UP: Resource = preload("res://assets/audio/sfx/paper_pick_up.wav")
-const PAPER_PUT_DOWN: Resource = preload("res://assets/audio/sfx/paper_put_down.wav")
+const PAPER_PICK_UP: Resource = preload("res://assets/audio/sfx/paper_pick_up3.wav")
+const PAPER_PUT_DOWN: Resource = preload("res://assets/audio/sfx/paper_put_down3.wav")
 
 var _is_mouse_inside := false
 var _is_held := false
 var _click_position: Vector2
 
 onready var _parent: CanvasItem = get_parent()
+
+signal drag_started
+signal drag_ended
 
 
 func _ready() -> void:
@@ -61,15 +64,19 @@ func _snap_to_tray() -> void:
 
 # I'm jammin' hard now.
 func _play_sound() -> void:
-	if not _parent.is_in_group("paper"):
-		return
+	if _parent.is_in_group("paper"):
+		var audio_player: AudioStreamPlayer = _parent.get_node("AudioStreamPlayer")
+		var sound: Resource
+		if _is_held:
+			sound = PAPER_PICK_UP
+		else:
+			sound = PAPER_PUT_DOWN
 
-	var audio_player: AudioStreamPlayer = _parent.get_node("AudioStreamPlayer")
-	var sound: Resource
-	if _is_held:
-		sound = PAPER_PICK_UP
+		audio_player.stream = sound
+		audio_player.play()
 	else:
-		sound = PAPER_PUT_DOWN
-
-	audio_player.stream = sound
-	audio_player.play()
+		if _is_held:
+			emit_signal("drag_started")
+		else:
+			emit_signal("drag_ended")
+			

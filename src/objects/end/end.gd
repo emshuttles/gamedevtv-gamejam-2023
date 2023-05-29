@@ -16,3 +16,6 @@ func _ready() -> void:
 
 	if game.desired_assignment_count >= game.DESIRED_ASSIGNMENT_GOAL:
 		bonus_result.text = "However, you gave everyone the job they wanted. May that comfort you during your job search."
+	else:
+		bonus_result.visible = false
+

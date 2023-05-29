@@ -2,8 +2,8 @@ class_name Persometer
 extends Control
 
 
-const PERSOMETER_ARMS: Resource = preload("res://assets/audio/sfx/persometer_arms.wav")
-const PERSOMETER_BUTTON: Resource = preload("res://assets/audio/sfx/persometer_button.wav")
+const PERSOMETER_ARMS: Resource = preload("res://assets/audio/sfx/persometer_arms2.wav")
+const PERSOMETER_BUTTON: Resource = preload("res://assets/audio/sfx/persometer_button2.wav")
 
 export var use_max:int = 4
 export var use_count:int = 0
@@ -23,7 +23,7 @@ onready var axes:Dictionary = {
 	"y": $"%AxisY",
 }
 onready var uses:Array = $Uses.get_children()
-onready var audio_player: AudioStreamPlayer = $AudioStreamPlayer
+onready var audio_player: AudioStreamPlayer2D = $AudioStreamPlayer
 
 
 func _ready() -> void:
@@ -139,3 +139,11 @@ func _play_arm_sound() -> void:
 func _on_raised():
 	# NOTHING rises above me
 	raise()
+
+
+func _on_Draggable_drag_started() -> void:
+	$PickUp.play()
+
+
+func _on_Draggable_drag_ended() -> void:
+	$PutDown.play()

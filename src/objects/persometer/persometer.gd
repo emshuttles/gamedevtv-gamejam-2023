@@ -2,6 +2,9 @@ class_name Persometer
 extends Control
 
 
+const PERSOMETER_ARMS: Resource = preload("res://assets/audio/sfx/persometer_arms.wav")
+const PERSOMETER_BUTTON: Resource = preload("res://assets/audio/sfx/persometer_button.wav")
+
 export var use_max:int = 4
 export var use_count:int = 0
 
@@ -19,6 +22,7 @@ onready var axes:Dictionary = {
 	"y": $"%AxisY",
 }
 onready var uses:Array = $Uses.get_children()
+onready var audio_player: AudioStreamPlayer = $AudioStreamPlayer
 
 
 func _ready() -> void:
@@ -35,6 +39,9 @@ func _on_ButtonActivate_pressed() -> void:
 
 		axes.x.check(_target_x)
 		axes.y.check(_target_y)
+
+		audio_player.stream = PERSOMETER_BUTTON
+		audio_player.play()
 
 
 func _on_Area2D_area_entered(area: Area2D) -> void:
@@ -80,12 +87,19 @@ func _animate_axes() -> void:
 	if is_over_evaluation:
 		if assigned_animation == "close":
 			node_animation_player.play("open")
+			_play_arm_sound()
 	else:
 		if assigned_animation != "close":
 			node_animation_player.play("close")
+			_play_arm_sound()
 			for axis in axes.values():
 				axis = axis as Axis
 				axis.reset_warmth()
+
+
+func _play_arm_sound() -> void:
+	audio_player.stream = PERSOMETER_ARMS
+	audio_player.play()
 
 
 func _on_raised():

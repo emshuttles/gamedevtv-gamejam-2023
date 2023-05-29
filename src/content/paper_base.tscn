@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/themes/paper_with_shadow.tres" type="Theme" id=1]
 [ext_resource path="res://assets/office/paper.png" type="Texture" id=2]
 [ext_resource path="res://src/themes/base_theme.tres" type="Theme" id=3]
 [ext_resource path="res://src/components/draggable.gd" type="Script" id=4]
+[ext_resource path="res://assets/audio/sfx/paper_pick_up.wav" type="AudioStream" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 511, 743.5 )
@@ -18,6 +19,9 @@ custom_constants/margin_right = 0
 custom_constants/margin_top = 0
 custom_constants/margin_left = 0
 custom_constants/margin_bottom = 0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
 
 [node name="Color" type="Panel" parent="."]
 margin_right = 1022.0

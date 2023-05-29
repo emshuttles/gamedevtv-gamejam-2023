@@ -2,6 +2,9 @@ class_name Draggable
 extends Node
 
 
+const PAPER_PICK_UP: Resource = preload("res://assets/audio/sfx/paper_pick_up.wav")
+const PAPER_PUT_DOWN: Resource = preload("res://assets/audio/sfx/paper_put_down.wav")
+
 var _is_mouse_inside := false
 var _is_held := false
 var _click_position: Vector2
@@ -38,6 +41,8 @@ func _gui_input(event: InputEvent) -> void:
 		else:
 			_snap_to_tray()
 
+		_play_sound()
+
 
 func _snap_to_tray() -> void:
 	if not Utils.is_fileable(_parent):
@@ -52,3 +57,19 @@ func _snap_to_tray() -> void:
 			_parent.rect_position = tray.position # Top-left corner is in center of tray
 			_parent.rect_position.x -= _parent.rect_size.x / 2
 			_parent.rect_position.y -= _parent.rect_size.y / 2 # Actually centered in tray
+
+
+# I'm jammin' hard now.
+func _play_sound() -> void:
+	if not _parent.is_in_group("paper"):
+		return
+
+	var audio_player: AudioStreamPlayer = _parent.get_node("AudioStreamPlayer")
+	var sound: Resource
+	if _is_held:
+		sound = PAPER_PICK_UP
+	else:
+		sound = PAPER_PUT_DOWN
+
+	audio_player.stream = sound
+	audio_player.play()

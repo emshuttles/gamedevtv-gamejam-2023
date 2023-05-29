@@ -1,3 +1,4 @@
+class_name Game
 extends Node
 
 
@@ -7,9 +8,9 @@ const DESIRED_ASSIGNMENT_GOAL := 7
 var day: int = 0
 var pending_job_requests := [] # of Candidate
 var correct_assignment_count: int = 0
+var desired_assignment_count: int = 0
 var was_perfect_today := true
 
-var _desired_assignment_count: int = 0
 var _pending_thank_yous := [] # of Candidate
 var _has_requested_before := [] # of Candidate
 var _assignments := {
@@ -72,7 +73,7 @@ func _on_day_ended(result: Result) -> void:
 	pending_job_requests = []
 	was_perfect_today = true
 	correct_assignment_count = 0
-	_desired_assignment_count = 0
+	desired_assignment_count = 0
 
 	_add_result_to_assignments(result)
 	_process_assignments()
@@ -114,13 +115,13 @@ func _erase_candidate(array: Array, candidate: Candidate) -> void:
 
 func _process_assignments() -> void:
 	for current_day in range(1, day + 1):
-		for engineering_candidate in _assignments[day].engineer_candidates:
-			_process_candidate(current_day, engineering_candidate, Enums.Job.ENGINEER)
+		for engineer_candidate in _assignments[current_day].engineer_candidates:
+			_process_candidate(current_day, engineer_candidate, Enums.Job.ENGINEER)
 
-		for art_therapist_candidate in _assignments[day].art_therapist_candidates:
+		for art_therapist_candidate in _assignments[current_day].art_therapist_candidates:
 			_process_candidate(current_day, art_therapist_candidate, Enums.Job.ART_THERAPIST)
 
-		for toy_maker_candidate in _assignments[day].toy_maker_candidates:
+		for toy_maker_candidate in _assignments[current_day].toy_maker_candidates:
 			_process_candidate(current_day, toy_maker_candidate, Enums.Job.TOY_MAKER)
 
 
@@ -132,7 +133,7 @@ func _process_candidate(current_day: int, candidate: Candidate, job: int) -> voi
 			was_perfect_today = false
 
 	if candidate.desired_job == job:
-		_desired_assignment_count += 1
+		desired_assignment_count += 1
 		# Candidates only thank you if you give them the job they want despite
 		# being suited to a different job
 		if candidate.correct_job != job:

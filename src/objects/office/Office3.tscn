@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://src/objects/office/BaseOffice.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/objects/desk/Tray.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://src/content/quotas/quota3.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/content/evaluations/Evaluation6.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/objects/persometer/Persometer.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/content/instructions/instructions_persometer.tscn" type="PackedScene" id=10]
 
 [node name="Office" instance=ExtResource( 1 )]
 
@@ -23,23 +24,35 @@ job = 1
 position = Vector2( 416, -624 )
 job = 2
 
-[node name="Evaluation5" parent="." index="6" instance=ExtResource( 5 )]
-margin_left = -2344.0
-margin_top = 528.0
-margin_right = -1322.0
-margin_bottom = 2340.0
+[node name="Evaluation6" parent="." index="6" instance=ExtResource( 8 )]
+margin_left = -2296.0
+margin_top = 560.0
+margin_right = -1274.0
+margin_bottom = 2426.0
 
-[node name="Evaluation6" parent="." index="7" instance=ExtResource( 8 )]
-margin_left = -1864.0
-margin_top = 608.0
-margin_right = -842.0
-margin_bottom = 2474.0
+[node name="Evaluation7" parent="." index="7" instance=ExtResource( 3 )]
+margin_left = -1880.0
+margin_top = 688.0
+margin_right = -858.0
+margin_bottom = 2394.0
 
-[node name="Evaluation7" parent="." index="8" instance=ExtResource( 3 )]
-margin_left = -1384.0
+[node name="Evaluation5" parent="." index="8" instance=ExtResource( 5 )]
+margin_left = -1328.0
+margin_top = 584.0
+margin_right = -306.0
+margin_bottom = 2396.0
+
+[node name="InstructionsPersometer" parent="." index="9" instance=ExtResource( 10 )]
+margin_left = 1448.0
+margin_top = 360.0
+margin_right = 2406.0
+margin_bottom = 1926.0
+
+[node name="Welcome" parent="." index="10" instance=ExtResource( 6 )]
+margin_left = 2304.0
 margin_top = 624.0
-margin_right = -362.0
-margin_bottom = 2330.0
+margin_right = 3326.0
+margin_bottom = 1312.0
 
 [node name="Welcome" parent="." index="9" instance=ExtResource( 6 )]
 visible = false
@@ -61,8 +74,8 @@ margin_top = 246.0
 margin_right = 1522.0
 margin_bottom = 916.0
 
-[node name="Persometer" parent="." index="12" instance=ExtResource( 9 )]
-margin_left = -72.0
-margin_top = 1120.0
-margin_right = -72.0
-margin_bottom = 1120.0
+[node name="Persometer" parent="." index="13" instance=ExtResource( 9 )]
+margin_left = 104.0
+margin_top = 1304.0
+margin_right = 104.0
+margin_bottom = 1304.0

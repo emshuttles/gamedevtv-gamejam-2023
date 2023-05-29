@@ -24,6 +24,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/components/draggable.gd"
 }, {
+"base": "Node",
+"class": "Game",
+"language": "GDScript",
+"path": "res://src/main/game.gd"
+}, {
 "base": "Control",
 "class": "Paper",
 "language": "GDScript",
@@ -53,6 +58,7 @@ _global_script_class_icons={
 "Axis": "",
 "Candidate": "",
 "Draggable": "",
+"Game": "",
 "Paper": "",
 "Persometer": "",
 "Power": "",

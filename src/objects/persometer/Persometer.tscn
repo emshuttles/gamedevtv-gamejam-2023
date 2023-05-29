@@ -203,6 +203,8 @@ margin_bottom = 242.0
 theme = ExtResource( 6 )
 script = ExtResource( 2 )
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
 [node name="Draggable" type="Control" parent="."]
 margin_left = -87.0
 margin_top = -404.0

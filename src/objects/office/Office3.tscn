@@ -48,12 +48,6 @@ margin_top = 360.0
 margin_right = 2406.0
 margin_bottom = 1926.0
 
-[node name="Welcome" parent="." index="10" instance=ExtResource( 6 )]
-margin_left = 2304.0
-margin_top = 624.0
-margin_right = 3326.0
-margin_bottom = 1312.0
-
 [node name="Welcome" parent="." index="9" instance=ExtResource( 6 )]
 visible = false
 margin_left = 1408.0

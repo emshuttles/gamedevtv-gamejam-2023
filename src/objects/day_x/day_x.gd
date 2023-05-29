@@ -43,7 +43,7 @@ func change_scene():
 			next_scene = Scenes.office_3
 		4:
 			# Ending
-			pass
+			next_scene = Scenes.end
 
 	Signals.emit_signal("scene_transition", next_scene)
 	queue_free()

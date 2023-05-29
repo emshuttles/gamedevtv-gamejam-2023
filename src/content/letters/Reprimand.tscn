@@ -36,16 +36,18 @@ custom_constants/separation = 50
 alignment = 1
 
 [node name="Title" type="Label" parent="MarginContainer/PLACEHOLDER" index="0"]
-margin_top = 35.0
+margin_top = 8.0
 margin_right = 490.0
-margin_bottom = 77.0
+margin_bottom = 50.0
 custom_fonts/font = ExtResource( 3 )
-text = "Reprimand"
+text = "Official Reprimand"
 align = 1
 
 [node name="Message" type="Label" parent="MarginContainer/PLACEHOLDER" index="1"]
-margin_top = 127.0
+margin_top = 100.0
 margin_right = 490.0
-margin_bottom = 205.0
-text = "Your performance yesterday could have been better. Please evaluate our candidates' personalities carefully to assign them to the most suitable job."
+margin_bottom = 232.0
+text = "Your performance yesterday could've been better. Please evaluate our candidates' personalities carefully to assign them to the most suitable job.
+
+The Empire is counting on you."
 autowrap = true

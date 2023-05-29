@@ -29,3 +29,7 @@ func check(target_value:int):
 		warmth.modulate = Color(0.2,0.3,1,1)
 #	var alpha:float = difference / 4
 #	warmth.modulate.a = 1 - alpha
+
+
+func _on_Marker_value_changed(value: float) -> void:
+	$Tick.play()

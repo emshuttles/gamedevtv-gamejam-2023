@@ -2,8 +2,8 @@ class_name Persometer
 extends Control
 
 
-const PERSOMETER_ARMS: Resource = preload("res://assets/audio/sfx/persometer_arms.wav")
-const PERSOMETER_BUTTON: Resource = preload("res://assets/audio/sfx/persometer_button.wav")
+const PERSOMETER_ARMS: Resource = preload("res://assets/audio/sfx/persometer_arms2.wav")
+const PERSOMETER_BUTTON: Resource = preload("res://assets/audio/sfx/persometer_button2.wav")
 
 export var use_max:int = 4
 export var use_count:int = 0
@@ -23,7 +23,7 @@ onready var axes:Dictionary = {
 	"y": $"%AxisY",
 }
 onready var uses:Array = $Uses.get_children()
-onready var audio_player: AudioStreamPlayer = $AudioStreamPlayer
+onready var audio_player: AudioStreamPlayer2D = $AudioStreamPlayer
 
 
 func _ready() -> void:
@@ -33,6 +33,7 @@ func _ready() -> void:
 
 func _on_ButtonActivate_pressed() -> void:
 	if use_count < use_max and is_over_evaluation:
+		$Activate.play()
 		var use = $Uses.get_child(use_count)
 		use.power_down()
 		use_count += 1
@@ -43,6 +44,10 @@ func _on_ButtonActivate_pressed() -> void:
 
 		audio_player.stream = PERSOMETER_BUTTON
 		audio_player.play()
+		
+		if use_count == use_max:
+			$Off.play()
+			$Ongoing.stop()
 
 
 func _on_Area2D_area_entered(area: Area2D) -> void:
@@ -77,6 +82,14 @@ func _select_evaluation(area: Area2D) -> void:
 			var use:Power = uses[i]
 			use.power_up()
 
+
+	if use_count < use_max:
+		if not $On.playing:
+			$On.play()
+		
+		if not $Ongoing.playing:
+			$Ongoing.play()
+	
 	is_over_evaluation = true
 	_animate_axes()
 
@@ -124,6 +137,9 @@ func _animate_axes() -> void:
 			_play_arm_sound()
 	else:
 		if assigned_animation != "close":
+			$Ongoing.stop()
+			if use_count < use_max:
+				$Off.play()
 			node_animation_player.play("close")
 			_play_arm_sound()
 			for axis in axes.values():
@@ -139,3 +155,11 @@ func _play_arm_sound() -> void:
 func _on_raised():
 	# NOTHING rises above me
 	raise()
+
+
+func _on_Draggable_drag_started() -> void:
+	$PickUp.play()
+
+
+func _on_Draggable_drag_ended() -> void:
+	$PutDown.play()

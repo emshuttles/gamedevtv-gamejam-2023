@@ -1,49 +1,103 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://src/content/letters/job_request.gd" type="Script" id=1]
 [ext_resource path="res://src/fonts/subtitle.tres" type="DynamicFont" id=2]
 [ext_resource path="res://src/content/paper_base.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/objects/desk/paper/portrait.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/fonts/regular_bold.tres" type="DynamicFont" id=5]
+[ext_resource path="res://src/fonts/regular.tres" type="DynamicFont" id=6]
+[ext_resource path="res://src/fonts/italic.tres" type="DynamicFont" id=7]
 
 [node name="PaperBase" instance=ExtResource( 3 )]
 script = ExtResource( 1 )
 is_job_request = true
 
-[node name="PLACEHOLDER" type="VBoxContainer" parent="." index="4"]
+[node name="MarginContainer" type="MarginContainer" parent="." index="4"]
 margin_right = 1022.0
 margin_bottom = 1487.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 100
+custom_constants/margin_top = 100
+custom_constants/margin_left = 100
+custom_constants/margin_bottom = 100
+
+[node name="PLACEHOLDER" type="VBoxContainer" parent="MarginContainer" index="0"]
+margin_left = 100.0
+margin_top = 100.0
+margin_right = 922.0
+margin_bottom = 1387.0
+mouse_filter = 2
 alignment = 1
 
-[node name="Title" type="Label" parent="PLACEHOLDER" index="0"]
-margin_top = 653.0
-margin_right = 1022.0
-margin_bottom = 695.0
+[node name="Title" type="Label" parent="MarginContainer/PLACEHOLDER" index="0"]
+margin_top = 426.0
+margin_right = 822.0
+margin_bottom = 468.0
 custom_fonts/font = ExtResource( 2 )
 text = "Job Change Request"
 align = 1
 
-[node name="Name" type="Label" parent="PLACEHOLDER" index="1"]
-margin_top = 699.0
-margin_right = 1022.0
-margin_bottom = 741.0
+[node name="Name" type="Label" parent="MarginContainer/PLACEHOLDER" index="1"]
+unique_name_in_owner = true
+margin_top = 472.0
+margin_right = 822.0
+margin_bottom = 496.0
+custom_fonts/font = ExtResource( 5 )
+text = "Job Change Request"
+align = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PLACEHOLDER" index="2"]
+margin_top = 500.0
+margin_right = 822.0
+margin_bottom = 550.0
+rect_min_size = Vector2( 0, 50 )
+mouse_filter = 2
+
+[node name="AssignedJob" type="Label" parent="MarginContainer/PLACEHOLDER" index="3"]
+unique_name_in_owner = true
+margin_top = 554.0
+margin_right = 822.0
+margin_bottom = 596.0
 custom_fonts/font = ExtResource( 2 )
 text = "Job Change Request"
 align = 1
 
-[node name="AssignedJob" type="Label" parent="PLACEHOLDER" index="2"]
-margin_top = 745.0
-margin_right = 1022.0
-margin_bottom = 787.0
+[node name="DesiredJob" type="Label" parent="MarginContainer/PLACEHOLDER" index="4"]
+unique_name_in_owner = true
+margin_top = 600.0
+margin_right = 822.0
+margin_bottom = 642.0
 custom_fonts/font = ExtResource( 2 )
 text = "Job Change Request"
 align = 1
 
-[node name="DesiredJob" type="Label" parent="PLACEHOLDER" index="3"]
-margin_top = 791.0
-margin_right = 1022.0
-margin_bottom = 833.0
-custom_fonts/font = ExtResource( 2 )
-text = "Job Change Request"
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/PLACEHOLDER" index="5"]
+margin_top = 646.0
+margin_right = 822.0
+margin_bottom = 696.0
+rect_min_size = Vector2( 0, 50 )
+mouse_filter = 2
+
+[node name="Writing" type="Label" parent="MarginContainer/PLACEHOLDER" index="6"]
+margin_top = 700.0
+margin_right = 822.0
+margin_bottom = 832.0
+custom_fonts/font = ExtResource( 6 )
+text = "Dear Animal Resources worker,
+
+I humbly request that you reconsider your decision. I understand that this may get you in trouble with the Imperial Office, but I'm afraid to say that I'm not happy with my new position.
+"
+align = 1
+autowrap = true
+
+[node name="WritingPS" type="Label" parent="MarginContainer/PLACEHOLDER" index="7"]
+margin_top = 836.0
+margin_right = 822.0
+margin_bottom = 860.0
+custom_fonts/font = ExtResource( 7 )
+text = "P.S. Please do not report this request to the Forebears."
 align = 1
 
 [node name="Portrait" parent="." index="5" instance=ExtResource( 4 )]

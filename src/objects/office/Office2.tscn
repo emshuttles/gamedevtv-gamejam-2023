@@ -33,22 +33,24 @@ margin_right = -706.0
 margin_bottom = 2671.0
 
 [node name="Welcome" parent="." index="7" instance=ExtResource( 6 )]
-margin_left = 2136.0
-margin_top = 544.0
-margin_right = 3158.0
-margin_bottom = 1232.0
+visible = false
+margin_left = 1186.0
+margin_top = 635.0
+margin_right = 2208.0
+margin_bottom = 1323.0
 
 [node name="Controls" parent="." index="8" instance=ExtResource( 7 )]
-margin_left = 2424.0
-margin_top = 1000.0
-margin_right = 3446.0
-margin_bottom = 1597.0
+visible = false
+margin_left = 1616.0
+margin_top = 1272.0
+margin_right = 2638.0
+margin_bottom = 1869.0
 
 [node name="Quota" parent="." index="9" instance=ExtResource( 2 )]
-margin_left = 312.0
-margin_top = -792.0
-margin_right = 1334.0
-margin_bottom = -198.0
+margin_left = 468.0
+margin_top = 256.0
+margin_right = 1490.0
+margin_bottom = 850.0
 
 [node name="InstructionsPersometer" parent="." index="10" instance=ExtResource( 9 )]
 margin_left = 536.0

@@ -1,12 +1,13 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://src/objects/day_x/day_x.gd" type="Script" id=1]
-[ext_resource path="res://assets/audio/music/fanfare.mp3" type="AudioStream" id=2]
-[ext_resource path="res://src/fonts/title_huge.tres" type="DynamicFont" id=3]
+[ext_resource path="res://assets/audio/music/samba.mp3" type="AudioStream" id=1]
+[ext_resource path="res://src/fonts/subtitle.tres" type="DynamicFont" id=2]
+[ext_resource path="res://src/fonts/title.tres" type="DynamicFont" id=3]
+[ext_resource path="res://src/objects/end/end.gd" type="Script" id=4]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Fade_In_Out"
-length = 7.0
+length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("CenterContainer:modulate")
 tracks/0/interp = 1
@@ -14,10 +15,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 5, 6.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 2, 5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/1/type = "method"
 tracks/1/path = NodePath(".")
@@ -26,12 +27,9 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 6.9 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "change_scene"
-} ]
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"values": [  ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Music:volume_db")
@@ -40,10 +38,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 5.8, 7 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
 "update": 0,
-"values": [ 0.0, -80.0 ]
+"values": [  ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -73,13 +71,13 @@ tracks/1/keys = {
 "values": [ 0.0 ]
 }
 
-[node name="DayX" type="MarginContainer"]
+[node name="End" type="MarginContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 1 )
+script = ExtResource( 4 )
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 2 )
+stream = ExtResource( 1 )
 autoplay = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -99,10 +97,37 @@ margin_bottom = 1080.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="LabelDay" type="Label" parent="CenterContainer"]
-margin_left = 792.0
-margin_top = 445.0
-margin_right = 1127.0
-margin_bottom = 635.0
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 552.0
+margin_top = 385.0
+margin_right = 1368.0
+margin_bottom = 695.0
+custom_constants/separation = 50
+
+[node name="Numbers" type="Label" parent="CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+margin_right = 816.0
+margin_bottom = 42.0
+custom_fonts/font = ExtResource( 2 )
+text = "You got 6 out of the 5 required assignments right (in the eyes of the Empire)."
+align = 1
+valign = 1
+
+[node name="Result" type="Label" parent="CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+margin_top = 92.0
+margin_right = 816.0
+margin_bottom = 218.0
 custom_fonts/font = ExtResource( 3 )
-text = "Day X"
+text = "You were fired."
+align = 1
+valign = 1
+
+[node name="Thanks" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_top = 268.0
+margin_right = 816.0
+margin_bottom = 310.0
+custom_fonts/font = ExtResource( 2 )
+text = "Thanks for your work!"
+align = 1
+valign = 1

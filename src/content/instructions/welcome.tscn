@@ -48,7 +48,7 @@ align = 1
 margin_top = 146.0
 margin_right = 822.0
 margin_bottom = 170.0
-text = "Citizen! You have been selected for this most important work:"
+text = "Citizen! Today you begin your 3-day trial for this most important work:"
 autowrap = true
 
 [node name="Label5" type="Label" parent="MarginContainer/VBoxContainer" index="2"]

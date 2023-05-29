@@ -257,7 +257,7 @@ unique_name_in_owner = true
 position = Vector2( 17, 17 )
 rotation = -0.785398
 
-[node name="Icon" parent="Axes/AxisX" index="4"]
+[node name="Icon" parent="Axes/AxisX" index="3"]
 texture = ExtResource( 10 )
 
 [node name="AxisY" parent="Axes" instance=ExtResource( 1 )]

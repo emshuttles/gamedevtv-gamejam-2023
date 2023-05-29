@@ -79,4 +79,4 @@ func _play_sound() -> void:
 			emit_signal("drag_started")
 		else:
 			emit_signal("drag_ended")
-			
+

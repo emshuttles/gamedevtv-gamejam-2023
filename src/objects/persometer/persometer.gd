@@ -44,7 +44,7 @@ func _on_ButtonActivate_pressed() -> void:
 
 		audio_player.stream = PERSOMETER_BUTTON
 		audio_player.play()
-		
+
 		if use_count == use_max:
 			$Off.play()
 			$Ongoing.stop()
@@ -59,7 +59,11 @@ func _on_Area2D_area_entered(area: Area2D) -> void:
 
 	# If you enter another Paper's area, but it's beneath the Paper you're currently selecting,
 	# ignore it.
-	if last_entered_area != null and last_entered_area.owner.is_greater_than(area.owner):
+	if (
+		last_entered_area != null
+		and _areas_below.has(last_entered_area)
+		and last_entered_area.owner.is_greater_than(area.owner)
+	):
 		return
 
 	_select_evaluation(area)
@@ -82,14 +86,13 @@ func _select_evaluation(area: Area2D) -> void:
 			var use:Power = uses[i]
 			use.power_up()
 
-
 	if use_count < use_max:
 		if not $On.playing:
 			$On.play()
-		
+
 		if not $Ongoing.playing:
 			$Ongoing.play()
-	
+
 	is_over_evaluation = true
 	_animate_axes()
 

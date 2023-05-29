@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/fonts/italic.tres" type="DynamicFont" id=1]
-[ext_resource path="res://src/content/paper.gd" type="Script" id=2]
+[ext_resource path="res://src/content/evaluations/evaluation.gd" type="Script" id=2]
 [ext_resource path="res://src/content/paper_base.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/content/evaluations/evaluation_base.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/portraits/portrait2.jpg" type="Texture" id=5]
@@ -9,6 +9,13 @@
 [node name="Evaluation" instance=ExtResource( 3 )]
 script = ExtResource( 2 )
 is_evaluation = true
+candidate_name = "Owlbert Rexword"
+correct_job = 1
+kind = 4
+analytical = 2
+engineer_interest = 4
+art_therapist_interest = 1
+toy_maker_interest = 1
 portrait = ExtResource( 5 )
 
 [node name="Evaluation" parent="." index="4" instance=ExtResource( 4 )]
@@ -65,6 +72,7 @@ margin_right = 287.0
 [node name="CheckBox2" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer/HBoxContainer" index="3"]
 margin_left = 291.0
 margin_right = 388.0
+pressed = true
 
 [node name="CheckBox3" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer/HBoxContainer" index="4"]
 margin_left = 392.0

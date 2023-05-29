@@ -60,21 +60,21 @@ margin_bottom = 270.0
 margin_right = 822.0
 margin_bottom = 24.0
 custom_fonts/font = ExtResource( 3 )
-text = "Naval Engineer ( 1 )"
+text = "Art Therapist ( 1 )"
 autowrap = true
 
 [node name="Label7" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer" index="1"]
 margin_top = 28.0
 margin_right = 822.0
 margin_bottom = 52.0
-text = "Analytic: Very High"
+text = "Analytic: Low"
 autowrap = true
 
 [node name="Label8" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer" index="2"]
 margin_top = 56.0
 margin_right = 822.0
 margin_bottom = 80.0
-text = "Kind: Very Low"
+text = "Kind: Very High"
 autowrap = true
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer" index="3"]
@@ -86,19 +86,19 @@ margin_bottom = 370.0
 margin_right = 822.0
 margin_bottom = 24.0
 custom_fonts/font = ExtResource( 3 )
-text = "Art Therapist ( 1 )"
+text = "Toy Maker ( 1 )"
 autowrap = true
 
 [node name="Label7" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer2" index="1"]
 margin_top = 28.0
 margin_right = 822.0
 margin_bottom = 52.0
-text = "Analytic: Low"
+text = "Analytic: High"
 autowrap = true
 
 [node name="Label8" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer2" index="2"]
 margin_top = 56.0
 margin_right = 822.0
 margin_bottom = 80.0
-text = "Kind: Very High"
+text = "Kind: Moderate"
 autowrap = true

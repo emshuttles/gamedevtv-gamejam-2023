@@ -7,16 +7,7 @@
 
 [node name="PaperBase" instance=ExtResource( 3 )]
 script = ExtResource( 1 )
-is_evaluation = null
-is_job_request = null
-candidate_name = null
-correct_job = null
-kind = null
-analytical = null
-desired_job = null
-engineer_interest = null
-art_therapist_interest = null
-toy_maker_interest = null
+is_job_request = true
 
 [node name="PLACEHOLDER" type="VBoxContainer" parent="." index="4"]
 margin_right = 1022.0

@@ -22,20 +22,17 @@ position = Vector2( -2144, -624 )
 position = Vector2( -864, -624 )
 job = 1
 
-[node name="Evaluation" parent="." index="5" instance=ExtResource( 5 )]
+[node name="Evaluation1" parent="." index="5" instance=ExtResource( 5 )]
 margin_left = -2429.0
 margin_top = 614.0
 margin_right = -1407.0
 margin_bottom = 2101.0
-candidate_name = "Luke"
 
 [node name="Evaluation2" parent="." index="6" instance=ExtResource( 3 )]
-margin_left = -1790.0
-margin_top = 990.0
-margin_right = -768.0
-margin_bottom = 2536.0
-candidate_name = "Arden"
-correct_job = 1
+margin_left = -1832.0
+margin_top = 1040.0
+margin_right = -810.0
+margin_bottom = 2586.0
 
 [node name="Welcome" parent="." index="7" instance=ExtResource( 7 )]
 margin_left = 1186.0

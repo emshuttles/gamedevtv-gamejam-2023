@@ -1,13 +1,24 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/content/paper_base.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/content/evaluations/evaluation_base.tscn" type="PackedScene" id=2]
-[ext_resource path="res://src/content/paper.gd" type="Script" id=3]
+[ext_resource path="res://src/content/evaluations/evaluation.gd" type="Script" id=3]
 [ext_resource path="res://assets/portraits/portrait4.jpg" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 511, 933 )
 
 [node name="Evaluation" instance=ExtResource( 1 )]
 script = ExtResource( 3 )
 is_evaluation = true
+candidate_name = "Mac Sterling"
+correct_job = 1
+kind = 5
+analytical = 3
+desired_job = 2
+engineer_interest = 1
+art_therapist_interest = 3
+toy_maker_interest = 5
 portrait = ExtResource( 4 )
 
 [node name="Color" parent="." index="0"]
@@ -15,6 +26,10 @@ margin_bottom = 1866.0
 
 [node name="TextureRect" parent="." index="1"]
 margin_bottom = 1866.0
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2( 511, 933 )
+shape = SubResource( 1 )
 
 [node name="Evaluation" parent="." index="4" instance=ExtResource( 2 )]
 margin_right = 1022.0
@@ -66,6 +81,7 @@ margin_bottom = 164.0
 
 [node name="CheckBox1" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer/HBoxContainer" index="2"]
 margin_right = 287.0
+pressed = true
 
 [node name="CheckBox2" parent="Evaluation/VBoxContainer/Statements/Statement1/VBoxContainer/HBoxContainer" index="3"]
 margin_left = 291.0

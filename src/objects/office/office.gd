@@ -28,13 +28,12 @@ func _ready() -> void:
 	_song_index_current = rng.randi_range(0,_playlist.size() -1)
 	_song_load_and_play()
 
-
+	_create_job_requests()
 	_trays = get_tree().get_nodes_in_group("tray")
 	_papers = get_tree().get_nodes_in_group("paper")
 
 	Signals.connect("tray_updated", self, "_on_tray_updated")
 
-	_create_job_requests()
 	_count_fileable_papers()
 	_create_reprimand()
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/objects/office/BaseOffice.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/content/quotas/quota2.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://src/content/instructions/welcome.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/content/instructions/controls.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/objects/persometer/Persometer.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/content/instructions/instructions_persometer.tscn" type="PackedScene" id=9]
 
 [node name="Office" instance=ExtResource( 1 )]
 
@@ -32,25 +33,29 @@ margin_right = -706.0
 margin_bottom = 2671.0
 
 [node name="Welcome" parent="." index="7" instance=ExtResource( 6 )]
-margin_left = 1186.0
-margin_top = 635.0
-margin_right = 2208.0
-margin_bottom = 1323.0
+margin_left = 2136.0
+margin_top = 544.0
+margin_right = 3158.0
+margin_bottom = 1232.0
 
 [node name="Controls" parent="." index="8" instance=ExtResource( 7 )]
-margin_left = 1616.0
-margin_top = 1272.0
-margin_right = 2638.0
-margin_bottom = 1869.0
+margin_left = 2424.0
+margin_top = 1000.0
+margin_right = 3446.0
+margin_bottom = 1597.0
 
 [node name="Quota" parent="." index="9" instance=ExtResource( 2 )]
-margin_left = 416.0
-margin_top = 1888.0
-margin_right = 1438.0
-margin_bottom = 2482.0
+margin_left = 312.0
+margin_top = -792.0
+margin_right = 1334.0
+margin_bottom = -198.0
 
-[node name="Persometer" parent="." index="10" instance=ExtResource( 8 )]
-margin_left = -416.0
-margin_top = 1560.0
-margin_right = -416.0
-margin_bottom = 1560.0
+[node name="InstructionsPersometer" parent="." index="10" instance=ExtResource( 9 )]
+margin_left = 536.0
+margin_right = 1494.0
+
+[node name="Persometer" parent="." index="11" instance=ExtResource( 8 )]
+margin_left = 240.0
+margin_top = 1104.0
+margin_right = 240.0
+margin_bottom = 1104.0

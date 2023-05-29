@@ -63,7 +63,7 @@ autowrap = true
 margin_top = 234.0
 margin_right = 822.0
 margin_bottom = 285.0
-text = "In your desk, you will find personality tests that will help you decide which job is a better fit for each candidate. They may or may not be former rebels and traitors to the Empress."
+text = "On your desk, you will find personality tests that will help you decide which job is a better fit for each candidate. They may or may not be former rebels and traitors to the Empress."
 autowrap = true
 
 [node name="Label11" type="Label" parent="MarginContainer/VBoxContainer" index="4"]

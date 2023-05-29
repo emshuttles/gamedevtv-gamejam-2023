@@ -65,7 +65,7 @@ func _snap_to_tray() -> void:
 # I'm jammin' hard now.
 func _play_sound() -> void:
 	if _parent.is_in_group("paper"):
-		var audio_player: AudioStreamPlayer = _parent.get_node("AudioStreamPlayer")
+		var audio_player: AudioStreamPlayer2D = _parent.get_node("AudioStreamPlayer")
 		var sound: Resource
 		if _is_held:
 			sound = PAPER_PICK_UP

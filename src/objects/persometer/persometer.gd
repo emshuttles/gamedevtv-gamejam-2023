@@ -33,6 +33,7 @@ func _ready() -> void:
 
 func _on_ButtonActivate_pressed() -> void:
 	if use_count < use_max and is_over_evaluation:
+		$Activate.play()
 		var use = $Uses.get_child(use_count)
 		use.power_down()
 		use_count += 1
@@ -43,6 +44,10 @@ func _on_ButtonActivate_pressed() -> void:
 
 		audio_player.stream = PERSOMETER_BUTTON
 		audio_player.play()
+		
+		if use_count == use_max:
+			$Off.play()
+			$Ongoing.stop()
 
 
 func _on_Area2D_area_entered(area: Area2D) -> void:
@@ -77,6 +82,14 @@ func _select_evaluation(area: Area2D) -> void:
 			var use:Power = uses[i]
 			use.power_up()
 
+
+	if use_count < use_max:
+		if not $On.playing:
+			$On.play()
+		
+		if not $Ongoing.playing:
+			$Ongoing.play()
+	
 	is_over_evaluation = true
 	_animate_axes()
 
@@ -124,6 +137,9 @@ func _animate_axes() -> void:
 			_play_arm_sound()
 	else:
 		if assigned_animation != "close":
+			$Ongoing.stop()
+			if use_count < use_max:
+				$Off.play()
 			node_animation_player.play("close")
 			_play_arm_sound()
 			for axis in axes.values():
